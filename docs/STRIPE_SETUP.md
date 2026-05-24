@@ -74,6 +74,32 @@ We do not have webhook-verified delivery in v1. The simplest delivery path:
 
 See `docs/CHECKOUT_TODO.md` for the email-consent and webhook upgrade path.
 
+## Invite Promo Code Setup
+
+Regular price:
+$29.99
+
+Invite price:
+$19.99
+
+Promo code:
+VIBE10
+
+Stripe setup:
+
+1. Create a coupon for $10.00 off.
+2. Set duration to once.
+3. Create a promotion code attached to the coupon.
+4. Code: VIBE10.
+5. Enable promotion codes on the VibeCode Safety Kit Payment Link.
+6. Test checkout without code: $29.99.
+7. Test checkout with VIBE10: $19.99.
+8. Optional invite URL:
+   Add `?prefilled_promo_code=VIBE10` to the Stripe Payment Link.
+
+Important:
+Do not expose the promo code publicly unless intentionally running a public sale.
+
 ## What we are intentionally NOT doing in v1
 
 - No Stripe SDK.
@@ -81,5 +107,5 @@ See `docs/CHECKOUT_TODO.md` for the email-consent and webhook upgrade path.
 - No Stripe webhook handler.
 - No subscriptions.
 - No customer portal.
-- No coupon / promo codes (Payment Link supports them natively if you
-  enable them in the dashboard - no code needed).
+- No custom coupon logic. Stripe Payment Link handles promo codes natively
+  when enabled in the dashboard - no app code needed.

@@ -152,6 +152,11 @@ Run through this before flipping the site to "live".
       `https://drive.google.com/uc?export=download&id=FILE_ID`
 - [ ] Add direct download link to `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` in .env.local
 - [ ] Create Stripe Payment Link ($29.99 one-time, NOT subscription)
+- [ ] Create Stripe $10 off coupon
+- [ ] Create promo code VIBE10
+- [ ] Enable promotion codes on Payment Link
+- [ ] Test normal checkout at $29.99
+- [ ] Test invite checkout at $19.99
 - [ ] Set Stripe success redirect to hidden access page:
       `/access/vcs-launch-edition-2026-k9p4`
 - [ ] Add Stripe checkout link to `NEXT_PUBLIC_CHECKOUT_LINK` in .env.local
@@ -159,6 +164,8 @@ Run through this before flipping the site to "live".
 - [ ] Enable Stripe successful-payment account notifications
 - [ ] Create Google Sheet buyer tracker (columns: Purchase Date, Customer Name, Customer Email, Stripe Payment ID, Access Sent?, Opted Into Updates?, Issue?, Notes)
 - [ ] Test purchase flow end-to-end in Stripe test mode
+- [ ] Confirm success redirect still goes to hidden access page
+- [ ] Confirm download works after promo checkout
 - [ ] Confirm `/success` does not show the download in production
 - [ ] Confirm hidden access page is not linked in the public nav/footer/homepage
 - [ ] Confirm direct download starts or opens Google's download confirmation

@@ -373,6 +373,10 @@ const faqs = [
     a: "No. For launch, you can buy through Stripe without creating an account. Access instructions are sent to the email used at checkout.",
   },
   {
+    q: "I have an invite code. Where do I use it?",
+    a: "Enter your invite code during checkout. If you received a special invite link, the code may already be applied.",
+  },
+  {
     q: "Can I sign in with Google?",
     a: "Google sign-in is planned for account-based access, but the launch version does not require an account. You can purchase the kit through Stripe and receive access instructions by email.",
   },
@@ -1139,6 +1143,9 @@ export default function Home() {
 
               <p className="mt-6 text-center text-sm text-gray-400">
                 Early launch pricing for the beginner-friendly version.
+              </p>
+              <p className="mt-3 text-center text-xs text-violet-200">
+                Have an invite code? You can enter it at checkout.
               </p>
 
               <div className="my-6 divider-line" />
