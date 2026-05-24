@@ -1,7 +1,7 @@
 import { LegalShell } from "@/components/LegalShell";
 import { SUPPORT_EMAIL } from "@/lib/checkout";
 
-export const metadata = { title: "Privacy Policy - VibeCode Safety Kit" };
+export const metadata = { title: "Privacy Policy - VibeCode Safety" };
 
 export default function PrivacyPage() {
   return (
@@ -10,9 +10,9 @@ export default function PrivacyPage() {
       updated="May 24, 2026"
       intro={
         <p>
-          VibeCode Safety Kit respects your privacy. This Privacy Policy
+          VibeCode Safety respects your privacy. This Privacy Policy
           explains what information may be collected when you visit our
-          website, purchase the product, or contact us.
+          website, subscribe to the membership, or contact us.
         </p>
       }
     >
@@ -31,22 +31,22 @@ export default function PrivacyPage() {
       <h2>2. How We Use Your Information</h2>
       <p>We may use your information to:</p>
       <ul>
-        <li>deliver your purchase</li>
-        <li>send product access or download instructions</li>
+        <li>deliver your membership access</li>
+        <li>send member kit access or download instructions</li>
         <li>respond to support requests</li>
-        <li>send important product updates</li>
-        <li>improve the website and product</li>
+        <li>send important membership updates</li>
+        <li>improve the website and membership materials</li>
         <li>prevent fraud or abuse</li>
       </ul>
 
       <h2>3. Email Updates</h2>
       <p>
         If you choose to receive updates, we may send occasional emails about
-        product updates, new resources, related tools, or launch
+        membership updates, new resources, related tools, or launch
         announcements. You can unsubscribe from marketing emails at any time.
       </p>
       <p>
-        Transactional emails related to your purchase may still be sent when
+        Transactional emails related to your subscription may still be sent when
         necessary.
       </p>
 
