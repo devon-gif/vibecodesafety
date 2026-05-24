@@ -444,70 +444,57 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden">
       {/* HERO */}
-      <section className="relative">
+      <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="orb left-[-160px] top-[-120px] h-[420px] w-[420px] bg-violet-700/40"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_78%_20%,rgba(124,58,237,0.26),transparent_46%),radial-gradient(ellipse_at_50%_110%,rgba(76,29,149,0.2),transparent_48%)]"
         />
         <div
           aria-hidden
-          className="orb right-[-160px] top-[60px] h-[460px] w-[460px] bg-fuchsia-700/30"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,5,16,0)_0%,rgba(7,5,16,0.75)_100%)]"
         />
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 pb-20 pt-16 lg:grid-cols-2 lg:gap-16 lg:pt-24">
-          <div className="relative">
-            <span className="pill">
-              <span className="pill-dot" />
-              FOR BEGINNER VIBE CODERS AND AI-ASSISTED FOUNDERS
-            </span>
-            <h1 className="mt-6 text-balance text-5xl font-semibold tracking-tight text-white md:text-6xl">
-              Ship faster <span className="violet-text">without shipping blind.</span>
+        <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 pb-24 pt-20 lg:grid-cols-[0.88fr,1.12fr] lg:gap-16 lg:pb-28 lg:pt-32">
+          <div>
+            <h1 className="text-balance text-6xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl">
+              Ship faster
+              <br />
+              <span className="violet-text">
+                without
+                <br />
+                shipping blind.
+              </span>
             </h1>
-            <p className="mt-6 text-pretty text-lg text-gray-300">
+            <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
               VibeCode Safety Kit gives you a copy-paste safety workflow for
-              AI-built apps - repo rules, review prompts, checklists, and
-              pre-ship guardrails that help catch risky AI-generated changes
-              before you commit, push, or deploy.
-            </p>
-            <p className="mt-3 text-sm text-gray-400">
-              Make AI check the AI for broken auth, exposed secrets, env
-              mistakes, billing regressions, schema drift, and disconnected
-              code changes.
+              AI-built apps: repo rules, smart checks, and guardrails that
+              catch risky changes before you commit, push, or deploy.
             </p>
 
-            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
-              <BuyLink className="btn-primary">
-                <CartIcon />
-                Get the Kit for $29.99
+            <div className="mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
+              <BuyLink className="btn-primary px-7 py-4 text-base">
+                Get the Kit
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m13 5 7 7-7 7" />
+                </svg>
               </BuyLink>
-              <Link href="#whats-inside" className="btn-secondary">
+              <Link href="#whats-inside" className="btn-secondary px-7 py-4 text-base">
                 See What&apos;s Inside
               </Link>
             </div>
 
-            <p className="mt-4 text-xs text-gray-500">
-              One-time purchase. No subscription. Beginner-friendly setup.
+            <p className="mt-8 flex items-center gap-3 text-sm text-gray-400">
+              <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-violet-300/50 text-violet-300">
+                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5L20 7" />
+                </svg>
+              </span>
+              Works with Claude, Cursor, Copilot, Windsurf &amp; more
             </p>
-            <p className="mt-2 text-xs text-violet-300">
-              Copy 3 files. Paste 1 prompt. Don&apos;t ship until it passes.
-            </p>
-
-            <ul className="mt-8 flex flex-wrap gap-2 text-xs text-gray-300">
-              {trustPills.map((p) => (
-                <li
-                  key={p}
-                  className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5"
-                >
-                  {p}
-                </li>
-              ))}
-            </ul>
           </div>
 
-          <div className="relative">
+          <div className="relative lg:pl-2">
             <SafetyReport />
-            <p className="mt-6 text-center text-xs text-gray-500">
-              A simple repeatable review system for every AI coding change.
-            </p>
           </div>
         </div>
       </section>
