@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 type Status = "Passed" | "Warnings" | "Blocked" | "Ship";
 
 const items: { label: string; status: Status; detail?: string }[] = [
@@ -23,7 +27,7 @@ function StatusBadge({
   };
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium ${map[status]}`}
+      className={`report-status-badge inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium ${map[status]}`}
     >
       {status === "Passed" && <CheckIcon />}
       {status === "Warnings" && <WarningIcon />}
@@ -58,8 +62,41 @@ function ShipIcon() {
 }
 
 export function SafetyReport() {
+  const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      setScore(92);
+      return;
+    }
+
+    let frame = 0;
+    let start = 0;
+    const duration = 1200;
+    const delay = window.setTimeout(() => {
+      const tick = (time: number) => {
+        if (!start) start = time;
+        const progress = Math.min((time - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setScore(Math.round(eased * 92));
+        if (progress < 1) {
+          frame = window.requestAnimationFrame(tick);
+        }
+      };
+      frame = window.requestAnimationFrame(tick);
+    }, 300);
+
+    return () => {
+      window.clearTimeout(delay);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  const scoreAngle = (score / 100) * 360;
+
   return (
-    <div className="relative mx-auto w-full max-w-2xl">
+    <div className="safety-report-float relative mx-auto w-full max-w-2xl">
       <div
         aria-hidden
         className="absolute -inset-12 rounded-full bg-violet-600/20 blur-3xl"
@@ -78,10 +115,10 @@ export function SafetyReport() {
         <div className="mt-7 grid grid-cols-1 gap-4 lg:grid-cols-[0.9fr,1.25fr]">
           <div className="flex min-h-[260px] flex-col items-center justify-center rounded-2xl border border-white/10 bg-black/25 p-6 shadow-inner">
             <div
-              className="relative flex h-40 w-40 items-center justify-center rounded-full shadow-[0_0_55px_rgba(139,92,246,0.35)]"
+              className="score-ring relative flex h-40 w-40 items-center justify-center rounded-full shadow-[0_0_55px_rgba(139,92,246,0.35)]"
               style={{
                 background:
-                  "conic-gradient(from 220deg, #8b5cf6 0deg, #a78bfa 282deg, rgba(139,92,246,0.18) 282deg, rgba(139,92,246,0.18) 360deg)",
+                  `conic-gradient(from 220deg, #8b5cf6 0deg, #a78bfa ${scoreAngle}deg, rgba(139,92,246,0.18) ${scoreAngle}deg, rgba(139,92,246,0.18) 360deg)`,
               }}
             >
               <div className="absolute inset-3 rounded-full bg-[#130b27]" />
@@ -90,11 +127,11 @@ export function SafetyReport() {
               </div>
             </div>
             <div className="mt-5 text-sm text-gray-400">Overall Score</div>
-            <div className="mt-1 text-5xl font-semibold tracking-tight text-white">
-              92<span className="text-gray-500">/100</span>
+            <div className="report-score mt-1 text-5xl font-semibold tracking-tight text-white">
+              {score}<span className="text-gray-500">/100</span>
             </div>
-            <div className="mt-3 flex items-center gap-2 text-sm text-emerald-300">
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+            <div className="report-status mt-3 flex items-center gap-2 text-sm text-emerald-300">
+              <span className="report-status-dot h-2.5 w-2.5 rounded-full bg-emerald-400" />
               Good to Ship
             </div>
           </div>
@@ -104,7 +141,10 @@ export function SafetyReport() {
               {items.map((it) => (
                 <li
                   key={it.label}
-                  className="flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.035] px-4 py-4 text-sm"
+                  className={`report-row flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.035] px-4 py-4 text-sm ${it.status === "Warnings" ? "report-row-warning" : ""}`}
+                  style={{
+                    animationDelay: `${900 + items.indexOf(it) * 180}ms`,
+                  }}
                 >
                   <span className="flex items-center gap-3 text-gray-200">
                     <span className="text-violet-300">
@@ -117,7 +157,7 @@ export function SafetyReport() {
               ))}
             </ul>
 
-            <div className="mt-auto flex items-center justify-between gap-4 rounded-xl border border-violet-300/20 bg-violet-500/[0.07] px-4 py-4 text-sm">
+            <div className="report-row report-row-final mt-auto flex items-center justify-between gap-4 rounded-xl border border-violet-300/20 bg-violet-500/[0.07] px-4 py-4 text-sm">
               <span className="flex items-center gap-3 text-gray-100">
                 <ShipIcon />
                 <span>
