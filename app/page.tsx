@@ -3,24 +3,25 @@ import { SafetyReport } from "@/components/SafetyReport";
 import { BuyLink } from "@/components/BuyLink";
 import { EmailConsentCheckbox } from "@/components/EmailConsentCheckbox";
 import { ContactForm } from "@/components/ContactForm";
+import { YEARLY_CHECKOUT_LINK } from "@/lib/checkout";
 
 /* ---------- data ---------- */
 
 const steps = [
   {
     n: "1",
-    t: "Copy the safety files",
-    b: "Add the rules and project profile to your repo.",
+    t: "Audit your current repo",
+    b: "Run the heavy-duty repo audit workflow to identify risky areas before you keep building.",
   },
   {
     n: "2",
-    t: "Paste the daily prompt",
-    b: "Use it after every AI coding change.",
+    t: "Add the safety guardrails",
+    b: "Copy the repo rules, project profile, and daily review prompt into your project.",
   },
   {
     n: "3",
-    t: "Ship only when it passes",
-    b: "Follow PASS / WARNING / BLOCKED before commit, push, or deploy.",
+    t: "Review every AI change",
+    b: "Use PASS / WARNING / BLOCKED before commit, push, or deploy.",
   },
 ];
 
@@ -45,28 +46,20 @@ const toneDot: Record<"emerald" | "amber" | "rose", string> = {
 
 const insideCards = [
   {
-    t: "Beginner Mode",
-    b: "3 files + 1 daily prompt. The fastest path to a safer AI workflow.",
+    t: "Heavy-Duty Repo Audit",
+    b: "Run a structured AI-assisted audit on your current repo to spot risky flows, exposed config, auth gaps, billing issues, and deployment risks.",
   },
   {
-    t: "Reviewer Prompts",
-    b: "Structured AI review before commit, push, or deploy.",
+    t: "Daily AI Change Reviews",
+    b: "Use the daily prompt after AI edits code so every change gets reviewed before commit, push, or deploy.",
   },
   {
-    t: "Repo Rules",
-    b: "Claude, Codex, Cursor, Windsurf, and Copilot instruction templates.",
+    t: "Repo Rules for AI Tools",
+    b: "Drop in Claude, Codex, Cursor, Windsurf, and Copilot instruction files so your tools stop treating every edit like an isolated file.",
   },
   {
-    t: "Safety Checklists",
-    b: "Auth, billing, env vars, API routes, Supabase, and Stripe.",
-  },
-  {
-    t: "Automation Starters",
-    b: "Gitleaks, GitHub Actions, Playwright, and k6 starter docs.",
-  },
-  {
-    t: "Launch Support",
-    b: "Pre-deploy, rollback, and client handoff checklists.",
+    t: "Ongoing Updates",
+    b: "Get new audit prompts, checklists, guardrails, and workflow improvements as the product evolves.",
   },
 ];
 
@@ -106,41 +99,43 @@ const riskZones = [
 ];
 
 const pricingIncludes = [
-  "Beginner Mode setup",
-  "Daily VibeCode Prompt",
-  "Reviewer Prompt",
-  "Project Safety Profile",
-  "Pre-Ship Checklist",
+  "Heavy-duty repo audit workflow",
+  "Daily AI change review prompt",
+  "Project safety profile",
   "Repo instruction templates",
-  "Security guardrail checklists",
-  "Gitleaks / GitHub Actions / Playwright / k6 starters",
-  "Setup guidance and QUICKSTART",
+  "Auth, billing, env var, API, Supabase, and Stripe checklists",
+  "Pre-commit, pre-push, and pre-deploy reviews",
+  "Ongoing prompt and checklist updates",
 ];
 
 const faqs = [
   {
-    q: "Does this replace a developer?",
-    a: "No. VibeCode Safety Kit does not replace a senior developer, QA process, or security audit. It gives AI-assisted builders a practical guardrail system for reviewing AI-generated changes before commit, push, or deploy.",
+    q: "Is this still a one-time kit?",
+    a: "No. VibeCode Safety is moving to a subscription so members can receive ongoing audit workflows, prompt updates, checklists, and guardrail improvements.",
   },
   {
-    q: "Is this a subscription?",
-    a: "No. This is a one-time digital purchase at $29.99. No subscription, no locked dashboard.",
+    q: "Do you personally audit my repo?",
+    a: "Not on the $6.99/month plan. The subscription gives you a heavy-duty AI-assisted repo audit workflow you can run with your coding tools. Manual audits may become a separate paid service later.",
   },
   {
-    q: "What do I actually get?",
-    a: "A ZIP of plain Markdown files: repo rules, prompts, checklists, and starter docs. Copy the Beginner Mode files into your repo, fill out your project profile, and start reviewing AI changes in under 5 minutes.",
+    q: "Can I pay yearly?",
+    a: "Yes. Monthly is $6.99/month, and yearly billing is $59/year.",
+  },
+  {
+    q: "Can I cancel anytime?",
+    a: "Yes. Cancel anytime by contacting support until automated account management is added.",
+  },
+  {
+    q: "Does this guarantee my app is secure?",
+    a: "No. It helps reduce risk and improve review habits, but it does not replace professional engineering, QA, or a security audit.",
+  },
+  {
+    q: "What do I get as a member?",
+    a: "You get the current VibeCode Safety Kit, heavy-duty repo audit workflow, daily AI change review prompts, repo instruction templates, checklists, and ongoing updates.",
   },
   {
     q: "Does it work with Cursor, Claude, Codex, and Windsurf?",
     a: "Yes. The kit is tool-agnostic. It includes specific instruction templates for Claude, Codex, Cursor, Windsurf, and GitHub Copilot, and works with any AI coding tool.",
-  },
-  {
-    q: "Will it guarantee my app is secure?",
-    a: "No. No prompt or checklist can guarantee that. The kit helps reduce risk and build a review habit, but is not a replacement for professional engineering, QA, or a security audit.",
-  },
-  {
-    q: "I have an invite code. Where do I use it?",
-    a: "Enter your invite code at checkout. If you received a special invite link, the code may already be applied.",
   },
 ];
 
