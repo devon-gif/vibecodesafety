@@ -1,44 +1,53 @@
-# Checkout TODO
+# Checkout Setup TODO
 
-Stripe is intentionally **not** wired in this initial setup.
+The site uses a single env var for checkout: `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`.
 
-## Current state
-- The “Get the kit” CTA links to `/success`, which renders a clear “Checkout coming soon” page.
-- There is no Stripe SDK installed.
-- There are no API routes.
-- No environment variables are required to run the site.
+When it is **set**, every "Get the Kit" button opens the Stripe Payment Link.
+When it is **blank**, every "Get the Kit" button routes to `/checkout-coming-soon`
+(a styled placeholder page) so we never have a broken href.
 
-## When you're ready to wire payments
+## Setup
 
-1. **Pick an integration style**
-   - Stripe Payment Link (zero code, fastest)
-   - Stripe Checkout Session via a Next.js Route Handler (more control)
-   - A 3rd-party reseller (Gumroad, Lemon Squeezy, Polar, etc.)
+1. Create a Stripe account.
+2. Create a product: **VibeCode Safety Kit**.
+3. Set price: **$29.99 one-time** (mode = `payment`, not `subscription`).
+4. Create a **Stripe Payment Link** for that price.
+5. Set the success redirect URL on the Payment Link to:
+   `https://yourdomain.com/success`
+6. Copy the Payment Link.
+7. Add it to your env (locally in `.env.local`, in production via your host's
+   env settings):
+   ```
+   NEXT_PUBLIC_STRIPE_PAYMENT_LINK=https://buy.stripe.com/xxxxxxxx
+   ```
+8. Test checkout with Stripe test mode if applicable.
+9. Confirm all CTA buttons route correctly:
+   - Header "Get the Kit"
+   - Hero "Get the Kit for $29.99"
+   - Pricing card "Get the Kit for $29.99"
+   - Final CTA "Get the Kit for $29.99"
+   - Sticky CTA "Get the Kit"
+   - Chat widget "Get the Kit for $29.99"
+10. Confirm the `/success` page explains delivery clearly.
 
-2. **If using Stripe directly**
-   - `pnpm add stripe @stripe/stripe-js`
-   - Create env vars:
-     - `STRIPE_SECRET_KEY`
-     - `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
-     - `STRIPE_PRICE_ID` (your $49 one-time price)
-   - Add a Route Handler at `app/api/checkout/route.ts` that creates a Checkout Session in `payment` mode (NOT `subscription`).
-   - Update CTAs (`Get the kit`) to POST to `/api/checkout` and redirect to the returned `url`.
-   - Update `/success` to read `session_id` from the query string and confirm payment via `stripe.checkout.sessions.retrieve`.
+## How CTAs are wired
 
-3. **Delivery**
-   - On successful payment, deliver the kit via:
-     - A signed download URL (e.g. S3 / R2 / Supabase Storage), or
-     - An email containing the link (Resend / Postmark).
+All purchase buttons use the helper in `lib/checkout.ts`:
 
-4. **Webhook**
-   - If you fulfill via email, add `app/api/stripe/webhook/route.ts` to listen for `checkout.session.completed`.
+```ts
+export const STRIPE_PAYMENT_LINK =
+  process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ||
+  "/checkout-coming-soon";
+```
 
-5. **Confirm one-time, not subscription**
-   - In Stripe: price must be **one-time**, not recurring.
-   - In Checkout Session: `mode: "payment"`.
-   - In all UI copy: keep the “One-time purchase. No subscription required.” line.
+Buttons render through `<BuyLink>` (`components/BuyLink.tsx`) which:
+- opens the Stripe URL in a new tab if it's an absolute URL,
+- navigates to `/checkout-coming-soon` otherwise.
 
-## Until then
-- Do not show fake checkout buttons.
-- Do not collect emails until there's a real fulfillment pipeline.
-- The current `/success` page is safe to ship as-is for waitlist-style launches.
+## What we are intentionally NOT doing yet
+
+- No `stripe` SDK installed.
+- No `app/api/checkout` route.
+- No Stripe webhook handler.
+- No database. No auth. No subscription mode.
+- No Vercel deploy from this repo.

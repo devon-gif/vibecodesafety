@@ -3,6 +3,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyCTA } from "@/components/StickyCTA";
+import { ChatWidget } from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
   title: "VibeCode Safety Kit — Make AI check the AI before you ship.",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <main>{children}</main>
         <SiteFooter />
         <StickyCTA />
+        <ChatWidget />
       </body>
     </html>
   );
