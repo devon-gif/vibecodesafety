@@ -313,6 +313,10 @@ body {
   transform: translateY(0);
 }
 
+.reveal-section.is-visible .reveal-card:hover {
+  transform: translateY(-2px);
+}
+
 @keyframes report-float {
   0%,
   100% {
