@@ -6,8 +6,8 @@
 
 The whole idea fits in one sentence:
 
-> Copy 3 files into your repo. Paste 1 prompt after every AI coding
-> change. Do not ship until the review passes.
+> **Start simple:** copy 3 files into your repo, paste 1 prompt after
+> every AI coding change, and don&rsquo;t ship until the review passes.
 
 ---
 

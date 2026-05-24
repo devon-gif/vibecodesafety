@@ -570,6 +570,11 @@ export default function Home() {
             and run before every commit, push, or deploy. Use it before you
             need a full engineering team.
           </p>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-sm text-violet-200">
+            Most public checklists are written for developers. VibeCode
+            Safety Kit turns practical safety patterns into copy/paste
+            prompts and simple pre-ship questions for AI-assisted builders.
+          </p>
 
           <div className="mx-auto mt-10 max-w-2xl">
             <div className="glass-strong rounded-2xl p-6 text-center shadow-glow">
@@ -1158,6 +1163,12 @@ export default function Home() {
           <h2 className="text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
             Questions vibe coders usually ask.
           </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-gray-500">
+            Based on practical AI coding workflow patterns and common
+            secure coding review principles. Not affiliated with or
+            endorsed by any AI coding tool, payment provider, hosting
+            platform, or security organization.
+          </p>
           <div className="mt-12 space-y-3">
             {faqs.map((f) => (
               <details
