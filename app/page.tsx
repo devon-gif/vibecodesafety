@@ -549,6 +549,209 @@ export default function Home() {
         </div>
       </section>
 
+      {/* POSITIONING — not another dev tool subscription */}
+      <section className="relative border-t border-white/5">
+        <div
+          aria-hidden
+          className="orb left-1/2 top-10 h-[360px] w-[360px] -translate-x-1/2 bg-violet-700/25"
+        />
+        <div className="mx-auto max-w-5xl px-6 py-24">
+          <Eyebrow>POSITIONING</Eyebrow>
+          <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            Not another <span className="violet-text">dev tool subscription.</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-gray-300">
+            AI code review platforms are powerful, but many solo founders and
+            vibe coders are not ready for a full PR review workflow yet.
+          </p>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-gray-400">
+            VibeCode Safety Kit is different. It is a one-time safety
+            workflow you copy into your repo, use with your AI coding tool,
+            and run before every commit, push, or deploy. Use it before you
+            need a full engineering team.
+          </p>
+
+          <div className="mx-auto mt-10 max-w-2xl">
+            <div className="glass-strong rounded-2xl p-6 text-center shadow-glow">
+              <p className="text-base leading-relaxed text-gray-100 md:text-lg">
+                Copy <span className="text-violet-300">3 files</span> into
+                your repo. Paste{" "}
+                <span className="text-violet-300">1 review prompt</span>{" "}
+                after every AI coding change.{" "}
+                <span className="text-white">
+                  Don&apos;t ship until the review passes.
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <p className="mx-auto mt-10 max-w-2xl text-center text-base text-gray-300 md:text-lg">
+            Most AI coding tools help you{" "}
+            <span className="text-white">generate</span> code.
+            <br className="hidden sm:block" /> VibeCode Safety Kit helps you{" "}
+            <span className="violet-text">question it</span> before you ship
+            it.
+          </p>
+        </div>
+      </section>
+
+      {/* BEGINNER MODE / ADVANCED MODE */}
+      <section
+        id="beginner-mode"
+        className="relative border-t border-white/5 bg-gradient-to-b from-transparent via-violet-500/[0.04] to-transparent"
+      >
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <Eyebrow>TWO WAYS TO USE THE KIT</Eyebrow>
+          <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            Start simple. <span className="violet-text">Grow into the rest.</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-gray-400">
+            You do not need to be a senior engineer to use this. Beginner
+            Mode is the entire kit, simplified to three files.
+          </p>
+
+          <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-2">
+            {/* Beginner Mode card */}
+            <div className="glass-strong relative rounded-2xl p-7 shadow-glow">
+              <div className="flex items-center justify-between">
+                <span className="pill">
+                  <span className="pill-dot" />
+                  BEGINNER MODE
+                </span>
+                <span className="text-xs text-violet-300">Recommended</span>
+              </div>
+              <h3 className="mt-5 text-2xl font-semibold text-white">
+                Copy 3 files. Paste 1 prompt. Don&apos;t ship until it
+                passes.
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-300">
+                The whole kit fits on one idea. Drop three markdown files
+                into your repo, paste the daily review prompt after every
+                AI coding change, and only ship on a PASS verdict.
+              </p>
+              <ul className="mt-5 space-y-2.5">
+                {[
+                  "VIBECODE_SAFETY_RULES.md → repo root",
+                  "DAILY_VIBECODE_PROMPT.md → paste before AI builds",
+                  "REVIEWER_PROMPT.md → paste before commit/push/deploy",
+                ].map((b) => (
+                  <li
+                    key={b}
+                    className="flex items-start gap-2.5 text-sm text-gray-200"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="mt-0.5 h-4 w-4 flex-none text-violet-300"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="m5 12 5 5L20 7" />
+                    </svg>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-500/10 px-3 py-1.5 text-[11px] font-medium text-violet-200">
+                ~10 minutes to set up. No senior engineer required.
+              </div>
+            </div>
+
+            {/* Advanced Mode card */}
+            <div className="glass relative rounded-2xl p-7">
+              <div className="flex items-center justify-between">
+                <span className="pill">
+                  <span className="pill-dot" />
+                  ADVANCED MODE
+                </span>
+                <span className="text-xs text-gray-500">When you&apos;re ready</span>
+              </div>
+              <h3 className="mt-5 text-2xl font-semibold text-white">
+                Add tool-specific rules and automated checks.
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-300">
+                When Beginner Mode feels easy, layer in Claude / Cursor /
+                Codex / Windsurf rules, deeper security checklists, and
+                automated checks that catch issues before you do.
+              </p>
+              <ul className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                {[
+                  "AGENTS.md / CLAUDE.md",
+                  "Cursor & Windsurf rules",
+                  "Supabase / Stripe / Auth checklists",
+                  "Env var & API route checks",
+                  "GitHub Actions starter",
+                  "Gitleaks, k6, Playwright",
+                ].map((b) => (
+                  <li
+                    key={b}
+                    className="flex items-start gap-2 text-xs text-gray-300"
+                  >
+                    <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-violet-400" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[11px] font-medium text-gray-300">
+                Same kit. Optional folders you grow into.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW BEGINNERS USE IT */}
+      <section className="relative border-t border-white/5">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <Eyebrow>HOW BEGINNERS USE IT</Eyebrow>
+          <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            Five steps. About ten minutes total.
+          </h2>
+
+          <ol className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-5">
+            {[
+              {
+                t: "Copy the safety files",
+                b: "Drop three markdown files from the kit into the root of your repo.",
+              },
+              {
+                t: "Fill out your project profile",
+                b: "Five to ten lines about your stack and what must not break. AI now has memory.",
+              },
+              {
+                t: "Build with your AI coding tool",
+                b: "Cursor, Claude, Codex, Windsurf, Copilot, Lovable, Bolt, Replit — whatever you use.",
+              },
+              {
+                t: "Paste the daily review prompt",
+                b: "After every AI change, paste it in a fresh chat with the diff. Get a verdict back.",
+              },
+              {
+                t: "Ship only when it passes",
+                b: "PASS or PASS WITH WARNINGS → ship. BLOCKED → fix and re-review.",
+              },
+            ].map((s, i) => (
+              <li key={s.t} className="glass relative rounded-2xl p-5">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-violetglow-500 to-violetglow-700 font-semibold text-white shadow-glow">
+                  {i + 1}
+                </div>
+                <div className="mt-4 font-semibold text-white">{s.t}</div>
+                <p className="mt-2 text-sm leading-relaxed text-gray-400">
+                  {s.b}
+                </p>
+              </li>
+            ))}
+          </ol>
+
+          <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-gray-500">
+            That&apos;s the whole loop. Run it after every AI coding change
+            and your odds of shipping a quietly broken app drop fast.
+          </p>
+        </div>
+      </section>
+
       {/* PROBLEM */}
       <section className="relative border-t border-white/5">
         <div className="mx-auto max-w-7xl px-6 py-24">
@@ -787,6 +990,9 @@ export default function Home() {
             Get the VibeCode Safety Kit for{" "}
             <span className="violet-text">$29.99.</span>
           </h2>
+          <p className="mx-auto mt-4 max-w-xl text-center text-sm text-violet-200">
+            You do not need to be a senior engineer to use it.
+          </p>
 
           <div className="mx-auto mt-14 max-w-2xl">
             <div className="glass-strong relative rounded-3xl p-8 shadow-glow-lg">
