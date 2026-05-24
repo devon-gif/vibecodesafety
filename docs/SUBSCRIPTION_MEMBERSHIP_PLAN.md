@@ -1,48 +1,64 @@
 # Subscription Membership Plan
 
-Product: VibeCode Safety Membership
+## Product
 
-Pricing:
+**VibeCode Safety** — an AI-assisted safety workflow kit for vibe coders.
 
-- $6.99/month
-- $59/year
+## Pricing
 
-Core promise:
+| Plan | Price | Stripe mode |
+|------|-------|-------------|
+| Monthly | $6.99/month | subscription |
+| Yearly | $59/year | subscription (~30% savings) |
 
-Audit your repo. Guard every AI change. Ship with fewer surprises.
+## What members get
 
-## V1 delivery
+- **VibeCode Auditor Agent** — instructions to load into Claude, Cursor,
+  Windsurf, or Codex so the AI reviews code like a cautious senior engineer
+- **Heavy-Duty Repo Audit** — full AI-assisted audit prompts for all major
+  risk areas (auth, secrets, API validation, Supabase RLS, Stripe checkout,
+  deploy readiness)
+- **Daily Build Guardrails** — short copy-paste prompts for pre-commit,
+  pre-push, and pre-deploy reviews
+- **Monthly Safety Drops** — focused monthly packs covering one risk area at
+  a time (Stripe, Supabase RLS, Auth Sessions, and more)
+- **Ongoing updates** — new drops and kit updates as part of the subscription
 
-V1 should use Stripe subscriptions and Stripe Customer Portal instead of a custom dashboard.
+## What members do NOT get
 
-Reasons:
+- Manual repo review by a human
+- Guaranteed security or production-readiness
+- GitHub repo access or automated scanning
+- Custom workflows or debugging help
+- Legal or compliance advice
 
-- Faster launch.
-- Less custom billing risk.
-- Stripe handles plan changes, invoices, failed payments, and cancellation.
-- No need to add auth, database, or webhooks before validating demand.
+## Delivery
 
-## What v1 includes
+Member kit is delivered as a downloadable ZIP from the access page after
+successful Stripe checkout. No SaaS dashboard — just files.
 
-- Member kit files.
-- VibeCode Auditor Agent instructions.
-- Heavy-duty repo audit prompt.
-- Daily guardrails.
-- Monthly safety drops.
-- Support/cancel docs.
+The access page URL is a private slug:
+`/access/vcs-launch-edition-2026-k9p4`
 
-## What v1 does not include
+This slug is shared in the post-checkout success page.
 
-- GitHub OAuth.
-- Repo scanning backend.
-- Manual human audits.
-- Guaranteed security.
-- SaaS dashboard.
+## Billing management
 
-## Future upsells
+Subscribers manage their billing through the Stripe Customer Portal.
 
-- Manual setup/audit service.
-- GitHub PR reviewer.
-- Member portal.
-- Repo risk dashboard.
-- Team plan.
+- Portal URL: set via `NEXT_PUBLIC_CUSTOMER_PORTAL_LINK` env var
+- Cancel anytime: cancellation takes effect at end of billing period
+- Retention offer: optional coupon ($3.99/month for 3 months) — configure
+  in Stripe Customer Portal settings
+
+## Roadmap (no commitment)
+
+- [ ] Stripe Customer Portal live link in site footer/header
+- [ ] More monthly drops (CORS, dependency scanning, error handling)
+- [ ] Video walkthrough of the audit workflow
+- [ ] Possible: member community (Discord or forum)
+- [ ] Possible: team/agency pricing tier
+
+## Stripe setup checklist
+
+See `docs/CHECKOUT_TODO.md` and `docs/STRIPE_SETUP.md`.
