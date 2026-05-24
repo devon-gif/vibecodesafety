@@ -20,8 +20,8 @@ function StatusBadge({
 }) {
   const map: Record<Status, string> = {
     Passed:
-      "bg-emerald-400/10 text-emerald-300 border-emerald-400/30",
-    Warnings: "bg-amber-400/10 text-amber-300 border-amber-400/30",
+      "border border-[#4ADE80]/30 bg-[#4ADE80]/10 text-[#4ADE80]",
+    Warnings: "border border-[#F59E0B]/30 bg-[#F59E0B]/10 text-[#F59E0B]",
     Blocked: "bg-rose-400/10 text-rose-300 border-rose-400/30",
     Ship: "bg-violet-400/15 text-violet-200 border-violet-400/40",
   };
@@ -99,10 +99,10 @@ export function SafetyReport() {
     <div className="safety-report-float relative mx-auto w-full max-w-2xl">
       <div
         aria-hidden
-        className="absolute -inset-12 rounded-full bg-violet-600/20 blur-3xl"
+        className="absolute -inset-12 rounded-full bg-[#8B5CF6]/18 blur-3xl"
       />
 
-      <div className="glass-strong relative rounded-[1.75rem] border-violet-300/25 p-5 shadow-[0_30px_120px_-55px_rgba(139,92,246,0.95)] sm:p-7">
+      <div className="glass-strong relative rounded-[1.75rem] border-[#C4B5FD]/22 p-5 shadow-[0_32px_120px_-48px_rgba(139,92,246,0.95)] sm:p-7">
         <div className="flex items-center gap-4">
           <span className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-gradient-to-br from-violetglow-400 to-violetglow-700 text-white shadow-glow">
             <ShieldCheckIcon className="h-6 w-6" />
@@ -113,15 +113,15 @@ export function SafetyReport() {
         </div>
 
         <div className="mt-7 grid grid-cols-1 gap-4 lg:grid-cols-[0.9fr,1.25fr]">
-          <div className="flex min-h-[260px] flex-col items-center justify-center rounded-2xl border border-white/10 bg-black/25 p-6 shadow-inner">
+          <div className="flex min-h-[260px] flex-col items-center justify-center rounded-2xl border border-[#C4B5FD]/15 bg-[#24153F]/60 p-6 shadow-inner backdrop-blur-md">
             <div
-              className="score-ring relative flex h-40 w-40 items-center justify-center rounded-full shadow-[0_0_55px_rgba(139,92,246,0.35)]"
+              className="score-ring relative flex h-40 w-40 items-center justify-center rounded-full shadow-[0_0_60px_-8px_rgba(139,92,246,0.45)]"
               style={{
                 background:
-                  `conic-gradient(from 220deg, #8b5cf6 0deg, #a78bfa ${scoreAngle}deg, rgba(139,92,246,0.18) ${scoreAngle}deg, rgba(139,92,246,0.18) 360deg)`,
+                  `conic-gradient(from 220deg, #8B5CF6 0deg, #A78BFA ${scoreAngle}deg, rgba(36,21,63,0.60) ${scoreAngle}deg, rgba(36,21,63,0.60) 360deg)`,
               }}
             >
-              <div className="absolute inset-3 rounded-full bg-[#130b27]" />
+              <div className="absolute inset-3 rounded-full bg-[#160B2E]" />
               <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-violet-200/20 bg-violet-300/10">
                 <ShieldCheckIcon className="h-12 w-12 text-violet-100" />
               </div>
@@ -130,8 +130,8 @@ export function SafetyReport() {
             <div className="report-score mt-1 text-5xl font-semibold tracking-tight text-white">
               {score}<span className="text-gray-500">/100</span>
             </div>
-            <div className="report-status mt-3 flex items-center gap-2 text-sm text-emerald-300">
-              <span className="report-status-dot h-2.5 w-2.5 rounded-full bg-emerald-400" />
+            <div className="report-status mt-3 flex items-center gap-2 text-sm text-[#4ADE80]">
+              <span className="report-status-dot h-2.5 w-2.5 rounded-full bg-[#4ADE80]" />
               Good to Ship
             </div>
           </div>
@@ -147,7 +147,7 @@ export function SafetyReport() {
                   }}
                 >
                   <span className="flex items-center gap-3 text-gray-200">
-                    <span className="text-violet-300">
+                    <span className="text-[#A78BFA]">
                       <CheckSquareIcon />
                     </span>
                     {it.label}
@@ -157,7 +157,7 @@ export function SafetyReport() {
               ))}
             </ul>
 
-            <div className="report-row report-row-final mt-auto flex items-center justify-between gap-4 rounded-xl border border-violet-300/20 bg-violet-500/[0.07] px-4 py-4 text-sm">
+            <div className="report-row report-row-final mt-auto flex items-center justify-between gap-4 rounded-xl border border-[#A78BFA]/25 bg-[#8B5CF6]/[0.08] px-4 py-4 text-sm">
               <span className="flex items-center gap-3 text-gray-100">
                 <ShipIcon />
                 <span>
