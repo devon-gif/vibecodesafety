@@ -22,6 +22,9 @@ export function SiteHeader() {
           <a href="#faq" className="hover:text-white">
             FAQ
           </a>
+          <a href="#contact" className="hover:text-white">
+            Contact
+          </a>
         </nav>
         <div className="flex items-center gap-4">
           <BuyLink className="btn-primary px-5 py-2.5 text-sm">
