@@ -9,15 +9,17 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          950: "#05070a",
-          900: "#0a0e13",
-          800: "#0f141b",
-          700: "#161d26",
+          950: "#070510",
+          900: "#0b0817",
+          800: "#120d22",
+          700: "#1a1330",
         },
-        emeraldglow: {
-          400: "#34d399",
-          500: "#10b981",
-          600: "#059669",
+        violetglow: {
+          300: "#c4b5fd",
+          400: "#a78bfa",
+          500: "#8b5cf6",
+          600: "#7c3aed",
+          700: "#6d28d9",
         },
       },
       fontFamily: {
@@ -31,11 +33,12 @@ const config: Config = {
         ],
       },
       boxShadow: {
-        glow: "0 0 60px -10px rgba(16,185,129,0.35)",
+        glow: "0 0 60px -10px rgba(139,92,246,0.45)",
+        "glow-lg": "0 0 120px -20px rgba(139,92,246,0.6)",
       },
       backgroundImage: {
-        "radial-emerald":
-          "radial-gradient(ellipse at top, rgba(16,185,129,0.18), transparent 60%)",
+        "radial-violet":
+          "radial-gradient(ellipse at top, rgba(139,92,246,0.25), transparent 60%)",
       },
     },
   },
