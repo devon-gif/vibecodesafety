@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Checkout coming soon - VibeCode Safety Kit",
+  title: "Subscription checkout coming soon - VibeCode Safety",
 };
 
 export default function CheckoutComingSoonPage() {
@@ -21,18 +21,20 @@ export default function CheckoutComingSoonPage() {
         </span>
 
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          Checkout is <span className="violet-text">almost ready.</span>
+          Subscription checkout is{" "}
+          <span className="violet-text">almost ready.</span>
         </h1>
 
         <p className="mt-6 text-gray-300">
-          Checkout and download delivery are almost ready. The launch version
-          will use secure checkout and a simple download link after purchase.
+          VibeCode Safety will be available for{" "}
+          <span className="text-white">$6.99/month</span> or{" "}
+          <span className="text-white">$59/year</span>. The subscription
+          includes the repo audit workflow, daily AI change guardrails, and
+          ongoing prompt and checklist updates.
         </p>
 
         <p className="mt-4 text-gray-400">
-          VibeCode Safety Kit will be available as a simple one-time purchase
-          for <span className="text-white">$29.99</span>. No subscription
-          required.
+          Monthly or yearly billing. Cancel anytime.
         </p>
 
         <div className="mt-10 flex justify-center">

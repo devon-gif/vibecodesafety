@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  "Download the ZIP",
-  "Open QUICKSTART.md first",
-  "If you are brand new, open 00-START-HERE/5_MINUTE_SETUP.md",
-  "Copy the safety files into your repo",
-  "Paste the Daily VibeCode Prompt after your next AI coding change",
+  "Download the member kit",
+  "Open QUICKSTART.md",
+  "Run the Heavy-Duty Repo Audit workflow",
+  "Add Beginner Mode files to your repo",
+  "Use the Daily VibeCode Prompt after AI coding changes",
 ];
 
 export default function LaunchEditionAccessPage() {
@@ -30,17 +30,16 @@ export default function LaunchEditionAccessPage() {
       <div className="mx-auto max-w-2xl px-6 py-24 text-center">
         <span className="pill">
           <span className="pill-dot" />
-          Launch edition access
+          VibeCode Safety — Member Kit
         </span>
 
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          Download <span className="violet-text">VibeCode Safety Kit</span>
+          Welcome to <span className="violet-text">VibeCode Safety</span>
         </h1>
 
         <p className="mt-6 text-gray-300">
-          Thanks for purchasing VibeCode Safety Kit. Download the ZIP below,
-          then open QUICKSTART.md first. If you are brand new, go directly to
-          00-START-HERE/5_MINUTE_SETUP.md.
+          Download the current member kit below. Start with the heavy-duty repo
+          audit, then add the daily guardrails to your project.
         </p>
 
         {hasDownload ? (

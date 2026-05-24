@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SUPPORT_EMAIL } from "@/lib/checkout";
 
 export const metadata: Metadata = {
-  title: "Payment complete - VibeCode Safety Kit",
+  title: "Welcome to VibeCode Safety",
 };
 
 export default function SuccessPage() {
@@ -31,12 +31,12 @@ export default function SuccessPage() {
         </div>
 
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          Payment <span className="violet-text">complete.</span>
+          Welcome to <span className="violet-text">VibeCode Safety.</span>
         </h1>
 
         <p className="mt-6 text-gray-300">
-          Thanks for purchasing VibeCode Safety Kit. Your download access is
-          available from the post-checkout access page.
+          Download the current member kit below. Start with the heavy-duty repo
+          audit, then add the daily guardrails to your project.
         </p>
 
         <p className="mt-4 text-sm leading-6 text-gray-400">
