@@ -10,7 +10,7 @@ This repo only contains the marketing site. It does **not** depend on any other 
 
 ## What this project is
 
-- A premium dark landing page for selling a one-time $49 digital kit.
+- A premium dark landing page for selling a one-time $29.99 digital kit (Launch Edition).
 - Next.js 14 (App Router) + React 18 + TypeScript + Tailwind CSS v3.
 - No database. No auth. No subscriptions. No cart. No API routes.
 - Stripe checkout is **not** wired yet — see `docs/CHECKOUT_TODO.md`.
@@ -20,7 +20,7 @@ This repo only contains the marketing site. It does **not** depend on any other 
 - **Name:** VibeCode Safety Kit
 - **Positioning:** “Make AI check the AI before you ship.”
 - **One-liner:** A practical guardrail system for solo founders and AI builders — prompts, checklists, repo rules, and pre-deploy workflows that help catch broken flows, exposed secrets, schema drift, and risky AI-generated changes before they go live.
-- **Price:** $49 one-time. Not a subscription.
+- **Price:** $29.99 one-time (Launch Edition). Not a subscription.
 - **Primary CTA:** “Get the kit”
 - **Secondary CTA:** “See what's inside”
 

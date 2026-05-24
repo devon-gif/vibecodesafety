@@ -1,4 +1,4 @@
-# QUICKSTART
+# QUICKSTART &mdash; VibeCode Safety Kit (Launch Edition)
 
 The whole kit in one page. If you read nothing else, read this.
 
@@ -6,7 +6,12 @@ The whole kit in one page. If you read nothing else, read this.
 
 ## The promise
 
+> **Ship faster without shipping blind.**
+>
 > Make AI check the AI before you ship.
+
+> **Start simple:** copy 3 files, paste 1 prompt, don&rsquo;t ship until
+> the review passes.
 
 You build with your AI coding tool like normal. You add a small safety
 loop around it. Bad changes get caught before they hit production.

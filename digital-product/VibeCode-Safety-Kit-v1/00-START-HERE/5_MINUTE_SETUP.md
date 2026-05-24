@@ -1,4 +1,8 @@
-# 5 MINUTE SETUP
+# 5 MINUTE SETUP &mdash; VibeCode Safety Kit (Launch Edition)
+
+> **Ship faster without shipping blind.**
+> Copy 3 files into your repo. Paste 1 prompt after every AI coding
+> change. Don&rsquo;t ship until the review passes.
 
 Five steps. Five minutes. You only do this once per project.
 

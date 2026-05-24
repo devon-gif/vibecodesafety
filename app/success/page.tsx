@@ -12,6 +12,7 @@ const steps = [
   "Fill out PROJECT_SAFETY_PROFILE.md",
   "Paste the Daily VibeCode Prompt into your AI coding tool",
   "Run the Reviewer Prompt before commit, push, or deploy",
+  "Add Core Guardrails like Gitleaks, GitHub Actions, Playwright, and k6 when you're ready",
 ];
 
 export default function SuccessPage() {
@@ -42,8 +43,9 @@ export default function SuccessPage() {
         </h1>
 
         <p className="mt-6 text-gray-300">
-          Thanks for purchasing VibeCode Safety Kit. Your download / access
-          instructions will be sent to the email used at checkout.
+          Your first step is not to install everything. Start simple: copy
+          the beginner safety files, fill out your project profile, and
+          use the Daily VibeCode Prompt after your next AI coding change.
         </p>
 
         <div className="glass-strong mx-auto mt-10 rounded-2xl p-6 text-left shadow-glow">

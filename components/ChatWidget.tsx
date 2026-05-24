@@ -7,36 +7,36 @@ type FAQ = { q: string; a: string };
 
 const faqs: FAQ[] = [
   {
-    q: "What do I get?",
-    a: "You get repo instruction templates, builder prompts, reviewer prompts, pre-commit/pre-push/pre-deploy checklists, critical flow checklists, security guardrails, and starter docs for checks like Gitleaks, GitHub Actions, k6, and Playwright.",
+    q: "Is this just a prompt pack?",
+    a: "No. It includes prompts, repo rules, checklists, project-profile templates, and starter docs for stronger checks like Gitleaks, GitHub Actions, Playwright, and k6.",
   },
   {
-    q: "Does this replace a developer?",
-    a: "No. It does not replace a senior developer, QA process, or security audit. It gives AI-assisted builders a practical review system to catch more issues before commit, push, or deploy.",
+    q: "Does it run checks automatically?",
+    a: "No. The first version is a digital kit, not a hosted dashboard. It gives you the files, prompts, and setup guides to add the workflow to your repo.",
   },
   {
-    q: "Does it work with Cursor?",
-    a: "Yes. The kit is tool-agnostic and includes repo rules and prompt workflows you can adapt for Cursor and similar AI coding tools.",
+    q: "What is Beginner Mode?",
+    a: "Beginner Mode is the fastest path. You copy 3 files into your repo, fill out a short project profile, paste the Daily VibeCode Prompt after AI edits code, and don't ship until the review passes.",
   },
   {
-    q: "Does it work with Claude or Codex?",
-    a: "Yes. The kit is designed for AI-assisted coding workflows, including Claude, Codex, Cursor, Windsurf, Copilot, and similar tools.",
+    q: "What are Core Guardrails?",
+    a: "Stronger guardrails for builders who are ready: repo instruction files (AGENTS / CLAUDE / Cursor / Windsurf / Copilot), Gitleaks setup, GitHub Actions starter, Playwright + k6 smoke tests, and release / rollback checklists. All included as templates and starter docs.",
+  },
+  {
+    q: "What if I use Supabase or Stripe?",
+    a: "The kit includes beginner-friendly guardrails for common Supabase risks (RLS, service-role keys, storage rules) and Stripe risks (webhook signature verification, plan state, success URLs, test vs live keys).",
+  },
+  {
+    q: "What does BLOCKED mean?",
+    a: "BLOCKED means the reviewer flagged something risky and you shouldn't commit, push, or deploy yet. Fix the listed items, then re-run the Reviewer Prompt on the new diff. PASS = ship. PASS WITH WARNINGS = ship carefully and track follow-ups.",
   },
   {
     q: "Is this a subscription?",
-    a: "No. VibeCode Safety Kit is a one-time digital product. The launch price is $29.99.",
-  },
-  {
-    q: "Can I use it with Supabase?",
-    a: "Yes. The kit includes practical checklist guidance for common Supabase risks like RLS, exposed service role keys, storage rules, auth flows, and schema drift.",
-  },
-  {
-    q: "Can I use it with Stripe?",
-    a: "Yes. The kit includes billing and checkout safety checks for common issues like webhook validation, protected routes, checkout success flows, environment variables, and test/live mode mistakes.",
+    a: "No. This is a one-time digital purchase at $29.99. Launch Edition pricing. No subscription, no hosted dashboard.",
   },
   {
     q: "Will it guarantee my app is secure?",
-    a: "No. No prompt or checklist can guarantee security. The kit helps reduce risk and improve your review workflow, but important apps should still get professional engineering and security review.",
+    a: "No. No prompt or checklist can guarantee that. The kit helps reduce risk and improve your review workflow, but it is not a replacement for professional engineering, QA, or security review.",
   },
 ];
 
