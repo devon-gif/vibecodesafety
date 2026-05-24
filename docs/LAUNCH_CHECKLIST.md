@@ -1,17 +1,77 @@
-# Launch Checklist - VibeCode Safety Kit
+# Launch Checklist - VibeCode Safety (Subscription)
 
 Run through this before flipping the site to "live".
+
+## Subscription Copy
+
+- [ ] No one-time pricing language remains on homepage.
+- [ ] Subscription price $6.99/month appears correctly.
+- [ ] Yearly option $59/year appears correctly.
+- [ ] "Cancel anytime" copy is accurate (support email until portal is live).
+- [ ] Support email (vibecodesafety@gmail.com) is visible on access and success pages.
+- [ ] No manual audit is promised at $6.99/month.
+- [ ] No "guaranteed security", "bug-free", or "production-ready" language.
 
 ## Site
 
 - [ ] Homepage renders without console errors.
-- [ ] Hero copy: "Make AI check the AI before you ship."
-- [ ] Pricing shows **$29.99 one-time** everywhere.
-- [ ] Sticky CTA appears after scroll on desktop and mobile.
-- [ ] Chat widget opens; FAQ chips return canned answers; final
-      "Get the Kit for $29.99" button works.
-- [ ] All "Get the Kit" buttons go to either the Stripe Payment Link
-      or `/checkout-coming-soon` (no broken hrefs).
+- [ ] Hero copy: "Audit your repo. Guard every AI change."
+- [ ] Pricing shows $6.99/month and $59/year.
+- [ ] Sticky CTA shows "$6.99/mo or $59/yr · cancel anytime".
+- [ ] Chat widget CTA shows "Start for $6.99/month".
+- [ ] All "Get Started" / "Start for $6.99/month" buttons go to monthly checkout or `/checkout-coming-soon`.
+- [ ] "Choose yearly — $59/year" button goes to yearly checkout or `/checkout-coming-soon`.
+
+## Pages
+
+- [ ] `/` - homepage.
+- [ ] `/checkout-coming-soon` - subscription placeholder copy.
+- [ ] `/success` - "Welcome to VibeCode Safety" copy.
+- [ ] `/access/vcs-launch-edition-2026-k9p4` - member kit download page.
+- [ ] `/privacy` - current copy, dated.
+- [ ] `/terms` - current copy, dated.
+- [ ] `/refund-policy` - subscription refund & cancellation policy.
+- [ ] Footer legal links work: Privacy Policy, Terms & Agreements, Refund Policy, Contact.
+
+## Stripe (see `docs/CHECKOUT_TODO.md`)
+
+- [ ] Monthly subscription price created at $6.99/month.
+- [ ] Yearly subscription price created at $59/year.
+- [ ] Monthly Payment Link created with success URL = `/access/vcs-launch-edition-2026-k9p4`.
+- [ ] Yearly Payment Link created with success URL = `/access/vcs-launch-edition-2026-k9p4`.
+- [ ] `NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK` set in production env.
+- [ ] `NEXT_PUBLIC_YEARLY_CHECKOUT_LINK` set in production env.
+- [ ] Test monthly purchase succeeds end-to-end in test mode.
+- [ ] Test yearly purchase succeeds end-to-end in test mode.
+- [ ] Switched to live mode for production.
+- [ ] Cancellation policy on the site matches Stripe behavior.
+
+## Digital product (Member Kit)
+
+- [ ] `digital-product/VibeCode-Safety-Kit-v1/` reviewed for typos.
+- [ ] Final ZIP opens locally.
+- [ ] Delivery method confirmed (Google Drive direct download link).
+- [ ] `START_HERE.md` / `QUICKSTART.md` clearly explains the audit + daily workflow.
+
+## Build / type-check
+
+- [ ] `pnpm run type-check` clean.
+- [ ] `pnpm run build` clean.
+- [ ] Local dev runs on http://localhost:3001.
+
+## Legal & policy
+
+- [ ] Refund policy updated to subscription cancellation language.
+- [ ] Disclaimer present near pricing: does not guarantee secure, bug-free, or production-ready software.
+- [ ] No fake testimonials or fake customer counts.
+
+## After launch
+
+- [ ] Watch first 5 subscriptions. Confirm each member received access.
+- [ ] Enable Stripe Customer Portal for self-serve cancellation.
+- [ ] Update FAQ cancellation answer once portal is live.
+- [ ] Replace placeholder testimonials with real ones.
+
 
 ## Pages
 

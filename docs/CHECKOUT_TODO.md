@@ -1,96 +1,87 @@
-# Checkout Setup TODO
+# Checkout Setup TODO — Subscription
 
-The site uses a primary checkout env var with a Stripe fallback:
+VibeCode Safety is now a subscription product: $6.99/month or $59/year.
 
-1. `NEXT_PUBLIC_CHECKOUT_LINK`
-2. `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`
-3. `/checkout-coming-soon`
+The site uses checkout env vars with fallback:
 
-When either checkout env var is **set**, every "Get the Kit" button opens that
-checkout link. When both are **blank**, every "Get the Kit" button routes to `/checkout-coming-soon`
-(a styled placeholder page) so we never have a broken href.
+1. `NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK` (monthly CTA)
+2. `NEXT_PUBLIC_YEARLY_CHECKOUT_LINK` (yearly CTA)
+3. `NEXT_PUBLIC_CHECKOUT_LINK` (fallback for both)
+4. `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` (legacy fallback)
+5. `/checkout-coming-soon` (final fallback)
 
-## Setup
+## Stripe Setup — Subscription
 
-1. Create a Stripe account.
-2. Create a product: **VibeCode Safety Kit**.
-3. Set price: **$29.99 one-time** (mode = `payment`, not `subscription`).
-4. Create a **Stripe Payment Link** for that price.
-5. Set the success redirect URL on the Payment Link to:
-   `https://yourdomain.com/access/vcs-launch-edition-2026-k9p4`
-6. Copy the Payment Link.
-7. Add it to your env (locally in `.env.local`, in production via your host's
-   env settings):
-   ```
-   NEXT_PUBLIC_CHECKOUT_LINK=https://buy.stripe.com/xxxxxxxx
-   ```
-8. Test checkout with Stripe test mode if applicable.
-9. Confirm all CTA buttons route correctly:
-   - Header "Get the Kit"
-   - Hero "Get the Kit for $29.99"
-   - Pricing card "Get the Kit for $29.99"
-   - Final CTA "Get the Kit for $29.99"
-   - Sticky CTA "Get the Kit"
-   - Chat widget "Get the Kit for $29.99"
-10. Confirm the `/success` page explains delivery clearly.
+- [ ] Create Stripe account (or use existing).
+- [ ] Create product: **VibeCode Safety** (subscription).
+- [ ] Create monthly price: **$6.99/month** (mode = `subscription`, interval = `month`).
+- [ ] Create yearly price: **$59/year** (mode = `subscription`, interval = `year`).
+- [ ] Create **monthly Payment Link** for $6.99/month price.
+- [ ] Create **yearly Payment Link** for $59/year price.
+- [ ] Set success redirect on both Payment Links to:
+  `https://yourdomain.com/access/vcs-launch-edition-2026-k9p4`
+- [ ] Add monthly link to env: `NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK`
+- [ ] Add yearly link to env: `NEXT_PUBLIC_YEARLY_CHECKOUT_LINK`
+- [ ] Test monthly checkout end-to-end in Stripe test mode.
+- [ ] Test yearly checkout end-to-end in Stripe test mode.
+- [ ] Test cancellation / support flow.
+- [ ] Confirm success redirect works after checkout.
+- [ ] Confirm access/download page shows download button when env var is set.
+- [ ] Confirm CTA buttons route correctly:
+  - Header "Get Started"
+  - Hero "Start for $6.99/month"
+  - Pricing card "Start for $6.99/month"
+  - Pricing card "Choose yearly — $59/year"
+  - Final CTA "Start for $6.99/month"
+  - Sticky CTA "Get Started"
+  - Chat widget "Start for $6.99/month"
+- [ ] Switch to live mode before launch.
 
 ## How CTAs are wired
 
-All purchase buttons use the helper in `lib/checkout.ts`:
+All purchase buttons use the helpers in `lib/checkout.ts`:
 
 ```ts
-export const CHECKOUT_LINK =
-  process.env.NEXT_PUBLIC_CHECKOUT_LINK ||
-  process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ||
-  "/checkout-coming-soon";
+export const MONTHLY_CHECKOUT_LINK =
+  process.env.NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK || CHECKOUT_LINK;
+
+export const YEARLY_CHECKOUT_LINK =
+  process.env.NEXT_PUBLIC_YEARLY_CHECKOUT_LINK || CHECKOUT_LINK;
 ```
 
-Buttons render through `<BuyLink>` (`components/BuyLink.tsx`) which:
-- opens the checkout URL in a new tab if it's an absolute URL,
-- navigates to `/checkout-coming-soon` otherwise.
+Buttons render through `<BuyLink>` or direct `<a>` tags. The yearly CTA in
+the pricing card uses `<BuyLink href={YEARLY_CHECKOUT_LINK}>`. All other
+CTAs (hero, sticky, chat widget, final CTA) default to the monthly link via
+`CHECKOUT_LINK` fallback.
+
+## Cancellation
+
+No Stripe Customer Portal is configured yet. Until it is:
+- Cancellations handled by emailing `vibecodesafety@gmail.com`.
+- This is documented in the FAQ and refund policy.
+- TODO: Enable Stripe Customer Portal for self-serve cancellation.
+- TODO: Update FAQ copy once portal is live.
+
+## Email Consent TODO
+
+The pricing card includes an optional, **unchecked** consent checkbox. It is
+UI-only and does not store anything. Before launch, connect to a real email
+provider. Keep consent optional. Do not pre-check.
 
 ## What we are intentionally NOT doing yet
 
 - No `stripe` SDK installed.
 - No `app/api/checkout` route.
 - No Stripe webhook handler.
-- No database. No auth. No subscription mode.
+- No database. No auth. No automated account management.
+- No Stripe Customer Portal (yet).
 - No Vercel deploy from this repo.
-
-## Email Consent TODO
-
-The pricing card includes an optional, **unchecked** consent checkbox:
-
-> Send me product updates, launch notes, and helpful AI coding safety tips by email.
-
-It is currently UI-only (state lives in `components/EmailConsentCheckbox.tsx`)
-and does not store anything.
-
-Before launch:
-
-1. Decide where email consent will be collected:
-   - Stripe Checkout custom consent if available
-   - email marketing provider form
-   - post-purchase welcome flow
-2. Keep marketing consent optional.
-3. Do not pre-check the box.
-4. Store consent only if connected to a real email provider or checkout system.
-5. Include unsubscribe instructions in future marketing emails.
-
-Do **not** add Mailchimp, ConvertKit, Resend, Supabase, or a database
-integration until the launch path is decided.
 
 ## Legal Pages TODO
 
-Confirm these pages exist and render with the Back to Home CTA:
+Confirm these pages exist and render with correct subscription copy:
 
 - `/privacy`
 - `/terms`
-- `/refund-policy`
+- `/refund-policy` — now titled "Refund & Cancellation Policy"
 
-Confirm footer legal links work on desktop and mobile:
-
-- Privacy Policy → `/privacy`
-- Terms & Agreements → `/terms`
-- Refund Policy → `/refund-policy`
-- Contact → `/#contact`
