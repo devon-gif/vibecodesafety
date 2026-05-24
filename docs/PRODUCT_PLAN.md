@@ -1,7 +1,7 @@
 # VibeCode Safety Kit — Product Plan
 
 ## Product
-**VibeCode Safety Kit** — a one-time, $49 digital kit for solo founders and AI builders.
+**VibeCode Safety Kit** — a one-time, $29.99 digital kit for solo founders and AI builders.
 
 ## Positioning
 > Make AI check the AI before you ship.
