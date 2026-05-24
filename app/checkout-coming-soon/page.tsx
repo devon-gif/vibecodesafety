@@ -28,9 +28,9 @@ export default function CheckoutComingSoonPage() {
         <p className="mt-6 text-gray-300">
           VibeCode Safety will be available for{" "}
           <span className="text-white">$6.99/month</span> or{" "}
-          <span className="text-white">$59/year</span>. The subscription
-          includes the repo audit workflow, daily AI change guardrails, and
-          ongoing prompt and checklist updates.
+          <span className="text-white">$59/year</span>. Members get the repo
+          audit workflow, VibeCode Auditor Agent, daily guardrails, monthly
+          safety drops, and ongoing updates.
         </p>
 
         <p className="mt-4 text-gray-400">
@@ -41,11 +41,6 @@ export default function CheckoutComingSoonPage() {
           <Link href="/" className="btn-primary">
             Back to Home
           </Link>
-        </div>
-
-        <div className="mx-auto mt-10 max-w-md rounded-xl border border-white/10 bg-white/[0.02] p-4 text-xs text-gray-500">
-          Stripe checkout and Google Drive delivery will be connected here before
-          launch.
         </div>
 
         {showTestLink ? (

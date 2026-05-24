@@ -47,19 +47,27 @@ const toneDot: Record<"emerald" | "amber" | "rose", string> = {
 const insideCards = [
   {
     t: "Heavy-Duty Repo Audit",
-    b: "Run a structured AI-assisted audit on your current repo to spot risky flows, exposed config, auth gaps, billing issues, and deployment risks.",
+    b: "Run a structured AI-assisted audit on your current repo to spot auth gaps, checkout risks, exposed config, API issues, and deployment problems.",
+  },
+  {
+    t: "VibeCode Auditor Agent",
+    b: "Prompt and instruction files that help Claude, Codex, Cursor, Windsurf, or ChatGPT act as your repo safety reviewer.",
   },
   {
     t: "Daily AI Change Reviews",
-    b: "Use the daily prompt after AI edits code so every change gets reviewed before commit, push, or deploy.",
+    b: "Use short prompts after AI edits code so risky changes get checked before commit, push, or deploy.",
   },
   {
-    t: "Repo Rules for AI Tools",
-    b: "Drop in Claude, Codex, Cursor, Windsurf, and Copilot instruction files so your tools stop treating every edit like an isolated file.",
+    t: "Monthly Safety Drops",
+    b: "Get new audit prompts, checklists, scorecards, and guardrails as the product evolves.",
   },
   {
-    t: "Ongoing Updates",
-    b: "Get new audit prompts, checklists, guardrails, and workflow improvements as the product evolves.",
+    t: "Repo Rules",
+    b: "Drop in Claude, Codex, Cursor, Windsurf, and Copilot instruction templates.",
+  },
+  {
+    t: "Launch Guardrails",
+    b: "Use pre-commit, pre-push, pre-deploy, rollback, and handoff checklists.",
   },
 ];
 
@@ -100,22 +108,23 @@ const riskZones = [
 
 const pricingIncludes = [
   "Heavy-duty repo audit workflow",
-  "Daily AI change review prompt",
+  "VibeCode Auditor Agent",
+  "Daily AI change review prompts",
   "Project safety profile",
   "Repo instruction templates",
   "Auth, billing, env var, API, Supabase, and Stripe checklists",
-  "Pre-commit, pre-push, and pre-deploy reviews",
+  "Monthly Safety Drops",
   "Ongoing prompt and checklist updates",
 ];
 
 const faqs = [
   {
-    q: "Is this still a one-time kit?",
-    a: "No. VibeCode Safety is moving to a subscription so members can receive ongoing audit workflows, prompt updates, checklists, and guardrail improvements.",
+    q: "Is this a one-time kit?",
+    a: "No. VibeCode Safety is now a subscription membership so members can receive ongoing audit workflows, prompt updates, checklists, and monthly safety drops.",
   },
   {
     q: "Do you personally audit my repo?",
-    a: "Not on the $6.99/month plan. The subscription gives you a heavy-duty AI-assisted repo audit workflow you can run with your coding tools. Manual audits may become a separate paid service later.",
+    a: "Not on the $6.99/month plan. The membership gives you a heavy-duty AI-assisted repo audit workflow you can run with your coding tools. Manual audits may become a separate paid service later.",
   },
   {
     q: "Can I pay yearly?",
@@ -123,7 +132,7 @@ const faqs = [
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes. Cancel anytime by contacting support until automated account management is added.",
+    a: "Yes. Billing is handled through Stripe. Until an automated portal is fully connected, cancellation can be handled through support.",
   },
   {
     q: "Does this guarantee my app is secure?",
@@ -131,7 +140,7 @@ const faqs = [
   },
   {
     q: "What do I get as a member?",
-    a: "You get the current VibeCode Safety Kit, heavy-duty repo audit workflow, daily AI change review prompts, repo instruction templates, checklists, and ongoing updates.",
+    a: "You get the current member kit, heavy-duty repo audit workflow, VibeCode Auditor Agent files, daily AI change review prompts, repo instruction templates, checklists, monthly safety drops, and ongoing updates.",
   },
   {
     q: "Does it work with Cursor, Claude, Codex, and Windsurf?",
@@ -226,7 +235,8 @@ export default function Home() {
             </h1>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
               VibeCode Safety gives AI-assisted builders a heavy-duty repo
-              audit workflow plus daily guardrails for every AI coding change.
+              audit workflow, daily AI change reviews, and monthly safety
+              drops so you can catch risky code before you ship.
             </p>
 
             <div className="mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
@@ -238,10 +248,6 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="mt-5 text-sm font-medium text-violet-100">
-              ⭐⭐⭐⭐⭐ Rated 4.8 stars!
-            </p>
-
             <p className="mt-4 text-sm text-gray-500">
               Monthly or yearly billing. Cancel anytime.
             </p>
@@ -252,7 +258,7 @@ export default function Home() {
                   <path d="m5 12 5 5L20 7" />
                 </svg>
               </span>
-              Works with Claude, Codex, Cursor, Windsurf, Copilot &amp; more
+              Works with Claude, Codex, Cursor, Windsurf, Copilot &amp; more.
             </p>
           </div>
 
@@ -274,8 +280,8 @@ export default function Home() {
             See the workflow in 35 seconds.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-gray-400 md:text-base">
-            A quick overview of how VibeCode Safety Kit helps you review
-            AI-generated changes before commit, push, or deploy.
+            A quick overview of how VibeCode Safety helps you audit your repo
+            and review AI-generated changes before commit, push, or deploy.
           </p>
 
           <div className="mx-auto mt-10 max-w-5xl">
@@ -328,7 +334,7 @@ export default function Home() {
           </ul>
           <p className="light-muted mx-auto mt-5 max-w-2xl text-center text-xs leading-relaxed">
             Tool names are shown for compatibility context only. VibeCode
-            Safety Kit is independent and is not affiliated with or endorsed
+            Safety is independent and is not affiliated with or endorsed
             by these companies.
           </p>
         </div>
@@ -441,63 +447,79 @@ export default function Home() {
           <Eyebrow>SIMPLE PRICING</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
             Simple pricing for{" "}
-            <span className="violet-text">solo builders.</span>
+            <span className="violet-text">AI-assisted builders.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
             One subscription. Repo audit workflow, daily guardrails, and
             ongoing updates.
           </p>
 
-          <div className="mx-auto mt-12 max-w-2xl">
+          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-5 lg:grid-cols-2">
             <div className="glass-strong relative rounded-3xl p-8 shadow-glow-lg">
               <div className="absolute inset-x-0 -top-px mx-auto h-px w-2/3 bg-gradient-to-r from-transparent via-violet-300/60 to-transparent" />
-              <div className="flex items-center justify-center">
-                <span className="pill">
-                  <SettingsIcon />
-                  VIBECODESAFETY — SUBSCRIPTION
-                </span>
+              <span className="pill">
+                <SettingsIcon />
+                MONTHLY
+              </span>
+              <h3 className="mt-6 text-2xl font-semibold text-white">
+                VibeCode Safety Monthly
+              </h3>
+              <div className="mt-4 flex items-end gap-2">
+                <span className="text-5xl font-semibold text-white">$6.99</span>
+                <span className="pb-2 text-sm text-violet-300">/month</span>
               </div>
-
-              <div className="mt-6 grid grid-cols-2 gap-4 text-center">
-                <div className="rounded-2xl border border-violet-300/20 bg-violet-500/[0.07] p-4">
-                  <div className="text-4xl font-semibold text-white">$6.99</div>
-                  <div className="mt-1 text-sm text-violet-300">per month</div>
-                </div>
-                <div className="rounded-2xl border border-violet-300/30 bg-violet-500/[0.12] p-4">
-                  <div className="text-4xl font-semibold text-white">$59</div>
-                  <div className="mt-1 text-sm text-violet-300">per year</div>
-                  <div className="mt-1 text-[11px] text-gray-400">Save with yearly billing.</div>
-                </div>
-              </div>
-
-              <div className="my-6 divider-line" />
-
-              <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                {pricingIncludes.map((b) => (
-                  <CheckBullet key={b}>{b}</CheckBullet>
-                ))}
-              </ul>
-
+              <p className="mt-3 text-sm text-gray-400">Best for active builders.</p>
               <EmailConsentCheckbox />
-
               <BuyLink className="btn-primary mt-5 w-full text-base">
                 <CartIcon />
-                Start for $6.99/month
+                Start monthly
               </BuyLink>
-              <BuyLink href={YEARLY_CHECKOUT_LINK} className="btn-secondary mt-3 w-full text-base">
-                Choose yearly — $59/year
-              </BuyLink>
-              <p className="mt-3 text-center text-xs text-gray-500">
-                Cancel anytime. Helps reduce risk, but does not guarantee
-                secure, bug-free, or production-ready software.
-              </p>
-              <p className="mt-4 text-center text-xs leading-relaxed text-gray-500">
-                <a href="/refund-policy" className="underline hover:text-gray-400">
-                  Refund &amp; cancellation policy
-                </a>
-                .
-              </p>
             </div>
+
+            <div className="glass-strong relative rounded-3xl p-8 shadow-glow-lg">
+              <div className="absolute inset-x-0 -top-px mx-auto h-px w-2/3 bg-gradient-to-r from-transparent via-violet-300/60 to-transparent" />
+              <span className="pill">
+                <SettingsIcon />
+                BEST VALUE
+              </span>
+              <h3 className="mt-6 text-2xl font-semibold text-white">
+                VibeCode Safety Yearly
+              </h3>
+              <div className="mt-4 flex items-end gap-2">
+                <span className="text-5xl font-semibold text-white">$59</span>
+                <span className="pb-2 text-sm text-violet-300">/year</span>
+              </div>
+              <p className="mt-3 text-sm text-gray-400">
+                Best value. Save compared to monthly billing.
+              </p>
+              <EmailConsentCheckbox />
+              <BuyLink href={YEARLY_CHECKOUT_LINK} className="btn-primary mt-5 w-full text-base">
+                <CartIcon />
+                Start yearly
+              </BuyLink>
+            </div>
+          </div>
+
+          <div className="glass mx-auto mt-6 max-w-5xl rounded-2xl p-6">
+            <p className="text-sm font-semibold text-white">Both plans include:</p>
+            <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {pricingIncludes.map((b) => (
+                <CheckBullet key={b}>{b}</CheckBullet>
+              ))}
+            </ul>
+            <p className="mt-5 text-xs leading-relaxed text-gray-500">
+              Helps reduce risk, but does not guarantee secure, bug-free, or
+              production-ready software.
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-gray-500">
+              Have an invite code? Enter it at checkout.
+            </p>
+            <p className="mt-3 text-xs leading-relaxed text-gray-500">
+              <a href="/refund-policy" className="underline hover:text-gray-400">
+                Refund &amp; cancellation policy
+              </a>
+              .
+            </p>
           </div>
         </div>
       </section>

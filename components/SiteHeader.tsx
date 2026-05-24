@@ -16,8 +16,8 @@ export function SiteHeader() {
           <a href="#how-it-works" className="hover:text-white">
             How It Works
           </a>
-          <a href="#who-its-for" className="hover:text-white">
-            Who It&apos;s For
+          <a href="#pricing" className="hover:text-white">
+            Pricing
           </a>
           <a href="#faq" className="hover:text-white">
             FAQ

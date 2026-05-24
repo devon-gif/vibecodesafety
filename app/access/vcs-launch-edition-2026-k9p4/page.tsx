@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PRODUCT_DOWNLOAD_LINK, SUPPORT_EMAIL } from "@/lib/checkout";
 
 export const metadata: Metadata = {
-  title: "Download VibeCode Safety Kit",
+  title: "Download VibeCode Safety Member Kit",
   robots: {
     index: false,
     follow: false,
@@ -14,8 +14,8 @@ const steps = [
   "Download the member kit",
   "Open QUICKSTART.md",
   "Run the Heavy-Duty Repo Audit workflow",
-  "Add Beginner Mode files to your repo",
-  "Use the Daily VibeCode Prompt after AI coding changes",
+  "Add the daily guardrails to your repo",
+  "Use the Daily AI Change Review Prompt after AI coding changes",
 ];
 
 export default function LaunchEditionAccessPage() {
@@ -30,7 +30,7 @@ export default function LaunchEditionAccessPage() {
       <div className="mx-auto max-w-2xl px-6 py-24 text-center">
         <span className="pill">
           <span className="pill-dot" />
-          VibeCode Safety — Member Kit
+          VibeCode Safety Member Kit
         </span>
 
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
@@ -64,7 +64,7 @@ export default function LaunchEditionAccessPage() {
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              Download the ZIP
+              Download the member kit
             </a>
           </div>
         ) : (

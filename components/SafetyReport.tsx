@@ -265,15 +265,15 @@ export function SafetyReport() {
                 </span>
                 <div>
                   <div className="text-xs font-bold uppercase tracking-wider text-white">
-                    Pass with Warnings
+                    PASS WITH WARNINGS
                   </div>
                   <div className="text-[10px] text-[#C4B5FD]/60 leading-tight mt-0.5">
-                    Review checkout redirect before deploy
+                    Review 2 warnings before deploy.
                   </div>
                 </div>
               </div>
               <span className="flex-none rounded-full border border-[#A78BFA]/40 bg-[#A78BFA]/15 px-2.5 py-1 text-[11px] font-semibold text-[#C4B5FD]">
-                2 tracked
+                2 warnings
               </span>
             </div>
           </div>
