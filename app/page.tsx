@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SafetyReport } from "@/components/SafetyReport";
+import { BuyLink } from "@/components/BuyLink";
 
 const kitFiles = [
   { name: "START_HERE.md", desc: "Read this first. The 5-minute orientation." },
@@ -395,10 +396,10 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
-              <Link href="#pricing" className="btn-primary">
+              <BuyLink className="btn-primary">
                 <CartIcon />
                 Get the Kit for $29.99
-              </Link>
+              </BuyLink>
               <Link href="#whats-inside" className="btn-secondary">
                 See What&apos;s Inside
               </Link>
@@ -766,13 +767,10 @@ export default function Home() {
                 ))}
               </ul>
 
-              <Link
-                href="/success"
-                className="btn-primary mt-8 w-full text-base"
-              >
+              <BuyLink className="btn-primary mt-8 w-full text-base">
                 <CartIcon />
                 Get the Kit for $29.99
-              </Link>
+              </BuyLink>
               <p className="mt-3 text-center text-xs text-gray-500">
                 Early version pricing. One-time purchase. No subscription
                 required.
@@ -801,6 +799,31 @@ export default function Home() {
                 AI-assisted builders catch more issues before they ship.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GUARANTEE */}
+      <section className="relative border-t border-white/5">
+        <div className="mx-auto max-w-3xl px-6 py-20">
+          <div className="glass-strong rounded-3xl p-8 text-center shadow-glow">
+            <div className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300 ring-1 ring-emerald-400/30">
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+              Try the workflow risk-free.
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-gray-300">
+              If you open the kit and feel like it does not help you review
+              AI-generated code more clearly, email us within 7 days.
+            </p>
+            <p className="mx-auto mt-4 max-w-xl text-xs text-gray-500">
+              The kit helps reduce risk, but it does not guarantee bug-free or
+              secure software.
+            </p>
           </div>
         </div>
       </section>
@@ -916,10 +939,10 @@ export default function Home() {
             ship with more confidence.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link href="/success" className="btn-primary">
+            <BuyLink className="btn-primary">
               <CartIcon />
               Get the Kit for $29.99
-            </Link>
+            </BuyLink>
             <Link href="#whats-inside" className="btn-secondary">
               See What&apos;s Inside
             </Link>

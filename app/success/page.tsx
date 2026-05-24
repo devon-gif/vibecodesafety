@@ -1,9 +1,17 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SUPPORT_EMAIL } from "@/lib/checkout";
 
 export const metadata: Metadata = {
-  title: "Checkout coming soon — VibeCode Safety Kit",
+  title: "You're in — VibeCode Safety Kit",
 };
+
+const steps = [
+  "Open START_HERE.md",
+  "Copy the repo instruction files into your project",
+  "Run the Builder Prompt before your next AI coding change",
+  "Run the Reviewer Prompt before you commit, push, or deploy",
+];
 
 export default function SuccessPage() {
   return (
@@ -12,30 +20,61 @@ export default function SuccessPage() {
         aria-hidden
         className="orb left-1/2 top-[-160px] h-[460px] w-[460px] -translate-x-1/2 bg-violet-600/40"
       />
-      <div className="mx-auto max-w-2xl px-6 py-28 text-center">
-        <span className="pill">
-          <span className="pill-dot" />
-          CHECKOUT COMING SOON
-        </span>
+      <div className="mx-auto max-w-2xl px-6 py-24 text-center">
+        <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300 ring-1 ring-emerald-400/30">
+          <svg
+            viewBox="0 0 24 24"
+            className="h-7 w-7"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="m5 12 5 5L20 7" />
+          </svg>
+        </div>
+
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          Thanks for your interest in the{" "}
-          <span className="violet-text">VibeCode Safety Kit</span>.
+          You&apos;re in —{" "}
+          <span className="violet-text">VibeCode Safety Kit is ready.</span>
         </h1>
-        <p className="mt-6 text-gray-400">
-          Payments aren&apos;t live yet. The kit launches as a one-time $29.99
-          purchase — no subscription. Once checkout is enabled, this page will
-          confirm your order and deliver your download link.
+
+        <p className="mt-6 text-gray-300">
+          Thanks for purchasing VibeCode Safety Kit. Your download/access
+          instructions will be sent to the email used at checkout.
         </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+
+        <div className="glass-strong mx-auto mt-10 rounded-2xl p-6 text-left shadow-glow">
+          <div className="text-sm font-semibold uppercase tracking-wider text-violet-300">
+            What to do first
+          </div>
+          <ol className="mt-5 space-y-3">
+            {steps.map((s, i) => (
+              <li key={s} className="flex items-start gap-3 text-gray-200">
+                <span className="mt-0.5 inline-flex h-7 w-7 flex-none items-center justify-center rounded-full bg-gradient-to-br from-violetglow-500 to-violetglow-700 text-xs font-semibold text-white shadow-glow">
+                  {i + 1}
+                </span>
+                <span>{s}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div className="mt-10 flex justify-center">
           <Link href="/" className="btn-primary">
-            Back to homepage
-          </Link>
-          <Link href="/#whats-inside" className="btn-secondary">
-            See what&apos;s inside
+            Back to Home
           </Link>
         </div>
-        <p className="mt-6 text-xs text-gray-500">
-          One-time purchase. No subscription required.
+
+        <p className="mt-8 text-xs text-gray-500">
+          If you do not receive access instructions, contact support:{" "}
+          <a
+            href={`mailto:${SUPPORT_EMAIL}`}
+            className="text-violet-300 hover:text-violet-200"
+          >
+            {SUPPORT_EMAIL}
+          </a>
         </p>
       </div>
     </section>

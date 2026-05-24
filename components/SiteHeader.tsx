@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { BuyLink } from "./BuyLink";
 
 export function SiteHeader() {
   return (
@@ -22,9 +23,9 @@ export function SiteHeader() {
             FAQ
           </a>
         </nav>
-        <Link href="#pricing" className="btn-primary px-4 py-2 text-sm">
+        <BuyLink className="btn-primary px-4 py-2 text-sm">
           Get the Kit
-        </Link>
+        </BuyLink>
       </div>
     </header>
   );

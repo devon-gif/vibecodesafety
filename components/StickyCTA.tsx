@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { STRIPE_PAYMENT_LINK, isExternalCheckout } from "@/lib/checkout";
 
 export function StickyCTA() {
   const [visible, setVisible] = useState(false);
@@ -48,12 +48,15 @@ export function StickyCTA() {
             </div>
           </div>
         </div>
-        <Link
-          href="#pricing"
+        <a
+          href={STRIPE_PAYMENT_LINK}
+          {...(isExternalCheckout(STRIPE_PAYMENT_LINK)
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
           className="btn-primary flex-none px-4 py-2 text-sm"
         >
           Get the Kit
-        </Link>
+        </a>
       </div>
     </div>
   );
