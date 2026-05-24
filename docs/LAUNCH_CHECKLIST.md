@@ -91,7 +91,7 @@ Run through this before flipping the site to "live".
 - [ ] All purchase CTAs work (header, hero, beginner-setup section,
       pricing, sticky CTA, chat widget, final CTA).
 - [ ] Footer legal links work on desktop AND mobile (Privacy Policy,
-      Terms & Agreements, Refund Policy, Contact mailto).
+      Terms & Agreements, Refund Policy, Contact section).
 - [ ] Hidden access page is not linked in the public nav, footer, or
       homepage.
 - [ ] Site is responsive on a real phone: sticky CTA and chat widget
@@ -125,7 +125,7 @@ Run through this before flipping the site to "live".
 - [ ] `/sign-up` page renders cleanly.
 - [ ] Google button is **visibly disabled** with a "Coming soon" badge.
 - [ ] Sign-up page does not imply auth is live.
-- [ ] Header "Sign In" link is subtle, not the primary CTA.
+- [ ] Header does not show a Sign In link for v1.
 - [ ] Purchase does **not** require an account.
 - [ ] Stripe checkout email is the delivery identity for launch.
 

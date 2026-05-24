@@ -18,7 +18,7 @@ SDK, write API routes, or handle webhooks for v1.
 1. **Payment links → New.**
 2. Select the price you just created.
 3. After payment behavior: **Redirect to your website**.
-4. Success URL: `https://yourdomain.com/success`.
+4. Success URL: `https://yourdomain.com/access/vcs-launch-edition-2026-k9p4`.
 5. (Optional) Collect billing address only if you need it for taxes.
 6. (Optional) Custom field: a single optional checkbox labeled
    *"Send me product updates and AI coding safety tips by email"*.
@@ -50,7 +50,7 @@ instead of breaking.
 2. On the site, click any Buy button.
 3. Pay with Stripe test card `4242 4242 4242 4242`, any future expiry,
    any CVC, any ZIP.
-4. Confirm you land on `/success`.
+4. Confirm you land on `/access/vcs-launch-edition-2026-k9p4`.
 5. Confirm Stripe shows the test payment under **Payments**.
 
 ## Step 5 — Switch to live mode
@@ -60,16 +60,17 @@ instead of breaking.
 2. Update the env var in production to the **live** Payment Link URL.
 3. Redeploy / restart so the new env var takes effect.
 4. Make a real $29.99 purchase from your own account. Refund yourself
-   after confirming `/success` works.
+   after confirming the hidden access page works.
 
-## Step 6 — Email delivery
+## Step 6 — Download delivery
 
-We do not have email automation in v1. The simplest delivery path:
+We do not have webhook-verified delivery in v1. The simplest delivery path:
 
-- After a real purchase, manually email the buyer the kit (Notion link,
-  GitHub release link, or a zip).
-- When ready, replace this with a real provider (Resend / Postmark /
-  ConvertKit) and connect it to a Stripe webhook.
+- Redirect the buyer to `/access/vcs-launch-edition-2026-k9p4`.
+- Set `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` to a direct Google Drive file
+  download URL.
+- When ready, replace this with server-side payment verification or a
+  digital delivery platform.
 
 See `docs/CHECKOUT_TODO.md` for the email-consent and webhook upgrade path.
 

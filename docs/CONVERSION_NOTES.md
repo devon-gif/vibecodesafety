@@ -48,8 +48,8 @@ do not accidentally ship misleading claims.
     delivery is available."
   - Primary CTA on the page is still **Get the Kit for $29.99**.
   - Secondary CTA is "Back to Home".
-- A subtle "Sign In" link in the header (sm+ breakpoints) routes to
-  `/sign-up`. It is **not** the primary CTA.
+- The header does not show a Sign In link for v1, so purchase remains the
+  clear primary action.
 - **TODO when ready for accounts:** plug in real auth via Supabase
   Auth, Clerk, or NextAuth/Auth.js. Replace the disabled button with a
   working OAuth flow. Update the FAQ entry "Can I sign in with Google?"
@@ -58,11 +58,10 @@ do not accidentally ship misleading claims.
 ## Checkout / delivery
 
 - One-time purchase at **$29.99 (Launch Edition)**. No subscription.
-- All purchase CTAs route through `lib/checkout.ts` →
-  `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` (or `/checkout-coming-soon`
-  fallback).
-- Delivery for launch: access instructions sent to the email used at
-  Stripe checkout.
+- All purchase CTAs route through `lib/checkout.ts`:
+  `NEXT_PUBLIC_CHECKOUT_LINK`, then `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`,
+  then `/checkout-coming-soon`.
+- Delivery for launch: Stripe redirects buyers to the hidden access page.
 - Future delivery via authenticated download is out of scope for v1.
 
 ## Language guardrails
@@ -88,4 +87,4 @@ Always say:
 - `docs/CHECKOUT_TODO.md` — Stripe Payment Link setup.
 - `docs/STRIPE_SETUP.md` — step-by-step setup.
 - `app/sign-up/page.tsx` — placeholder sign-up route.
-- `components/SiteHeader.tsx` — subtle Sign In link wiring.
+- `components/SiteHeader.tsx` — no Sign In link for v1.
