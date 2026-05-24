@@ -1,47 +1,68 @@
-# Launch Checklist
+# Launch Checklist — VibeCode Safety Kit
 
-Pre-launch tasks for the VibeCode Safety Kit landing site.
+Run through this before flipping the site to "live".
 
-## Content
-- [ ] Final pass on hero copy
-- [ ] Final pass on FAQ
-- [ ] Confirm pricing copy says “one-time”, not “subscription”
-- [ ] Add real support email to footer / privacy / refund policy
-- [ ] Replace placeholder “Last updated” dates in legal pages
+## Site
 
-## Visual / brand
-- [ ] Add favicon (`app/icon.png` or `app/favicon.ico`)
-- [ ] Add OG image (`app/opengraph-image.png`)
-- [ ] Confirm dark theme renders correctly on iOS Safari
-- [ ] Confirm responsive layout at 375px, 768px, 1280px
+- [ ] Homepage renders without console errors.
+- [ ] Hero copy: "Make AI check the AI before you ship."
+- [ ] Pricing shows **$29.99 one-time** everywhere.
+- [ ] Sticky CTA appears after scroll on desktop and mobile.
+- [ ] Chat widget opens; FAQ chips return canned answers; final
+      "Get the Kit for $29.99" button works.
+- [ ] All "Get the Kit" buttons go to either the Stripe Payment Link
+      or `/checkout-coming-soon` (no broken hrefs).
 
-## Product / kit
-- [ ] Build the actual kit ZIP (replace `kit-preview/` placeholders)
-- [ ] Decide on delivery method (signed link, email, Gumroad, Lemon Squeezy, custom)
-- [ ] Write the customer “welcome” email
+## Pages
 
-## Payments (do **not** start until product is ready)
-- [ ] Create Stripe product + $49 one-time price
-- [ ] Decide on Stripe Checkout vs Payment Link vs custom
-- [ ] Wire `/success` to confirm a real session_id
-- [ ] Add tax / VAT handling if applicable
-- [ ] See `CHECKOUT_TODO.md`
+- [ ] `/` — homepage.
+- [ ] `/checkout-coming-soon` — placeholder when env var unset.
+- [ ] `/success` — post-Stripe success page with delivery instructions.
+- [ ] `/privacy` — current copy, dated.
+- [ ] `/terms` — current copy, dated.
+- [ ] `/refund-policy` — current copy, dated.
+- [ ] Footer legal links work on desktop and mobile:
+      Privacy Policy, Terms & Agreements, Refund Policy, Contact.
 
-## Legal
-- [ ] Review Terms / Privacy / Refund policy with the right jurisdiction in mind
-- [ ] Add company / sole-trader name + address to legal pages
+## Stripe (see `docs/STRIPE_SETUP.md`)
 
-## Analytics
-- [ ] Add lightweight analytics (Plausible / Umami / GA4)
-- [ ] Track CTA clicks: “Get the kit”, “See what's inside”
+- [ ] Product created at $29.99 one-time (NOT subscription).
+- [ ] Payment Link created with success URL = `/success`.
+- [ ] `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` set in production env.
+- [ ] Test purchase succeeds end-to-end in test mode.
+- [ ] Switched to live mode for production.
+- [ ] Refund policy on the site matches Stripe behavior.
 
-## Tech
-- [ ] `pnpm run type-check` clean
-- [ ] `pnpm run build` clean
-- [ ] Check no console errors on `/`, `/success`, `/terms`, `/privacy`, `/refund-policy`
+## Digital product
 
-## Launch day
-- [ ] Pick the domain
-- [ ] Decide on host (Vercel, Cloudflare Pages, etc.) — **not done by this repo**
-- [ ] Soft launch to small list
-- [ ] Public launch post
+- [ ] `digital-product/VibeCode-Safety-Kit-v1/` is reviewed for typos
+      and `{{REPLACE_ME}}` placeholders are documented as user fills.
+- [ ] A delivery method is decided (zip download, GitHub release link,
+      Notion share, or manual email after each sale).
+- [ ] `START_HERE.md` clearly explains the 5-minute first-use loop.
+
+## Build / type-check
+
+- [ ] `pnpm run type-check` clean.
+- [ ] `pnpm run build` clean.
+- [ ] Local dev runs on http://localhost:3001.
+
+## Legal & policy
+
+- [ ] Email used in legal pages: `support@vibecodesafety.com`.
+- [ ] No fake testimonials, no fake "5,000 customers" claims.
+- [ ] Disclaimer present near pricing: this is not a security audit and
+      does not replace a senior developer.
+
+## Email consent (optional)
+
+- [ ] Pricing card includes the **unchecked-by-default** marketing
+      consent checkbox.
+- [ ] When connecting to a real provider, do not pre-check it.
+
+## After launch
+
+- [ ] Watch the first 5 real purchases. Confirm each buyer received the
+      kit.
+- [ ] Open one bug ticket per piece of feedback. Don't lose any.
+- [ ] Schedule a v1.1 pass: typos, missing examples, new tools to support.

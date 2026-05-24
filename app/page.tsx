@@ -432,16 +432,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FILE TREE — what you actually get */}
+      {/* PREVIEW WHAT'S INSIDE */}
       <section className="relative border-t border-white/5">
         <div className="mx-auto max-w-7xl px-6 py-24">
-          <Eyebrow>WHAT YOU ACTUALLY GET</Eyebrow>
+          <Eyebrow>PREVIEW WHAT&apos;S INSIDE</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            A real folder you drop into your repo.
+            Preview what&apos;s inside.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-center text-gray-400">
-            Not a course. Not a SaaS dashboard. A small set of markdown files
-            and starter configs that live in your project alongside your code.
+            A practical folder of prompts, checklists, and guardrails you can
+            copy into your repo and reuse after every AI coding change.
           </p>
 
           <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-[1fr,1.1fr]">
@@ -491,6 +491,60 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Preview excerpt cards */}
+          <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3">
+            {[
+              {
+                t: "Reviewer AI Prompt",
+                excerpt:
+                  "You are a senior reviewer for a small product. Your only job is to inspect the change below and return a confident, structured verdict. Return: files changed, risk level, broken-flow check (auth, billing, data writes, schema), security review, type/build sanity, things that might silently break, required fixes, follow-ups, and finally a single VERDICT line: PASS / PASS WITH WARNINGS / BLOCKED.",
+              },
+              {
+                t: "Pre-Deploy Checklist",
+                excerpt:
+                  "[ ] type-check clean  [ ] build clean  [ ] env vars set in production  [ ] gitleaks clean  [ ] sign in / sign up / sign out work  [ ] test purchase reaches /success  [ ] webhook receives the test event  [ ] no breaking schema changes without a migration  [ ] rollback plan documented  [ ] reviewer prompt returned PASS or PASS WITH WARNINGS.",
+              },
+              {
+                t: "Security Guardrails",
+                excerpt:
+                  "Secrets live only in environment variables. Never log them. Never paste them into AI chats. API routes validate input, enforce auth from the session (not request body), and check ownership. RLS is enabled on every public table. Stripe webhooks verify the signature; plan state is updated only on webhook events, never from a /success URL.",
+              },
+            ].map((p) => (
+              <div
+                key={p.t}
+                className="glass relative flex flex-col rounded-2xl p-6"
+              >
+                <div className="mb-4 flex items-center gap-2">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-violet-500/15 text-violet-300 ring-1 ring-violet-400/30">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden
+                    >
+                      <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+                      <path d="M14 3v6h6" />
+                    </svg>
+                  </span>
+                  <h3 className="text-base font-semibold text-white">
+                    {p.t}
+                  </h3>
+                </div>
+                <p className="text-sm leading-relaxed text-gray-300">
+                  &ldquo;{p.excerpt}&rdquo;
+                </p>
+                <div className="mt-5 inline-flex items-center gap-1.5 self-start rounded-full border border-violet-400/30 bg-violet-500/10 px-2.5 py-1 text-[11px] font-medium text-violet-200">
+                  <span className="h-1.5 w-1.5 rounded-full bg-violet-300" />
+                  Included in the kit
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
