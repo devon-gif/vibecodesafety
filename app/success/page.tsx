@@ -3,14 +3,15 @@ import type { Metadata } from "next";
 import { SUPPORT_EMAIL } from "@/lib/checkout";
 
 export const metadata: Metadata = {
-  title: "You're in — VibeCode Safety Kit",
+  title: "Start with the 5-minute setup — VibeCode Safety Kit",
 };
 
 const steps = [
-  "Open START_HERE.md",
-  "Copy the repo instruction files into your project",
-  "Run the Builder Prompt before your next AI coding change",
-  "Run the Reviewer Prompt before you commit, push, or deploy",
+  "Open QUICKSTART.md",
+  "Copy the Beginner Mode files into your repo",
+  "Fill out PROJECT_SAFETY_PROFILE.md",
+  "Paste the Daily VibeCode Prompt into your AI coding tool",
+  "Run the Reviewer Prompt before commit, push, or deploy",
 ];
 
 export default function SuccessPage() {
@@ -36,18 +37,18 @@ export default function SuccessPage() {
         </div>
 
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          You&apos;re in —{" "}
-          <span className="violet-text">VibeCode Safety Kit is ready.</span>
+          Start with the{" "}
+          <span className="violet-text">5-minute setup.</span>
         </h1>
 
         <p className="mt-6 text-gray-300">
-          Thanks for purchasing VibeCode Safety Kit. Your download/access
+          Thanks for purchasing VibeCode Safety Kit. Your download / access
           instructions will be sent to the email used at checkout.
         </p>
 
         <div className="glass-strong mx-auto mt-10 rounded-2xl p-6 text-left shadow-glow">
           <div className="text-sm font-semibold uppercase tracking-wider text-violet-300">
-            What to do first
+            Your next 5 minutes
           </div>
           <ol className="mt-5 space-y-3">
             {steps.map((s, i) => (
@@ -68,13 +69,14 @@ export default function SuccessPage() {
         </div>
 
         <p className="mt-8 text-xs text-gray-500">
-          If you do not receive access instructions, contact support:{" "}
+          If you have trouble accessing the kit, email{" "}
           <a
             href={`mailto:${SUPPORT_EMAIL}`}
             className="text-violet-300 hover:text-violet-200"
           >
             {SUPPORT_EMAIL}
           </a>
+          .
         </p>
       </div>
     </section>

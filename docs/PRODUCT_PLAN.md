@@ -49,7 +49,7 @@ A practical guardrail system — prompts, checklists, repo rules, and pre-deploy
 - **BLOCKED** — fix before push/deploy
 
 ## Pricing
-- **$49 one-time.**
+- **$29.99 one-time.**
 - No subscription, no seats.
 - Lifetime access to the current version of the kit.
 - Future major versions may be paid upgrades — TBD.
