@@ -4,12 +4,12 @@ import { BuyLink } from "./BuyLink";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 bg-ink-950/70 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-ink-950/55 backdrop-blur-2xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <Link href="/" aria-label="VibeCode Safety home">
           <Logo />
         </Link>
-        <nav className="hidden items-center gap-8 text-sm text-gray-300 md:flex">
+        <nav className="hidden items-center gap-9 text-sm text-gray-300 md:flex">
           <a href="#whats-inside" className="hover:text-white">
             What&apos;s Inside
           </a>
@@ -24,7 +24,7 @@ export function SiteHeader() {
           </a>
         </nav>
         <div className="flex items-center gap-4">
-          <BuyLink className="btn-primary px-4 py-2 text-sm">
+          <BuyLink className="btn-primary px-5 py-2.5 text-sm">
             Get the Kit
           </BuyLink>
         </div>

@@ -6,12 +6,6 @@ import { ContactForm } from "@/components/ContactForm";
 
 /* ---------- data ---------- */
 
-const trustPills = [
-  "Works with Claude, Codex, Cursor, Windsurf, Copilot & more",
-  "Beginner-friendly setup - copy 3 files, paste 1 prompt",
-  "Designed for solo founders, not enterprise teams",
-];
-
 const problems = [
   {
     t: "Working build ≠ safe build",
