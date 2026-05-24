@@ -1,4 +1,4 @@
-import { CHECKOUT_LINK, isExternalCheckout } from "@/lib/checkout";
+import { MONTHLY_CHECKOUT_LINK, isExternalCheckout } from "@/lib/checkout";
 
 type Props = {
   className?: string;
@@ -8,12 +8,11 @@ type Props = {
 };
 
 /**
- * Single component for every "Get the Kit" button.
- * Routes to NEXT_PUBLIC_CHECKOUT_LINK, then NEXT_PUBLIC_STRIPE_PAYMENT_LINK,
- * then /checkout-coming-soon.
+ * Single component for general "Start" buttons.
+ * Defaults to the monthly subscription checkout link.
  */
 export function BuyLink({ className = "btn-primary", children, href }: Props) {
-  const target = href ?? CHECKOUT_LINK;
+  const target = href ?? MONTHLY_CHECKOUT_LINK;
   const external = isExternalCheckout(target);
 
   return (

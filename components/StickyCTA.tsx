@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CHECKOUT_LINK, isExternalCheckout } from "@/lib/checkout";
+import { MONTHLY_CHECKOUT_LINK, isExternalCheckout } from "@/lib/checkout";
 
 export function StickyCTA() {
   const [visible, setVisible] = useState(false);
@@ -63,8 +63,8 @@ export function StickyCTA() {
           </div>
         </div>
         <a
-          href={CHECKOUT_LINK}
-          {...(isExternalCheckout(CHECKOUT_LINK)
+          href={MONTHLY_CHECKOUT_LINK}
+          {...(isExternalCheckout(MONTHLY_CHECKOUT_LINK)
             ? { target: "_blank", rel: "noopener noreferrer" }
             : {})}
           className="btn-primary flex-none px-4 py-2 text-sm"
