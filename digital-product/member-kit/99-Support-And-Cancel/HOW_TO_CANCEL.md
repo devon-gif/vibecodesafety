@@ -1,13 +1,49 @@
-# How To Cancel
+# How To Cancel Your Subscription
 
-Subscription billing is handled through Stripe.
+Your subscription billing is managed through Stripe.
 
-## Preferred path
+---
 
-Use the Manage Subscription link from Stripe Customer Portal when it is available.
+## Option 1 — Stripe Customer Portal (preferred)
 
-## If the portal is not live yet
+Use the Manage Subscription link in your billing confirmation email or on the
+VibeCode Safety site. This opens the Stripe Customer Portal where you can
+cancel your subscription in one click.
 
-Contact support with the email used at checkout and request cancellation.
+Cancellation takes effect at the end of your current billing period. You keep
+access until then.
 
-Cancellation stops future billing. It does not turn the membership into a security audit or guarantee.
+---
+
+## Option 2 — Contact support
+
+If the Customer Portal is not yet available, email:
+
+vibecodesafety@gmail.com
+
+Subject: Cancel Subscription — [your checkout email]
+
+Support will process the cancellation and confirm. Allow up to 2 business days.
+
+---
+
+## What happens after cancellation
+
+- Future billing is stopped.
+- Access continues until the end of the current paid period.
+- The member kit files you downloaded remain yours to keep.
+- No partial refunds for unused time unless required by law.
+
+---
+
+## Changing your mind
+
+If you cancel but want to resubscribe, you can do so at any time at
+vibecodesafety.com.
+
+---
+
+## Retention offer
+
+If you choose to cancel, Stripe may present an offer to continue at a
+discounted rate for 3 months. You are not required to accept it.

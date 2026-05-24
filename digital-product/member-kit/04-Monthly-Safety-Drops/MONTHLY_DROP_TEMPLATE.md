@@ -1,14 +1,108 @@
-# Monthly Drop Template
+# Monthly Safety Drop Template
 
-Folder name:
-`YYYY-MM-TOPIC_SAFETY_DROP`
+Use this template when creating a new monthly drop folder.
 
-Include:
+Copy this into: `04-Monthly-Safety-Drops/YYYY-MM-TOPIC_SAFETY_DROP/`
 
-- `README.md`
-- `AUDIT_PROMPT.md`
-- `CHECKLIST.md`
-- `SCORECARD.md`
-- `WHAT_TO_FIX_FIRST.md`
+---
 
-Each drop should focus on one practical risk area and end with PASS / WARNING / BLOCKED.
+## Files to create in each drop folder
+
+- `README.md` — what this drop covers and why it matters
+- `AUDIT_PROMPT.md` — the copy-paste AI audit prompt
+- `CHECKLIST.md` — manual checklist to work through
+- `SCORECARD.md` — how to score PASS / WARNING / BLOCKED
+- `WHAT_TO_FIX_FIRST.md` — priority order for common issues found
+
+---
+
+## README.md template
+
+```markdown
+# [Month Year] Safety Drop: [Topic]
+
+## What this covers
+
+[One paragraph: what risk area this drop focuses on and why it matters for
+AI-assisted builders.]
+
+## Who should run this
+
+[Who benefits most from this drop. e.g. "Anyone using Stripe subscriptions"
+or "Any project with a database and user accounts".]
+
+## How long it takes
+
+Approximately [X] minutes.
+
+## What you need
+
+[What files or context to have ready before running the audit prompt.]
+```
+
+---
+
+## AUDIT_PROMPT.md template
+
+```markdown
+# [Topic] Audit Prompt
+
+Paste this into your AI tool with your relevant files.
+
+---
+
+\`\`\`
+Act as the VibeCode Auditor.
+
+[Specific focused audit instructions for this topic.]
+
+Return:
+1. Summary.
+2. Issues found (HIGH / MEDIUM / LOW).
+3. Affected files.
+4. Recommended fixes.
+5. Verdict: PASS / WARNING / BLOCKED
+\`\`\`
+```
+
+---
+
+## CHECKLIST.md template
+
+```markdown
+# [Topic] Checklist
+
+- [ ] [Check 1]
+- [ ] [Check 2]
+- [ ] [Check 3]
+...
+
+Score: [X] / [Total] checks passing.
+```
+
+---
+
+## SCORECARD.md template
+
+```markdown
+# [Topic] Scorecard
+
+PASS: all critical checks passing, no HIGH risks.
+WARNING: one or more MEDIUM risks, or a HIGH risk with a clear mitigation plan.
+BLOCKED: one or more HIGH risks found with no fix in place.
+```
+
+---
+
+## WHAT_TO_FIX_FIRST.md template
+
+```markdown
+# What To Fix First
+
+1. [Most critical issue]
+2. [Second most critical]
+3. [Third]
+
+These are the issues that most commonly cause real harm in production.
+Fix them in order.
+```

@@ -7,6 +7,10 @@ import { useEffect, useRef, useState } from "react";
 const SCORE_TARGET = 92;
 const SCORE_DURATION = 3200; // ms
 const SCORE_DELAY = 900;     // ms before ring starts
+const ROW_BASE_DELAY = SCORE_DELAY + SCORE_DURATION + 250;
+const ROW_STAGGER = 420; // ms per row
+const VERDICT_DELAY = ROW_BASE_DELAY + 5 * ROW_STAGGER + 600;
+const LOOP_DELAY = 12500;
 
 type RowStatus = "Passed" | "Warnings" | "Blocked";
 
@@ -105,39 +109,49 @@ export function SafetyReport() {
       return;
     }
 
-    /* score ring fill */
     let frame = 0;
-    let start = 0;
-    const scoreTimer: number = window.setTimeout(() => {
-      const tick = (time: number) => {
-        if (!start) start = time;
-        const progress = Math.min((time - start) / SCORE_DURATION, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        setScore(Math.round(eased * SCORE_TARGET));
-        if (progress < 1) frame = window.requestAnimationFrame(tick);
-      };
-      frame = window.requestAnimationFrame(tick);
-    }, SCORE_DELAY);
+    let cycleTimers: number[] = [];
 
-    /* stagger checklist rows — start after ring is ~done */
-    const ROW_BASE_DELAY  = SCORE_DELAY + SCORE_DURATION + 250;
-    const ROW_STAGGER     = 420; // ms per row
-    const rowTimers: number[] = [];
-    checklistRows.forEach((_, i) => {
-      rowTimers.push(window.setTimeout(() => setRowsVisible(i + 1), ROW_BASE_DELAY + i * ROW_STAGGER));
-    });
+    const clearCycle = () => {
+      cycleTimers.forEach(window.clearTimeout);
+      cycleTimers = [];
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+        frame = 0;
+      }
+    };
 
-    /* final verdict after all rows */
-    const verdictTimer: number = window.setTimeout(
-      () => setVerdictVisible(true),
-      ROW_BASE_DELAY + checklistRows.length * ROW_STAGGER + 600
-    );
+    const runCycle = () => {
+      clearCycle();
+      setScore(0);
+      setRowsVisible(0);
+      setVerdictVisible(false);
+
+      let start = 0;
+      cycleTimers.push(window.setTimeout(() => {
+        const tick = (time: number) => {
+          if (!start) start = time;
+          const progress = Math.min((time - start) / SCORE_DURATION, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setScore(Math.round(eased * SCORE_TARGET));
+          if (progress < 1) frame = window.requestAnimationFrame(tick);
+        };
+        frame = window.requestAnimationFrame(tick);
+      }, SCORE_DELAY));
+
+      checklistRows.forEach((_, i) => {
+        cycleTimers.push(window.setTimeout(() => setRowsVisible(i + 1), ROW_BASE_DELAY + i * ROW_STAGGER));
+      });
+
+      cycleTimers.push(window.setTimeout(() => setVerdictVisible(true), VERDICT_DELAY));
+    };
+
+    runCycle();
+    const loopTimer = window.setInterval(runCycle, LOOP_DELAY);
 
     return () => {
-      window.clearTimeout(scoreTimer);
-      window.clearTimeout(verdictTimer);
-      rowTimers.forEach(window.clearTimeout);
-      if (frame) window.cancelAnimationFrame(frame);
+      window.clearInterval(loopTimer);
+      clearCycle();
     };
   }, []);
 

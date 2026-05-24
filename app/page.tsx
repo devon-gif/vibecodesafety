@@ -238,6 +238,10 @@ export default function Home() {
               </a>
             </div>
 
+            <p className="mt-5 text-sm font-medium text-violet-100">
+              ⭐⭐⭐⭐⭐ Rated 4.8 stars!
+            </p>
+
             <p className="mt-4 text-sm text-gray-500">
               Monthly or yearly billing. Cancel anytime.
             </p>
