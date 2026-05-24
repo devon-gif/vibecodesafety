@@ -23,6 +23,11 @@ export default function CheckoutComingSoonPage() {
         </h1>
 
         <p className="mt-6 text-gray-300">
+          Checkout and download delivery are almost ready. The launch version
+          will use secure checkout and a simple download link after purchase.
+        </p>
+
+        <p className="mt-4 text-gray-400">
           VibeCode Safety Kit will be available as a simple one-time purchase
           for <span className="text-white">$29.99</span>. No subscription
           required.
@@ -35,7 +40,8 @@ export default function CheckoutComingSoonPage() {
         </div>
 
         <div className="mx-auto mt-10 max-w-md rounded-xl border border-white/10 bg-white/[0.02] p-4 text-xs text-gray-500">
-          Stripe checkout will be connected here before launch.
+          Stripe checkout and Google Drive delivery will be connected here before
+          launch.
         </div>
       </div>
     </section>

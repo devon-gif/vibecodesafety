@@ -128,3 +128,23 @@ Run through this before flipping the site to "live".
 - [ ] Replace placeholder testimonials with real ones.
 - [ ] When real accounts are wired, replace the disabled Google button
       with a working OAuth flow and update the related FAQ entry.
+
+## Free delivery setup (v1)
+
+- [ ] Create dedicated Gmail: vibecodesafety@gmail.com
+- [ ] Create Google Drive delivery folder (owned by that Gmail)
+- [ ] Upload final product ZIP: VibeCode-Safety-Kit-v1.zip
+- [ ] Set Google Drive sharing to "Anyone with the link — Viewer"
+- [ ] Add product download link to `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` in .env.local
+- [ ] Create Stripe Payment Link ($29.99 one-time, NOT subscription)
+- [ ] Set Stripe success redirect to `/success`
+- [ ] Add Stripe checkout link to `NEXT_PUBLIC_CHECKOUT_LINK` in .env.local
+- [ ] Enable Stripe customer receipts (Settings → Emails)
+- [ ] Enable Stripe successful-payment account notifications
+- [ ] Create Google Sheet buyer tracker (columns: Purchase Date, Customer Name, Customer Email, Stripe Payment ID, Access Sent?, Opted Into Updates?, Issue?, Notes)
+- [ ] Test purchase flow end-to-end in Stripe test mode
+- [ ] Test `/success` page download button appears and works
+- [ ] Test download link in incognito window
+- [ ] Confirm no account is required to purchase or download
+- [ ] Confirm no CRM is needed for v1
+- [ ] Switch Stripe to live mode before launch

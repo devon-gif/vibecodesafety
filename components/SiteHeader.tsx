@@ -24,12 +24,6 @@ export function SiteHeader() {
           </a>
         </nav>
         <div className="flex items-center gap-4">
-          <Link
-            href="/sign-up"
-            className="hidden text-sm text-gray-400 transition hover:text-violet-300 sm:inline"
-          >
-            Sign In
-          </Link>
           <BuyLink className="btn-primary px-4 py-2 text-sm">
             Get the Kit
           </BuyLink>

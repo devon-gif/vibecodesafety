@@ -1,21 +1,22 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { SUPPORT_EMAIL } from "@/lib/checkout";
+import { PRODUCT_DOWNLOAD_LINK, SUPPORT_EMAIL } from "@/lib/checkout";
 
 export const metadata: Metadata = {
-  title: "Start with the 5-minute setup — VibeCode Safety Kit",
+  title: "Download VibeCode Safety Kit — You're in",
 };
 
 const steps = [
+  "Download the ZIP",
   "Open QUICKSTART.md",
   "Copy the Beginner Mode files into your repo",
   "Fill out PROJECT_SAFETY_PROFILE.md",
-  "Paste the Daily VibeCode Prompt into your AI coding tool",
-  "Run the Reviewer Prompt before commit, push, or deploy",
-  "Add Core Guardrails like Gitleaks, GitHub Actions, Playwright, and k6 when you're ready",
+  "Paste the Daily VibeCode Prompt after your next AI coding change",
 ];
 
 export default function SuccessPage() {
+  const hasDownload = Boolean(PRODUCT_DOWNLOAD_LINK);
+
   return (
     <section className="relative overflow-hidden">
       <div
@@ -38,19 +39,60 @@ export default function SuccessPage() {
         </div>
 
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          Start with the{" "}
-          <span className="violet-text">5-minute setup.</span>
+          You're in —{" "}
+          <span className="violet-text">download the kit.</span>
         </h1>
 
         <p className="mt-6 text-gray-300">
-          Your first step is not to install everything. Start simple: copy
-          the beginner safety files, fill out your project profile, and
-          use the Daily VibeCode Prompt after your next AI coding change.
+          Thanks for purchasing VibeCode Safety Kit. Your checkout receipt will
+          be sent to the email used at purchase.
         </p>
+
+        {hasDownload ? (
+          <div className="mt-8 flex flex-col items-center gap-4">
+            <a
+              href={PRODUCT_DOWNLOAD_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-base"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="mr-2 inline h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download VibeCode Safety Kit
+            </a>
+            <p className="text-sm text-violet-200">
+              Start with QUICKSTART.md, then open the Beginner Mode folder.
+            </p>
+          </div>
+        ) : (
+          <div className="glass mx-auto mt-8 max-w-md rounded-xl p-5 text-sm text-gray-300">
+            Your download link is being prepared. If you purchased and need
+            access, email{" "}
+            <a
+              href={`mailto:${SUPPORT_EMAIL}`}
+              className="text-violet-300 hover:text-violet-200"
+            >
+              {SUPPORT_EMAIL}
+            </a>
+            .
+          </div>
+        )}
 
         <div className="glass-strong mx-auto mt-10 rounded-2xl p-6 text-left shadow-glow">
           <div className="text-sm font-semibold uppercase tracking-wider text-violet-300">
-            Your next 5 minutes
+            Your next 5 steps
           </div>
           <ol className="mt-5 space-y-3">
             {steps.map((s, i) => (
@@ -65,12 +107,17 @@ export default function SuccessPage() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <Link href="/" className="btn-primary">
+          <Link href="/" className="btn-secondary">
             Back to Home
           </Link>
         </div>
 
         <p className="mt-8 text-xs text-gray-500">
+          This download page is for launch delivery. Do not share the product
+          files publicly.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-500">
           If you have trouble accessing the kit, email{" "}
           <a
             href={`mailto:${SUPPORT_EMAIL}`}

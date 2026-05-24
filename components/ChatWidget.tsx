@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { STRIPE_PAYMENT_LINK, isExternalCheckout } from "@/lib/checkout";
+import { CHECKOUT_LINK, isExternalCheckout } from "@/lib/checkout";
 
 type FAQ = { q: string; a: string };
 
@@ -48,7 +48,7 @@ export function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const externalCheckout = isExternalCheckout(STRIPE_PAYMENT_LINK);
+  const externalCheckout = isExternalCheckout(CHECKOUT_LINK);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -203,7 +203,7 @@ export function ChatWidget() {
             </div>
 
             <a
-              href={STRIPE_PAYMENT_LINK}
+              href={CHECKOUT_LINK}
               {...(externalCheckout
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
