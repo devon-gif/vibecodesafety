@@ -9,7 +9,8 @@ type Props = {
 
 /**
  * Single component for every "Get the Kit" button.
- * Routes to NEXT_PUBLIC_CHECKOUT_LINK if set, otherwise /checkout-coming-soon.
+ * Routes to NEXT_PUBLIC_CHECKOUT_LINK, then NEXT_PUBLIC_STRIPE_PAYMENT_LINK,
+ * then /checkout-coming-soon.
  */
 export function BuyLink({ className = "btn-primary", children, href }: Props) {
   const target = href ?? CHECKOUT_LINK;

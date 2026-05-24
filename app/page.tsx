@@ -93,34 +93,49 @@ const toneDot: Record<"emerald" | "amber" | "rose", string> = {
 const kitFiles = [
   { name: "QUICKSTART.md", desc: "The whole kit in one page." },
   {
+    name: "00-START-HERE/",
+    desc: "Read-first setup guides and beginner mistakes to avoid.",
+  },
+  {
     name: "00-Beginner-Mode/",
-    desc: "The 3-file beginner workflow + reviewer + ship checklist.",
+    desc: "The fastest workflow: copy 3 files, paste 1 prompt, review.",
   },
   {
     name: "01-Repo-Instructions/",
-    desc: "AGENTS / CLAUDE / Cursor / Windsurf / Copilot rule templates.",
+    desc: "AGENTS, CLAUDE, Codex, Cursor, and Windsurf instruction templates.",
   },
   {
-    name: "02-Security-Guardrails/",
-    desc: "Secrets, env vars, Supabase RLS, Stripe webhooks.",
+    name: "02-Prompt-Workflows/",
+    desc: "Builder and reviewer prompts for after every AI coding change.",
   },
   {
-    name: "03-Automated-Check-Starters/",
-    desc: "Gitleaks, GitHub Actions, Playwright, k6 starter docs.",
+    name: "03-Checklists/",
+    desc: "Pre-commit, pre-push, pre-deploy, client handoff, and critical flows.",
   },
   {
-    name: "04-Release-Checklists/",
-    desc: "Pre-commit, pre-deploy, rollback.",
+    name: "04-Security-Guardrails/",
+    desc: "Auth, API routes, env vars, Supabase, Stripe, and general security.",
+  },
+  {
+    name: "05-Automated-Checks/",
+    desc: "Commands, GitHub Actions, Gitleaks, Playwright, and k6 starters.",
+  },
+  {
+    name: "99-BUYER-BONUS/",
+    desc: "Prompt pack, scorecard, and one-page deploy checklist.",
   },
 ];
 
 const fileTreeText = `VibeCode-Safety-Kit-v1/
 ├── QUICKSTART.md
+├── START_HERE.md
 ├── 00-START-HERE/
 │   ├── READ_THIS_FIRST.md
 │   ├── 5_MINUTE_SETUP.md
-│   └── WHICH_FILE_DO_I_USE.md
+│   ├── WHICH_FILE_DO_I_USE.md
+│   └── COMMON_BEGINNER_MISTAKES.md
 ├── 00-Beginner-Mode/
+│   ├── READ_ME_FIRST.md
 │   ├── VIBECODE_SAFETY_RULES.md
 │   ├── PROJECT_SAFETY_PROFILE.md
 │   ├── DAILY_VIBECODE_PROMPT.md
@@ -130,43 +145,66 @@ const fileTreeText = `VibeCode-Safety-Kit-v1/
 │   ├── CURSOR_RULES.md
 │   ├── WINDSURF_RULES.md
 │   ├── CLAUDE.md
+│   ├── CODEX_INSTRUCTIONS.md
 │   └── AGENTS.md
 ├── 02-Prompt-Workflows/
+│   ├── AFTER_EVERY_AI_CHANGE.md
 │   ├── BUILDER_PROMPT.md
 │   └── REVIEWER_PROMPT.md
 ├── 03-Checklists/
 │   ├── PRE_COMMIT_CHECKLIST.md
 │   ├── PRE_PUSH_CHECKLIST.md
-│   └── PRE_DEPLOY_CHECKLIST.md
+│   ├── PRE_DEPLOY_CHECKLIST.md
+│   ├── CLIENT_HANDOFF_CHECKLIST.md
+│   └── CRITICAL_FLOWS_CHECKLIST.md
 ├── 04-Security-Guardrails/
+│   ├── AUTH_CHECKLIST.md
+│   ├── API_ROUTES_CHECKLIST.md
+│   ├── ENVIRONMENT_VARIABLES_CHECKLIST.md
 │   ├── SECURITY_GUARDRAILS.md
 │   ├── SUPABASE_CHECKLIST.md
 │   └── STRIPE_BILLING_CHECKLIST.md
 ├── 05-Automated-Checks/
+│   ├── COMMANDS_TO_RUN.md
 │   ├── GITLEAKS_SETUP.md
-│   └── GITHUB_ACTIONS_STARTER.md
+│   ├── GITHUB_ACTIONS_STARTER.md
+│   ├── PLAYWRIGHT_SMOKE_TEST.md
+│   └── K6_SMOKE_TEST.md
+├── 06-Examples/
+│   ├── SIMPLE_LANDING_PAGE_EXAMPLE.md
+│   ├── SAAS_DASHBOARD_EXAMPLE.md
+│   └── NEXTJS_SUPABASE_EXAMPLE.md
+├── 07-Open-Safety-Patterns/
+│   ├── AGENTS_MD_PATTERN.md
+│   ├── AI_AGENT_RULES_FOR_BEGINNERS.md
+│   ├── PRE_DEPLOY_RISK_MAP.md
+│   ├── SECRET_SCANNING_WORKFLOW.md
+│   └── SECURE_CODING_REVIEW_QUESTIONS.md
 └── 99-BUYER-BONUS/
+    ├── BEFORE_YOU_DEPLOY_ONE_PAGE_CHECKLIST.md
     ├── COPY_PASTE_PROMPT_PACK.md
     └── VIBECODE_REVIEW_SCORECARD.md`;
 
 const insideCards = [
   {
-    t: "Beginner Setup Files",
-    b: "The 3-file starting point for non-technical builders.",
+    t: "Start Here Guides",
+    b: "Read-first docs that explain the 5-minute setup and which file to use.",
+    list: [
+      "QUICKSTART.md",
+      "READ_THIS_FIRST.md",
+      "5_MINUTE_SETUP.md",
+      "WHICH_FILE_DO_I_USE.md",
+    ],
+  },
+  {
+    t: "Beginner Mode",
+    b: "The fastest path for new AI builders: copy three files, paste one prompt, and review before shipping.",
     list: [
       "VIBECODE_SAFETY_RULES.md",
       "PROJECT_SAFETY_PROFILE.md",
       "DAILY_VIBECODE_PROMPT.md",
-    ],
-  },
-  {
-    t: "AI Reviewer Prompts",
-    b: "Make a second AI review the change before you commit, push, or deploy.",
-    list: [
-      "Risk summary",
-      "Changed files",
-      "Affected flows",
-      "PASS / WARNING / BLOCKED verdict",
+      "REVIEWER_PROMPT.md",
+      "PRE_SHIP_CHECKLIST.md",
     ],
   },
   {
@@ -175,36 +213,41 @@ const insideCards = [
     list: [
       "AGENTS.md",
       "CLAUDE.md",
-      "Cursor rules",
-      "Windsurf rules",
-      "Copilot instructions",
+      "CODEX_INSTRUCTIONS.md",
+      "CURSOR_RULES.md",
+      "WINDSURF_RULES.md",
     ],
   },
   {
-    t: "Security Guardrails",
-    b: "Beginner-friendly checks for common AI coding mistakes.",
+    t: "Prompt Workflows",
+    b: "Builder and reviewer prompts for checking AI-generated changes before commit, push, or deploy.",
     list: [
-      "Secret leaks",
-      "NEXT_PUBLIC env mistakes",
-      "API validation",
-      "Supabase RLS",
-      "Stripe webhook basics",
+      "AFTER_EVERY_AI_CHANGE.md",
+      "BUILDER_PROMPT.md",
+      "REVIEWER_PROMPT.md",
+      "PASS / WARNING / BLOCKED verdicts",
     ],
   },
   {
-    t: "Pre-Ship Checklists",
-    b: "Simple human checklists for the moments before commit, push, deploy, or client handoff.",
-    list: ["Pre-commit", "Pre-push", "Pre-deploy", "Release", "Rollback"],
+    t: "Checklists",
+    b: "Simple human checklists for the moments before commit, push, deploy, client handoff, or critical flow testing.",
+    list: [
+      "PRE_COMMIT_CHECKLIST.md",
+      "PRE_PUSH_CHECKLIST.md",
+      "PRE_DEPLOY_CHECKLIST.md",
+      "CLIENT_HANDOFF_CHECKLIST.md",
+      "CRITICAL_FLOWS_CHECKLIST.md",
+    ],
   },
   {
-    t: "Automated Check Starters",
-    b: "Starter docs for adding stronger verification when your app is ready.",
+    t: "Core Guardrails",
+    b: "Security, automated checks, examples, and open safety patterns you can add as the project matures.",
     list: [
-      "Gitleaks",
-      "GitHub Actions",
-      "Playwright smoke tests",
-      "k6 smoke tests",
-      "health-check script",
+      "04-Security-Guardrails/",
+      "05-Automated-Checks/",
+      "06-Examples/",
+      "07-Open-Safety-Patterns/",
+      "99-BUYER-BONUS/",
     ],
   },
 ];

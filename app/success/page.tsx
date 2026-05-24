@@ -9,9 +9,8 @@ export const metadata: Metadata = {
 const steps = [
   "Download the ZIP",
   "Open QUICKSTART.md",
-  "Copy the Beginner Mode files into your repo",
-  "Fill out PROJECT_SAFETY_PROFILE.md",
-  "Paste the Daily VibeCode Prompt after your next AI coding change",
+  "Start with Beginner Mode",
+  "Add Core Guardrails later",
 ];
 
 export default function SuccessPage() {
@@ -73,7 +72,8 @@ export default function SuccessPage() {
               Download VibeCode Safety Kit
             </a>
             <p className="text-sm text-violet-200">
-              Start with QUICKSTART.md, then open the Beginner Mode folder.
+              Download the ZIP, open QUICKSTART.md, start with Beginner
+              Mode, and add Core Guardrails later.
             </p>
           </div>
         ) : (

@@ -19,19 +19,23 @@ Use this as the support and delivery identity for v1.
 
 ---
 
-## 3. Zip the product folder
+## 3. Use the final product ZIP
 
 ```
-zip -r VibeCode-Safety-Kit-v1.zip digital-product/VibeCode-Safety-Kit-v1/
+digital-product/final/VibeCode-Safety-Kit-v1-Launch-Edition.zip
 ```
+
+Before upload, open the ZIP locally and confirm it contains
+`QUICKSTART.md` at the root of the product folder.
 
 ---
 
 ## 4. Upload ZIP to Google Drive
 
-- Upload `VibeCode-Safety-Kit-v1.zip` into the delivery folder.
+- Upload `VibeCode-Safety-Kit-v1-Launch-Edition.zip` into the delivery folder.
 - Right-click → Share → Change to **Anyone with the link → Viewer**.
 - Copy the share link.
+- Test the share link in an incognito window before launch.
 
 ---
 
@@ -92,7 +96,8 @@ After each Stripe notification email arrives, log the buyer manually and confirm
 2. Use a test card to complete a purchase.
 3. Confirm you are redirected to `/success`.
 4. Confirm the **Download VibeCode Safety Kit** button appears.
-5. Click the button and confirm the ZIP downloads in an incognito window.
+5. Click the button and confirm the Google Drive folder opens in an
+   incognito window.
 6. Switch Stripe to **live mode** for production.
 
 ---

@@ -37,6 +37,8 @@ Run through this before flipping the site to "live".
 
 - [ ] `digital-product/VibeCode-Safety-Kit-v1/` is reviewed for typos
       and `{{REPLACE_ME}}` placeholders are documented as user fills.
+- [ ] Final ZIP opens locally:
+      `digital-product/final/VibeCode-Safety-Kit-v1-Launch-Edition.zip`.
 - [ ] A delivery method is decided (zip download, GitHub release link,
       Notion share, or manual email after each sale).
 - [ ] `START_HERE.md` clearly explains the 5-minute first-use loop.
@@ -133,9 +135,13 @@ Run through this before flipping the site to "live".
 
 - [ ] Create dedicated Gmail: vibecodesafety@gmail.com
 - [ ] Create Google Drive delivery folder (owned by that Gmail)
-- [ ] Upload final product ZIP: VibeCode-Safety-Kit-v1.zip
+- [ ] Test final ZIP opens:
+      `digital-product/final/VibeCode-Safety-Kit-v1-Launch-Edition.zip`
+- [ ] Upload final ZIP to Google Drive:
+      `VibeCode-Safety-Kit-v1-Launch-Edition.zip`
 - [ ] Set Google Drive sharing to "Anyone with the link — Viewer"
-- [ ] Add product download link to `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` in .env.local
+- [ ] Test Google Drive download link in an incognito window
+- [ ] Add download link to `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` in .env.local
 - [ ] Create Stripe Payment Link ($29.99 one-time, NOT subscription)
 - [ ] Set Stripe success redirect to `/success`
 - [ ] Add Stripe checkout link to `NEXT_PUBLIC_CHECKOUT_LINK` in .env.local
@@ -143,8 +149,8 @@ Run through this before flipping the site to "live".
 - [ ] Enable Stripe successful-payment account notifications
 - [ ] Create Google Sheet buyer tracker (columns: Purchase Date, Customer Name, Customer Email, Stripe Payment ID, Access Sent?, Opted Into Updates?, Issue?, Notes)
 - [ ] Test purchase flow end-to-end in Stripe test mode
-- [ ] Test `/success` page download button appears and works
-- [ ] Test download link in incognito window
+- [ ] Test `/success` page download button appears
+- [ ] Test `/success` page download button opens the Google Drive folder
 - [ ] Confirm no account is required to purchase or download
 - [ ] Confirm no CRM is needed for v1
 - [ ] Switch Stripe to live mode before launch

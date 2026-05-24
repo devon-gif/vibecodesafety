@@ -1,9 +1,13 @@
 # Checkout Setup TODO
 
-The site uses a single env var for checkout: `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`.
+The site uses a primary checkout env var with a Stripe fallback:
 
-When it is **set**, every "Get the Kit" button opens the Stripe Payment Link.
-When it is **blank**, every "Get the Kit" button routes to `/checkout-coming-soon`
+1. `NEXT_PUBLIC_CHECKOUT_LINK`
+2. `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`
+3. `/checkout-coming-soon`
+
+When either checkout env var is **set**, every "Get the Kit" button opens that
+checkout link. When both are **blank**, every "Get the Kit" button routes to `/checkout-coming-soon`
 (a styled placeholder page) so we never have a broken href.
 
 ## Setup
@@ -18,7 +22,7 @@ When it is **blank**, every "Get the Kit" button routes to `/checkout-coming-soo
 7. Add it to your env (locally in `.env.local`, in production via your host's
    env settings):
    ```
-   NEXT_PUBLIC_STRIPE_PAYMENT_LINK=https://buy.stripe.com/xxxxxxxx
+   NEXT_PUBLIC_CHECKOUT_LINK=https://buy.stripe.com/xxxxxxxx
    ```
 8. Test checkout with Stripe test mode if applicable.
 9. Confirm all CTA buttons route correctly:
@@ -35,13 +39,14 @@ When it is **blank**, every "Get the Kit" button routes to `/checkout-coming-soo
 All purchase buttons use the helper in `lib/checkout.ts`:
 
 ```ts
-export const STRIPE_PAYMENT_LINK =
+export const CHECKOUT_LINK =
+  process.env.NEXT_PUBLIC_CHECKOUT_LINK ||
   process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ||
   "/checkout-coming-soon";
 ```
 
 Buttons render through `<BuyLink>` (`components/BuyLink.tsx`) which:
-- opens the Stripe URL in a new tab if it's an absolute URL,
+- opens the checkout URL in a new tab if it's an absolute URL,
 - navigates to `/checkout-coming-soon` otherwise.
 
 ## What we are intentionally NOT doing yet
