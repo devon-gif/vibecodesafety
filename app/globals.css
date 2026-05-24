@@ -250,3 +250,166 @@ body {
     radial-gradient(ellipse at center, rgba(167, 139, 250, 0.3), transparent 70%),
     linear-gradient(180deg, #1a1030, #0d0820);
 }
+
+.safety-report-float {
+  animation: report-float 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.score-ring {
+  transition: background 120ms linear, box-shadow 450ms ease;
+}
+
+.report-score {
+  animation: report-score-in 650ms ease-out 950ms both;
+}
+
+.report-status {
+  animation: report-fade-up 520ms ease-out 1250ms both;
+}
+
+.report-status-dot {
+  animation: report-green-pulse 900ms ease-out 1450ms both;
+}
+
+.report-row {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: report-row-in 520ms ease-out both;
+}
+
+.report-row .report-status-badge {
+  animation: report-badge-glow 950ms ease-out both;
+  animation-delay: inherit;
+}
+
+.report-row-warning .report-status-badge {
+  animation-name: report-warning-pulse;
+}
+
+.report-row-final {
+  animation-delay: 1720ms;
+}
+
+.reveal-section .reveal-heading,
+.reveal-section .reveal-card {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 520ms ease-out,
+    transform 520ms ease-out,
+    border-color 150ms ease,
+    background 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.reveal-section .reveal-card {
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-section.is-visible .reveal-heading,
+.reveal-section.is-visible .reveal-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes report-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes report-score-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes report-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes report-green-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+  }
+  40% {
+    box-shadow: 0 0 0 8px rgba(52, 211, 153, 0.18);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+  }
+}
+
+@keyframes report-row-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+}
+
+@keyframes report-badge-glow {
+  0% {
+    box-shadow: 0 0 0 rgba(52, 211, 153, 0);
+  }
+  45% {
+    box-shadow: 0 0 22px rgba(52, 211, 153, 0.28);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(52, 211, 153, 0);
+  }
+}
+
+@keyframes report-warning-pulse {
+  0% {
+    box-shadow: 0 0 0 rgba(251, 191, 36, 0);
+  }
+  45% {
+    box-shadow: 0 0 24px rgba(251, 191, 36, 0.32);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(251, 191, 36, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-section .reveal-heading,
+  .reveal-section .reveal-card,
+  .report-row,
+  .report-score,
+  .report-status {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
