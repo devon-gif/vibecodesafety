@@ -93,4 +93,4 @@ Confirm footer legal links work on desktop and mobile:
 - Privacy Policy → `/privacy`
 - Terms & Agreements → `/terms`
 - Refund Policy → `/refund-policy`
-- Contact → `mailto:support@vibecodesafety.com`
+- Contact → `/#contact`
