@@ -24,6 +24,11 @@ export function SiteFooter() {
             <div className="text-sm font-semibold text-white">Product</div>
             <ul className="mt-4 space-y-2 text-sm text-gray-400">
               <li>
+                <Link href="/pre-ship-checklist" className="hover:text-white">
+                  Free Checklist
+                </Link>
+              </li>
+              <li>
                 <a href="/#whats-inside" className="hover:text-white">
                   What&apos;s Inside
                 </a>
