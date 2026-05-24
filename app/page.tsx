@@ -209,6 +209,10 @@ export default function Home() {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,5,16,0)_0%,rgba(7,5,16,0.75)_100%)]"
         />
+        {/* Animated swirl orbs */}
+        <div aria-hidden className="hero-swirl hero-swirl-1 -left-24 top-0" />
+        <div aria-hidden className="hero-swirl hero-swirl-2 right-0 top-20" />
+        <div aria-hidden className="hero-swirl hero-swirl-ambient left-1/4 bottom-0" />
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 pb-24 pt-20 lg:grid-cols-[0.88fr,1.12fr] lg:gap-16 lg:pb-28 lg:pt-32">
           <div>
             <span className="pill mb-6 inline-flex">
