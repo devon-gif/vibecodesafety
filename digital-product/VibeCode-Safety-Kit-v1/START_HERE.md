@@ -2,6 +2,10 @@
 
 Welcome. This is the kit that makes AI check the AI before you ship.
 
+> **Start simple:** copy 3 files into your repo, paste 1 prompt after
+> every AI coding change, and don&rsquo;t ship until the review passes.
+> The full Beginner Mode walkthrough is in `00-Beginner-Mode/`.
+
 It is a small folder of prompts, checklists, and guardrails. You drop it
 into your repo and reuse it after every AI coding change.
 

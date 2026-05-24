@@ -9,6 +9,9 @@ Welcome. You bought VibeCode Safety Kit. The whole kit fits on one idea:
 You do not need to be a senior engineer to use this. If you can copy a
 file and paste a prompt, you can use this kit.
 
+> **Start simple:** copy 3 files into your repo, paste 1 prompt after
+> every AI coding change, and don&rsquo;t ship until the review passes.
+
 ---
 
 ## Beginner Mode (start here)
