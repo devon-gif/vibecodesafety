@@ -528,7 +528,7 @@ export default function Home() {
             <div className="relative rounded-3xl border border-violet-300/20 bg-white/[0.04] p-2 shadow-[0_0_80px_rgba(139,92,246,0.18)] backdrop-blur-xl sm:p-3">
               <div className="overflow-hidden rounded-2xl border border-white/10 bg-black aspect-video">
                 <video
-                  src="/video/vibecodesafetyvideo.mp4"
+                  src="/video/vibecode-safetyFINAL.mp4"
                   controls
                   preload="metadata"
                   playsInline
