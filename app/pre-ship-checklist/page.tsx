@@ -3,7 +3,7 @@ import { BuyLink } from "@/components/BuyLink";
 import { CopyChecklistButton } from "./CopyChecklistButton";
 
 export const metadata: Metadata = {
-  title: "Free Pre-Ship Checklist for AI-Generated Code - VibeCode Safety Kit",
+  title: "Free Pre-Ship Checklist for AI-Generated Code - VibeCode Safety",
   description:
     "A free 10-point pre-ship checklist for reviewing AI-generated code before you commit, push, or deploy.",
 };
@@ -214,7 +214,7 @@ export default function PreShipChecklistPage() {
           <SectionHeader
             eyebrow="Quick check vs full workflow"
             title="The free checklist is the quick version."
-            body="The full VibeCode Safety Kit gives you the system behind the checklist: repo rules, project safety files, copy-paste reviewer prompts, pre-ship checklists, and starter guardrails for AI-built apps."
+            body="VibeCode Safety Membership gives you the system behind the checklist: repo rules, project safety files, copy-paste reviewer prompts, repo audits, daily guardrails, and monthly safety drops."
           />
 
           <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2">
@@ -234,7 +234,7 @@ export default function PreShipChecklistPage() {
 
             <div className="glass-strong rounded-2xl p-6 shadow-glow">
               <h3 className="text-xl font-semibold text-white">
-                Full VibeCode Safety Kit
+                VibeCode Safety Membership
               </h3>
               <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {kitFeatures.map((feature) => (

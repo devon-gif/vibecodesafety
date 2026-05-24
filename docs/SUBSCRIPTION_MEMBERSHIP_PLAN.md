@@ -2,7 +2,8 @@
 
 ## Product
 
-**VibeCode Safety** — an AI-assisted safety workflow kit for vibe coders.
+**VibeCode Safety Membership** is an AI-assisted safety workflow subscription
+for vibe coders.
 
 ## Pricing
 
@@ -13,16 +14,16 @@
 
 ## What members get
 
-- **VibeCode Auditor Agent** — instructions to load into Claude, Cursor,
+- **VibeCode Auditor Agent** - instructions to load into Claude, Cursor,
   Windsurf, or Codex so the AI reviews code like a cautious senior engineer
-- **Heavy-Duty Repo Audit** — full AI-assisted audit prompts for all major
+- **Heavy-Duty Repo Audit** - full AI-assisted audit prompts for all major
   risk areas (auth, secrets, API validation, Supabase RLS, Stripe checkout,
   deploy readiness)
-- **Daily Build Guardrails** — short copy-paste prompts for pre-commit,
+- **Daily Build Guardrails** - short copy-paste prompts for pre-commit,
   pre-push, and pre-deploy reviews
-- **Monthly Safety Drops** — focused monthly packs covering one risk area at
+- **Monthly Safety Drops** - focused monthly packs covering one risk area at
   a time (Stripe, Supabase RLS, Auth Sessions, and more)
-- **Ongoing updates** — new drops and kit updates as part of the subscription
+- **Ongoing updates** - new drops and kit updates as part of the subscription
 
 ## What members do NOT get
 
@@ -35,7 +36,7 @@
 ## Delivery
 
 Member kit is delivered as a downloadable ZIP from the access page after
-successful Stripe checkout. No SaaS dashboard — just files.
+successful Stripe checkout. No SaaS dashboard yet, just files.
 
 The access page URL is a private slug:
 `/access/vcs-launch-edition-2026-k9p4`
@@ -48,7 +49,7 @@ Subscribers manage their billing through the Stripe Customer Portal.
 
 - Portal URL: set via `NEXT_PUBLIC_CUSTOMER_PORTAL_LINK` env var
 - Cancel anytime: cancellation takes effect at end of billing period
-- Retention offer: optional coupon ($3.99/month for 3 months) — configure
+- Retention offer: optional coupon ($3.99/month for 3 months) - configure
   in Stripe Customer Portal settings
 
 ## Roadmap (no commitment)
@@ -62,3 +63,18 @@ Subscribers manage their billing through the Stripe Customer Portal.
 ## Stripe setup checklist
 
 See `docs/CHECKOUT_TODO.md` and `docs/STRIPE_SETUP.md`.
+
+## Launch Validation
+
+- Create monthly Stripe subscription price: $6.99/month.
+- Create yearly Stripe subscription price: $59/year.
+- Add monthly checkout link to `NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK`.
+- Add yearly checkout link to `NEXT_PUBLIC_YEARLY_CHECKOUT_LINK`.
+- Configure Stripe Customer Portal later.
+- Test monthly checkout.
+- Test yearly checkout.
+- Test success redirect.
+- Test member kit download.
+- Confirm cancellation copy is accurate.
+- Confirm no manual audit promise exists.
+- Confirm no security guarantee exists.

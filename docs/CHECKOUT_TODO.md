@@ -33,8 +33,8 @@ The site uses checkout env vars with fallback:
 - [ ] Confirm CTA buttons route correctly:
   - Header "Get Started"
   - Hero "Start for $6.99/month"
-  - Pricing card "Start for $6.99/month"
-  - Pricing card "Choose yearly - $59/year"
+  - Pricing card "Start monthly"
+  - Pricing card "Start yearly"
   - Final CTA "Start for $6.99/month"
   - Sticky CTA "Get Started"
   - Chat widget "Start for $6.99/month"
@@ -55,7 +55,7 @@ export const YEARLY_CHECKOUT_LINK =
 Buttons render through `<BuyLink>` or direct `<a>` tags. The yearly CTA in
 the pricing card uses `<BuyLink href={YEARLY_CHECKOUT_LINK}>`. All other
 CTAs (hero, sticky, chat widget, final CTA) default to the monthly link via
-`CHECKOUT_LINK` fallback.
+`MONTHLY_CHECKOUT_LINK`.
 
 ## Cancellation
 
