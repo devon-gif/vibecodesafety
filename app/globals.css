@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ======================================================
-   COLOR SYSTEM — VibeCode Safety Kit
+   COLOR SYSTEM - VibeCode Safety
    ====================================================== */
 :root {
   color-scheme: dark;
@@ -47,7 +47,7 @@ body {
 }
 
 /* ======================================================
-   GLASS — dark-section cards
+   GLASS - dark-section cards
    ====================================================== */
 .glass {
   background: linear-gradient(
@@ -143,7 +143,7 @@ body {
 .light-muted    { color: #8E7FA0; }
 
 /* ======================================================
-   LIGHT GLASS — cards on light sections
+   LIGHT GLASS - cards on light sections
    ====================================================== */
 .light-glass {
   background: linear-gradient(
@@ -176,7 +176,7 @@ body {
 }
 
 /* ======================================================
-   TOOL PILLS — light sections
+   TOOL PILLS - light sections
    ====================================================== */
 .light-tool-pill {
   background: rgba(255, 255, 255, 0.76);
@@ -225,7 +225,7 @@ body {
   color: transparent;
 }
 
-/* Hero headline gradient — #C4B5FD → #8B5CF6 → #A78BFA */
+/* Hero headline gradient - #C4B5FD to #8B5CF6 to #A78BFA */
 .violet-text {
   background: linear-gradient(90deg, #c4b5fd 0%, #8b5cf6 50%, #a78bfa 100%);
   -webkit-background-clip: text;
@@ -270,7 +270,7 @@ body {
   transform: translateX(3px);
 }
 
-/* Secondary — transparent dark glass, #C4B5FD border */
+/* Secondary - transparent dark glass, #C4B5FD border */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -424,7 +424,7 @@ body {
 }
 
 /* ======================================================
-   KEYFRAMES — REPORT
+   KEYFRAMES - REPORT
    ====================================================== */
 @keyframes report-float {
   0%, 100% { transform: translateY(0); }
@@ -458,7 +458,7 @@ body {
   100% { box-shadow: 0 0 0   rgba(74, 222, 128, 0); }
 }
 
-/* Warning pulse — palette orange #F59E0B */
+/* Warning pulse - palette orange #F59E0B */
 @keyframes report-warning-pulse {
   0%   { box-shadow: 0 0 0   rgba(245, 158, 11, 0); }
   45%  { box-shadow: 0 0 24px rgba(245, 158, 11, 0.36); }
@@ -494,7 +494,7 @@ body {
   opacity: 0.62;
 }
 
-/* Warm orange whisper — lower right, very subtle (~7% opacity) */
+/* Warm orange whisper - lower right, very subtle (~7% opacity) */
 .hero-swirl-warm {
   width: 360px;
   height: 200px;

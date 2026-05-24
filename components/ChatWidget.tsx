@@ -1,30 +1,30 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { CHECKOUT_LINK, isExternalCheckout } from "@/lib/checkout";
+import { MONTHLY_CHECKOUT_LINK, isExternalCheckout } from "@/lib/checkout";
 
 type FAQ = { q: string; a: string };
 
 const faqs: FAQ[] = [
   {
     q: "Is this just a prompt pack?",
-    a: "No. It includes prompts, repo rules, checklists, project-profile templates, and starter docs for stronger checks like Gitleaks, GitHub Actions, Playwright, and k6.",
+    a: "No. It includes a heavy-duty repo audit workflow, VibeCode Auditor Agent files, daily guardrails, checklists, repo rules, and monthly safety drops.",
   },
   {
     q: "Does it run checks automatically?",
-    a: "No. The subscription gives you a digital kit, not a hosted dashboard. It gives you the files, prompts, and setup guides to add the workflow to your repo.",
+    a: "No. The subscription gives you a member kit, not a hosted dashboard. It gives you the files, prompts, and setup guides to add the workflow to your repo.",
   },
   {
-    q: "What is Beginner Mode?",
-    a: "Beginner Mode is the fastest path. You copy 3 files into your repo, fill out a short project profile, paste the Daily VibeCode Prompt after AI edits code, and don't ship until the review passes.",
+    q: "Where do I start?",
+    a: "Start with the Heavy-Duty Repo Audit workflow, then add the daily guardrails and use the Daily AI Change Review Prompt after AI edits code.",
   },
   {
-    q: "What are Core Guardrails?",
-    a: "Stronger guardrails for builders who are ready: repo instruction files (AGENTS / CLAUDE / Cursor / Windsurf / Copilot), Gitleaks setup, GitHub Actions starter, Playwright + k6 smoke tests, and release / rollback checklists. All included as templates and starter docs.",
+    q: "What are daily guardrails?",
+    a: "They are short copy-paste review prompts and checklists for commit, push, and deploy moments. They help you catch risky AI changes before they become release problems.",
   },
   {
     q: "What if I use Supabase or Stripe?",
-    a: "The kit includes beginner-friendly guardrails for common Supabase risks (RLS, service-role keys, storage rules) and Stripe risks (webhook signature verification, plan state, success URLs, test vs live keys).",
+    a: "The membership includes guardrails for common Supabase risks (RLS, service-role keys, storage rules) and Stripe risks (webhook signature verification, plan state, success URLs, test vs live keys).",
   },
   {
     q: "What does BLOCKED mean?",
@@ -48,7 +48,7 @@ export function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const externalCheckout = isExternalCheckout(CHECKOUT_LINK);
+  const externalCheckout = isExternalCheckout(MONTHLY_CHECKOUT_LINK);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -79,7 +79,7 @@ export function ChatWidget() {
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        aria-label="Open Safety Kit guide chat"
+        aria-label="Open VibeCode Safety guide chat"
         className={`fixed right-4 z-[60] flex items-center gap-2 rounded-full border border-violet-400/40 bg-gradient-to-br from-violetglow-500 to-violetglow-700 px-4 py-2.5 text-sm font-semibold text-white shadow-glow-lg transition hover:brightness-110 ${
           open ? "bottom-[28rem] sm:bottom-[30rem]" : "bottom-24 sm:bottom-6"
         }`}
@@ -96,13 +96,13 @@ export function ChatWidget() {
         >
           <path d="M21 15a4 4 0 0 1-4 4H8l-5 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z" />
         </svg>
-        {open ? "Close" : "Ask about the kit"}
+        {open ? "Close" : "Ask about membership"}
       </button>
 
       {/* Panel */}
       <div
         role="dialog"
-        aria-label="Safety Kit Guide"
+        aria-label="VibeCode Safety Guide"
         aria-hidden={!open}
         className={`fixed bottom-4 right-4 z-[59] w-[min(380px,calc(100vw-2rem))] origin-bottom-right transition-all duration-200 ${
           open
@@ -129,7 +129,7 @@ export function ChatWidget() {
               </span>
               <div>
                 <div className="text-sm font-semibold text-white">
-                  Safety Kit Guide
+                  VibeCode Safety Guide
                 </div>
                 <div className="text-[11px] text-gray-400">
                   Quick answers before you buy.
@@ -203,7 +203,7 @@ export function ChatWidget() {
             </div>
 
             <a
-              href={CHECKOUT_LINK}
+              href={MONTHLY_CHECKOUT_LINK}
               {...(externalCheckout
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}

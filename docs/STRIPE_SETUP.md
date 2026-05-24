@@ -1,111 +1,60 @@
-# Stripe Setup - VibeCode Safety Kit
+# Stripe Setup - VibeCode Safety Membership
 
-This site sells a **single one-time digital product** at **$29.99**. The
-simplest path is a Stripe Payment Link. We do **not** install the Stripe
-SDK, write API routes, or handle webhooks for v1.
+VibeCode Safety Membership uses Stripe subscription Payment Links for the v1
+launch. Do not add Stripe SDK code, webhooks, auth, a database, or a custom
+dashboard yet.
 
-## Step 1 - Create the product in Stripe
+## Products And Prices
 
-1. Sign in to https://dashboard.stripe.com/.
-2. **Products → Add product.**
-3. Name: `VibeCode Safety Kit`.
-4. Description: `A practical safety workflow for AI-assisted builders. Prompts, checklists, repo rules, and pre-deploy guardrails. One-time purchase.`
-5. Pricing model: **One time**. Price: **29.99 USD**.
-6. Save.
+1. Create product: `VibeCode Safety Membership`.
+2. Create monthly subscription price: `$6.99/month`.
+3. Create yearly subscription price: `$59/year`.
+4. Create a monthly Payment Link for the monthly price.
+5. Create a yearly Payment Link for the yearly price.
+6. Set both success redirects to:
+   `https://yourdomain.com/access/vcs-launch-edition-2026-k9p4`
 
-## Step 2 - Create a Payment Link
+## Environment Variables
 
-1. **Payment links → New.**
-2. Select the price you just created.
-3. After payment behavior: **Redirect to your website**.
-4. Success URL: `https://yourdomain.com/access/vcs-launch-edition-2026-k9p4`.
-5. (Optional) Collect billing address only if you need it for taxes.
-6. (Optional) Custom field: a single optional checkbox labeled
-   *"Send me product updates and AI coding safety tips by email"*.
-   Leave it **unchecked by default**. Mark it **optional**.
-7. Save. Copy the resulting URL - it looks like
-   `https://buy.stripe.com/test_xxx` (test mode) or
-   `https://buy.stripe.com/xxx` (live mode).
+Add these locally and in production:
 
-## Step 3 - Wire the URL into the site
-
-Add to `.env.local` for local dev:
-
-```
-NEXT_PUBLIC_STRIPE_PAYMENT_LINK=https://buy.stripe.com/xxxxx
+```bash
+NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK=
+NEXT_PUBLIC_YEARLY_CHECKOUT_LINK=
+NEXT_PUBLIC_CHECKOUT_LINK=
+NEXT_PUBLIC_STRIPE_PAYMENT_LINK=
+NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK=
 ```
 
-Add the same value in your hosting provider (Vercel → Environment
-Variables → Production / Preview / Development).
+Use `NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK` for the monthly plan and
+`NEXT_PUBLIC_YEARLY_CHECKOUT_LINK` for the yearly plan. Keep
+`NEXT_PUBLIC_CHECKOUT_LINK` and `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` as fallback
+links only if needed.
 
-Restart the dev server (`pnpm run dev`). All "Get the Kit" buttons now
-open the Payment Link in a new tab.
+## Customer Portal
 
-If the env var is unset, every Buy button routes to `/checkout-coming-soon`
-instead of breaking.
+Configure Stripe Customer Portal later for self-serve cancellation and billing
+updates. Until then, cancellation copy should say support can help cancel
+manually through Stripe.
 
-## Step 4 - Test mode end-to-end
+## Test Checklist
 
-1. Use a **test mode** Payment Link (toggle in the Stripe dashboard).
-2. On the site, click any Buy button.
-3. Pay with Stripe test card `4242 4242 4242 4242`, any future expiry,
-   any CVC, any ZIP.
-4. Confirm you land on `/access/vcs-launch-edition-2026-k9p4`.
-5. Confirm Stripe shows the test payment under **Payments**.
+1. Test monthly checkout.
+2. Test yearly checkout.
+3. Test success redirect.
+4. Test member kit download.
+5. Confirm cancellation copy is accurate.
+6. Confirm no manual human audit is promised.
+7. Confirm no security guarantee is promised.
 
-## Step 5 - Switch to live mode
-
-1. Create the product and Payment Link again in **live mode** (Stripe
-   keeps test and live separate).
-2. Update the env var in production to the **live** Payment Link URL.
-3. Redeploy / restart so the new env var takes effect.
-4. Make a real $29.99 purchase from your own account. Refund yourself
-   after confirming the hidden access page works.
-
-## Step 6 - Download delivery
-
-We do not have webhook-verified delivery in v1. The simplest delivery path:
-
-- Redirect the buyer to `/access/vcs-launch-edition-2026-k9p4`.
-- Set `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` to a direct Google Drive file
-  download URL.
-- When ready, replace this with server-side payment verification or a
-  digital delivery platform.
-
-See `docs/CHECKOUT_TODO.md` for the email-consent and webhook upgrade path.
-
-## Invite Promo Code Setup
-
-Regular price:
-$29.99
-
-Invite price:
-$19.99
-
-Promo code:
-VIBE10
-
-Stripe setup:
-
-1. Create a coupon for $10.00 off.
-2. Set duration to once.
-3. Create a promotion code attached to the coupon.
-4. Code: VIBE10.
-5. Enable promotion codes on the VibeCode Safety Kit Payment Link.
-6. Test checkout without code: $29.99.
-7. Test checkout with VIBE10: $19.99.
-8. Optional invite URL:
-   Add `?prefilled_promo_code=VIBE10` to the Stripe Payment Link.
-
-Important:
-Do not expose the promo code publicly unless intentionally running a public sale.
-
-## What we are intentionally NOT doing in v1
+## What We Are Not Doing Yet
 
 - No Stripe SDK.
 - No `app/api/checkout` route.
 - No Stripe webhook handler.
-- No subscriptions.
-- No customer portal.
-- No custom coupon logic. Stripe Payment Link handles promo codes natively
-  when enabled in the dashboard - no app code needed.
+- No database.
+- No auth.
+- No GitHub OAuth.
+- No repo scanning backend.
+- No full dashboard.
+- No custom coupon logic.

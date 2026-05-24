@@ -28,8 +28,11 @@ The site uses checkout env vars with fallback:
 - [ ] Test yearly checkout end-to-end in Stripe test mode.
 - [ ] Test cancellation through Stripe Customer Portal.
 - [ ] Confirm success redirect works after checkout.
+- [ ] Test member kit download from the hidden access page.
 - [ ] Confirm access/download page shows download button when env var is set.
+- [ ] Confirm cancellation copy is accurate while the portal is not fully connected.
 - [ ] Confirm no public copy promises manual human audits, GitHub repo scanning, guaranteed security, or a SaaS dashboard.
+- [ ] Confirm no public copy guarantees secure, bug-free, compliant, or production-ready software.
 - [ ] Confirm CTA buttons route correctly:
   - Header "Get Started"
   - Hero "Start for $6.99/month"
