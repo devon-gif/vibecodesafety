@@ -5,7 +5,7 @@ export function Logo({ className = "" }: { className?: string }) {
     <span className={`inline-flex items-center ${className}`}>
       <Image
         src="/images/logogog.png?v=2"
-        alt="VibeCode Safety Kit"
+        alt="VibeCode Safety"
         width={2508}
         height={627}
         priority
