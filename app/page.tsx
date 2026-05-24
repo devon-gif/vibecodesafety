@@ -114,8 +114,12 @@ const kitFiles = [
   },
 ];
 
-const fileTreeText = `VibeCode Safety Kit/
+const fileTreeText = `VibeCode-Safety-Kit-v1/
 ├── QUICKSTART.md
+├── 00-START-HERE/
+│   ├── READ_THIS_FIRST.md
+│   ├── 5_MINUTE_SETUP.md
+│   └── WHICH_FILE_DO_I_USE.md
 ├── 00-Beginner-Mode/
 │   ├── VIBECODE_SAFETY_RULES.md
 │   ├── PROJECT_SAFETY_PROFILE.md
@@ -123,25 +127,27 @@ const fileTreeText = `VibeCode Safety Kit/
 │   ├── REVIEWER_PROMPT.md
 │   └── PRE_SHIP_CHECKLIST.md
 ├── 01-Repo-Instructions/
-│   ├── AGENTS.md
-│   ├── CLAUDE.md
 │   ├── CURSOR_RULES.md
 │   ├── WINDSURF_RULES.md
-│   └── COPILOT_INSTRUCTIONS.md
-├── 02-Security-Guardrails/
-│   ├── SECRET_SCANNING_WORKFLOW.md
-│   ├── ENVIRONMENT_VARIABLES_CHECKLIST.md
-│   ├── SUPABASE_RLS_CHECKLIST.md
-│   └── STRIPE_WEBHOOK_CHECKLIST.md
-├── 03-Automated-Check-Starters/
+│   ├── CLAUDE.md
+│   └── AGENTS.md
+├── 02-Prompt-Workflows/
+│   ├── BUILDER_PROMPT.md
+│   └── REVIEWER_PROMPT.md
+├── 03-Checklists/
+│   ├── PRE_COMMIT_CHECKLIST.md
+│   ├── PRE_PUSH_CHECKLIST.md
+│   └── PRE_DEPLOY_CHECKLIST.md
+├── 04-Security-Guardrails/
+│   ├── SECURITY_GUARDRAILS.md
+│   ├── SUPABASE_CHECKLIST.md
+│   └── STRIPE_BILLING_CHECKLIST.md
+├── 05-Automated-Checks/
 │   ├── GITLEAKS_SETUP.md
-│   ├── GITHUB_ACTIONS_STARTER.md
-│   ├── PLAYWRIGHT_SMOKE_TEST.md
-│   └── K6_SMOKE_TEST.md
-└── 04-Release-Checklists/
-    ├── PRE_COMMIT_CHECKLIST.md
-    ├── PRE_DEPLOY_CHECKLIST.md
-    └── ROLLBACK_CHECKLIST.md`;
+│   └── GITHUB_ACTIONS_STARTER.md
+└── 99-BUYER-BONUS/
+    ├── COPY_PASTE_PROMPT_PACK.md
+    └── VIBECODE_REVIEW_SCORECARD.md`;
 
 const insideCards = [
   {
@@ -318,6 +324,22 @@ const faqs = [
     q: "Can I use it with an existing app?",
     a: "Yes. The kit is designed to be copied into an existing repo. You add the templates, customize them to your app, and start using the review workflow after each AI coding change.",
   },
+  {
+    q: "Do I need an account to buy the kit?",
+    a: "No. For launch, you can buy through Stripe without creating an account. Access instructions are sent to the email used at checkout.",
+  },
+  {
+    q: "Can I sign in with Google?",
+    a: "Google sign-in is planned for account-based access, but the launch version does not require an account. You can purchase the kit through Stripe and receive access instructions by email.",
+  },
+  {
+    q: "Are you affiliated with Claude, Cursor, OpenAI, GitHub, Lovable, Bolt, Replit, or Vercel?",
+    a: "No. Tool names are shown only to explain compatibility. VibeCode Safety Kit is independent and is not affiliated with or endorsed by those companies.",
+  },
+  {
+    q: "Are the testimonials real?",
+    a: "Not yet. The reactions shown on this page are placeholder/example quotes used for product positioning. They are not verified customer reviews. Real buyer testimonials will be added after launch.",
+  },
 ];
 
 /* ---------- helper components ---------- */
@@ -439,6 +461,48 @@ export default function Home() {
               A simple repeatable review system for every AI coding change.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* COMPATIBLE AI TOOLS */}
+      <section className="relative border-t border-white/5">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <Eyebrow>COMPATIBLE WITH YOUR AI CODING WORKFLOW</Eyebrow>
+          <h2 className="mx-auto mt-5 max-w-3xl text-center text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Works with the AI coding tools you already use.
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-gray-400">
+            Use the kit with repo rules, prompts, and review workflows
+            across popular AI-assisted coding tools.
+          </p>
+
+          <ul className="mx-auto mt-10 flex max-w-5xl flex-wrap items-center justify-center gap-2.5">
+            {[
+              "Claude",
+              "Codex",
+              "Cursor",
+              "Windsurf",
+              "GitHub Copilot",
+              "Lovable",
+              "Bolt",
+              "Replit",
+              "v0",
+            ].map((t) => (
+              <li
+                key={t}
+                className="inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-white/[0.03] px-4 py-2 text-sm font-medium text-gray-200 transition hover:border-violet-400/40 hover:bg-violet-500/10"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+                {t}
+              </li>
+            ))}
+          </ul>
+
+          <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-gray-500">
+            Tool names are shown for compatibility context only. VibeCode
+            Safety Kit is independent and is not affiliated with or
+            endorsed by these companies.
+          </p>
         </div>
       </section>
 
@@ -625,6 +689,75 @@ export default function Home() {
             secure-coding review principles, simplified for beginner vibe
             coders. Not affiliated with or endorsed by any AI coding tool,
             hosting platform, payment provider, or security organization.
+          </p>
+        </div>
+      </section>
+
+      {/* TESTIMONIAL-STYLE REACTIONS (PLACEHOLDER) */}
+      <section className="relative border-t border-white/5">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <Eyebrow>BUILT FOR THE WAY AI BUILDERS ACTUALLY SHIP</Eyebrow>
+          <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            Designed for the moment right before you push.
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-gray-400">
+            VibeCode Safety Kit is built around the real anxiety of
+            AI-assisted development:{" "}
+            <span className="text-violet-200">
+              &ldquo;It works&hellip; but what did it quietly break?&rdquo;
+            </span>
+          </p>
+
+          <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3">
+            {[
+              {
+                label: "Example founder reaction",
+                quote:
+                  "This is exactly what I needed after using AI to build fast — a simple way to slow down for five minutes before I ship something risky.",
+                who: "Solo SaaS founder",
+              },
+              {
+                label: "Example vibe coder reaction",
+                quote:
+                  "I don't need another complicated dev tool. I need a repeatable prompt and checklist that tells me what to check before I push.",
+                who: "AI-assisted builder",
+              },
+              {
+                label: "Example agency reaction",
+                quote:
+                  "The PASS / WARNING / BLOCKED system makes it easier to review AI-built changes before handing work to a client.",
+                who: "Small studio operator",
+              },
+            ].map((t) => (
+              <figure
+                key={t.who}
+                className="glass-strong relative flex flex-col rounded-2xl p-6 shadow-glow"
+              >
+                <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-violet-400/30 bg-violet-500/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-violet-200">
+                  <span className="h-1.5 w-1.5 rounded-full bg-violet-300" />
+                  {t.label}
+                </span>
+                <svg
+                  viewBox="0 0 24 24"
+                  className="mt-5 h-6 w-6 text-violet-400/60"
+                  fill="currentColor"
+                  aria-hidden
+                >
+                  <path d="M7 7h4v4H8c0 2 1 3 3 3v3c-4 0-7-2-7-7V7Zm10 0h4v4h-3c0 2 1 3 3 3v3c-4 0-7-2-7-7V7Z" />
+                </svg>
+                <blockquote className="mt-3 flex-1 text-base leading-relaxed text-gray-100">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <figcaption className="mt-5 text-sm text-gray-400">
+                  &mdash; {t.who}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-gray-500">
+            Placeholder reactions shown for product positioning. Real buyer
+            testimonials will be added after launch.
           </p>
         </div>
       </section>
@@ -937,20 +1070,10 @@ export default function Home() {
                 Core and Team versions may come later.
               </p>
 
-              <div className="mt-6 rounded-xl border border-emerald-400/25 bg-emerald-400/5 p-4">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-300">
-                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
-                  7-day simple refund policy
-                </div>
-                <p className="mt-2 text-sm leading-relaxed text-gray-300">
-                  If you open the kit and feel like it does not help you
-                  review AI-generated code more clearly, email us within
-                  7 days for a full refund.
-                </p>
-              </div>
+              <p className="mt-4 text-center text-xs leading-relaxed text-gray-500">
+                This is a digital product. All sales are final.{" "}
+                <a href="/refund-policy" className="underline hover:text-gray-400">Refund policy</a>.
+              </p>
 
               <p className="mt-4 text-center text-[11px] leading-relaxed text-gray-500">
                 Helps reduce risk. Does not guarantee secure, bug-free, or
@@ -987,29 +1110,37 @@ export default function Home() {
               <CheckBullet key={b}>{b}</CheckBullet>
             ))}
           </ul>
+
+          <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-violet-200">
+            No account required for launch. Checkout uses Stripe, and
+            access instructions are sent to the email used at purchase.
+          </p>
         </div>
       </section>
 
-      {/* GUARANTEE */}
+      {/* DIGITAL PRODUCT NOTE */}
       <section className="relative border-t border-white/5">
         <div className="mx-auto max-w-3xl px-6 py-20">
           <div className="glass-strong rounded-3xl p-8 text-center shadow-glow">
-            <div className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300 ring-1 ring-emerald-400/30">
+            <div className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full bg-violet-400/15 text-violet-300 ring-1 ring-violet-400/30">
               <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z" />
                 <path d="m9 12 2 2 4-4" />
               </svg>
             </div>
             <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl">
-              Try the workflow risk-free.
+              Plain Markdown. Use it today.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-gray-300">
-              If you open the kit and feel like it does not help you review
-              AI-generated code more clearly, email us within 7 days.
+              Every file is plain Markdown — no app to install, no account to
+              create. Open QUICKSTART.md and you&apos;re reviewing AI code in under
+              5 minutes.
             </p>
             <p className="mx-auto mt-4 max-w-xl text-xs text-gray-500">
-              The kit helps reduce risk. It does not guarantee secure or
-              bug-free software.
+              This is a digital product. All sales are final. The kit helps
+              reduce risk but does not guarantee secure or bug-free software.
+              See our{" "}
+              <a href="/refund-policy" className="underline hover:text-gray-400">refund policy</a>.
             </p>
           </div>
         </div>

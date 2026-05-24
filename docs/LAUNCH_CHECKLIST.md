@@ -88,9 +88,43 @@ Run through this before flipping the site to "live".
       do not cover important content; modals can be closed.
 - [ ] Local dev runs on `http://localhost:3001` (`pnpm run dev`).
 
+## Testimonials & social proof
+
+- [ ] All 3 testimonial cards are clearly labeled as
+      *Example founder / vibe coder / agency reaction*.
+- [ ] Disclaimer line ("Placeholder reactions shown for product
+      positioning. Real buyer testimonials will be added after launch.")
+      is present under the cards.
+- [ ] Replace placeholder testimonials with **real** buyer quotes (with
+      permission) as they come in. Remove the disclaimer once all three
+      cards are real.
+- [ ] No fake names, no fake photos, no "verified buyer" badges.
+
+## AI tool compatibility strip
+
+- [ ] Compatibility pill strip uses tool **names only** (no third-party
+      logos).
+- [ ] Disclaimer line ("Tool names are shown for compatibility context
+      only. VibeCode Safety Kit is independent and is not affiliated with
+      or endorsed by these companies.") is present.
+- [ ] No endorsement, partnership, or certification language anywhere
+      on the site.
+
+## Accounts / sign-up
+
+- [ ] `/sign-up` page renders cleanly.
+- [ ] Google button is **visibly disabled** with a "Coming soon" badge.
+- [ ] Sign-up page does not imply auth is live.
+- [ ] Header "Sign In" link is subtle, not the primary CTA.
+- [ ] Purchase does **not** require an account.
+- [ ] Stripe checkout email is the delivery identity for launch.
+
 ## After launch
 
 - [ ] Watch the first 5 real purchases. Confirm each buyer received the
       kit.
 - [ ] Open one bug ticket per piece of feedback. Don't lose any.
 - [ ] Schedule a v1.1 pass: typos, missing examples, new tools to support.
+- [ ] Replace placeholder testimonials with real ones.
+- [ ] When real accounts are wired, replace the disabled Google button
+      with a working OAuth flow and update the related FAQ entry.
