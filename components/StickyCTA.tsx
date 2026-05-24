@@ -55,11 +55,10 @@ export function StickyCTA() {
           </span>
           <div className="min-w-0">
             <div className="truncate text-sm font-semibold text-white">
-              VibeCode Safety Kit
+              VibeCode Safety
             </div>
             <div className="truncate text-xs text-gray-400">
-              <span className="text-violet-300">$29.99</span> one-time · no
-              subscription
+              <span className="text-violet-300">$6.99/mo</span> or $59/yr &middot; cancel anytime
             </div>
           </div>
         </div>
@@ -70,7 +69,7 @@ export function StickyCTA() {
             : {})}
           className="btn-primary flex-none px-4 py-2 text-sm"
         >
-          Get the Kit
+          Get Started
         </a>
       </div>
     </div>

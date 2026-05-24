@@ -12,7 +12,7 @@ const faqs: FAQ[] = [
   },
   {
     q: "Does it run checks automatically?",
-    a: "No. The first version is a digital kit, not a hosted dashboard. It gives you the files, prompts, and setup guides to add the workflow to your repo.",
+    a: "No. The subscription gives you a digital kit, not a hosted dashboard. It gives you the files, prompts, and setup guides to add the workflow to your repo.",
   },
   {
     q: "What is Beginner Mode?",
@@ -32,11 +32,11 @@ const faqs: FAQ[] = [
   },
   {
     q: "Is this a subscription?",
-    a: "No. This is a one-time digital purchase at $29.99. Launch Edition pricing. No subscription, no hosted dashboard.",
+    a: "Yes. VibeCode Safety is $6.99/month or $59/year. The subscription includes the repo audit workflow, daily guardrails, and ongoing updates. Cancel anytime.",
   },
   {
     q: "Will it guarantee my app is secure?",
-    a: "No. No prompt or checklist can guarantee that. The kit helps reduce risk and improve your review workflow, but it is not a replacement for professional engineering, QA, or security review.",
+    a: "No. No prompt or checklist can guarantee that. It helps reduce risk and improve your review workflow, but it is not a replacement for professional engineering, QA, or security review.",
   },
 ];
 
@@ -209,7 +209,7 @@ export function ChatWidget() {
                 : {})}
               className="btn-primary mt-3 w-full text-sm"
             >
-              Get the Kit for $29.99
+              Start for $6.99/month
             </a>
           </div>
         </div>
