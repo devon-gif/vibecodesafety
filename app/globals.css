@@ -353,7 +353,7 @@ body {
    SAFETY REPORT ANIMATIONS
    ====================================================== */
 .safety-report-float {
-  animation: report-float 9s ease-in-out infinite;
+  animation: report-float 14s ease-in-out infinite;
   will-change: transform;
 }
 
@@ -362,15 +362,15 @@ body {
 }
 
 .report-score {
-  animation: report-score-in 1100ms ease-out 1500ms both;
+  animation: report-score-in 1400ms ease-out 2200ms both;
 }
 
 .report-status {
-  animation: report-fade-up 900ms ease-out 2000ms both;
+  animation: report-fade-up 1200ms ease-out 3600ms both;
 }
 
 .report-status-dot {
-  animation: report-green-pulse 2800ms ease-in-out 2400ms infinite both;
+  animation: report-green-pulse 4200ms ease-in-out 4200ms infinite both;
 }
 
 .report-row {
@@ -428,7 +428,7 @@ body {
    ====================================================== */
 @keyframes report-float {
   0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-6px); }
+  50%       { transform: translateY(-4px); }
 }
 
 @keyframes report-score-in {
