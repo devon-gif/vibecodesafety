@@ -252,7 +252,7 @@ body {
 }
 
 .safety-report-float {
-  animation: report-float 6.5s ease-in-out infinite;
+  animation: report-float 9s ease-in-out infinite;
   will-change: transform;
 }
 
@@ -261,30 +261,32 @@ body {
 }
 
 .report-score {
-  animation: report-score-in 650ms ease-out 950ms both;
+  animation: report-score-in 1100ms ease-out 1500ms both;
 }
 
 .report-status {
-  animation: report-fade-up 520ms ease-out 1250ms both;
+  animation: report-fade-up 900ms ease-out 2000ms both;
 }
 
 .report-status-dot {
-  animation: report-green-pulse 900ms ease-out 1450ms both;
+  animation: report-green-pulse 2800ms ease-in-out 2400ms infinite both;
 }
 
 .report-row {
   opacity: 0;
   transform: translateY(14px);
-  animation: report-row-in 520ms ease-out both;
+  animation: report-row-in 800ms ease-out both;
 }
 
 .report-row .report-status-badge {
-  animation: report-badge-glow 950ms ease-out both;
+  animation: report-badge-glow 2400ms ease-in-out infinite both;
   animation-delay: inherit;
 }
 
 .report-row-warning .report-status-badge {
   animation-name: report-warning-pulse;
+  animation-duration: 2400ms;
+  animation-iteration-count: infinite;
 }
 
 .report-row-final {

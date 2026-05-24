@@ -73,7 +73,7 @@ export function SafetyReport() {
 
     let frame = 0;
     let start = 0;
-    const duration = 1200;
+    const duration = 2000;
     const delay = window.setTimeout(() => {
       const tick = (time: number) => {
         if (!start) start = time;
@@ -85,7 +85,7 @@ export function SafetyReport() {
         }
       };
       frame = window.requestAnimationFrame(tick);
-    }, 300);
+    }, 900);
 
     return () => {
       window.clearTimeout(delay);
@@ -143,7 +143,7 @@ export function SafetyReport() {
                   key={it.label}
                   className={`report-row flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.035] px-4 py-4 text-sm ${it.status === "Warnings" ? "report-row-warning" : ""}`}
                   style={{
-                    animationDelay: `${900 + items.indexOf(it) * 180}ms`,
+                    animationDelay: `${1400 + items.indexOf(it) * 260}ms`,
                   }}
                 >
                   <span className="flex items-center gap-3 text-gray-200">
