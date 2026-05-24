@@ -133,7 +133,7 @@ function CartIcon() {
 
 export default function PreShipChecklistPage() {
   return (
-    <main className="relative overflow-hidden">
+    <div className="relative overflow-hidden">
       <section className="relative border-b border-white/5">
         <div
           aria-hidden="true"
@@ -306,6 +306,6 @@ export default function PreShipChecklistPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
