@@ -51,3 +51,41 @@ Buttons render through `<BuyLink>` (`components/BuyLink.tsx`) which:
 - No Stripe webhook handler.
 - No database. No auth. No subscription mode.
 - No Vercel deploy from this repo.
+
+## Email Consent TODO
+
+The pricing card includes an optional, **unchecked** consent checkbox:
+
+> Send me product updates, launch notes, and helpful AI coding safety tips by email.
+
+It is currently UI-only (state lives in `components/EmailConsentCheckbox.tsx`)
+and does not store anything.
+
+Before launch:
+
+1. Decide where email consent will be collected:
+   - Stripe Checkout custom consent if available
+   - email marketing provider form
+   - post-purchase welcome flow
+2. Keep marketing consent optional.
+3. Do not pre-check the box.
+4. Store consent only if connected to a real email provider or checkout system.
+5. Include unsubscribe instructions in future marketing emails.
+
+Do **not** add Mailchimp, ConvertKit, Resend, Supabase, or a database
+integration until the launch path is decided.
+
+## Legal Pages TODO
+
+Confirm these pages exist and render with the Back to Home CTA:
+
+- `/privacy`
+- `/terms`
+- `/refund-policy`
+
+Confirm footer legal links work on desktop and mobile:
+
+- Privacy Policy → `/privacy`
+- Terms & Agreements → `/terms`
+- Refund Policy → `/refund-policy`
+- Contact → `mailto:support@vibecodesafety.com`

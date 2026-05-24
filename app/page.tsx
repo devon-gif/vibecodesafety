@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SafetyReport } from "@/components/SafetyReport";
 import { BuyLink } from "@/components/BuyLink";
+import { EmailConsentCheckbox } from "@/components/EmailConsentCheckbox";
 
 const kitFiles = [
   { name: "START_HERE.md", desc: "Read this first. The 5-minute orientation." },
@@ -767,7 +768,9 @@ export default function Home() {
                 ))}
               </ul>
 
-              <BuyLink className="btn-primary mt-8 w-full text-base">
+              <EmailConsentCheckbox />
+
+              <BuyLink className="btn-primary mt-5 w-full text-base">
                 <CartIcon />
                 Get the Kit for $29.99
               </BuyLink>
