@@ -1,6 +1,28 @@
 import Link from "next/link";
 import { SafetyReport } from "@/components/SafetyReport";
 
+const kitFiles = [
+  { name: "START_HERE.md", desc: "Read this first. The 5-minute orientation." },
+  { name: "AI_REVIEWER_PROMPT.md", desc: "Second-pass prompt that reviews every AI change." },
+  { name: "BUILDER_PROMPT.md", desc: "Structured prompt for safer AI feature builds." },
+  { name: "PRE_DEPLOY_CHECKLIST.md", desc: "Run before every push or deploy." },
+  { name: "SECURITY_GUARDRAILS.md", desc: "Practical checks for secrets, env, API, logging." },
+  { name: "SUPABASE_CHECKLIST.md", desc: "RLS, policies, schema drift, and auth." },
+  { name: "STRIPE_BILLING_CHECKLIST.md", desc: "Webhooks, plan state, and checkout safety." },
+  { name: "GITLEAKS_SETUP.md", desc: "Catch exposed secrets before they ship." },
+  { name: "GITHUB_ACTIONS_STARTER.md", desc: "Type-check, build, and scan on every push." },
+  { name: "CRITICAL_FLOWS_CHECKLIST.md", desc: "Auth, onboarding, forms, dashboards, billing." },
+];
+
+const useCases = [
+  "You built your SaaS with Cursor.",
+  "Claude fixed one bug but changed five files.",
+  "You are about to push to Vercel.",
+  "You added Stripe and are scared something broke.",
+  "You use Supabase and want to avoid RLS mistakes.",
+  "You are handing a client project off.",
+];
+
 const trustPills = [
   "Works with Claude, Codex, Cursor, Windsurf, Copilot & more",
   "Includes prompts, checklists, and repo rules",
@@ -408,6 +430,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FILE TREE — what you actually get */}
+      <section className="relative border-t border-white/5">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <Eyebrow>WHAT YOU ACTUALLY GET</Eyebrow>
+          <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            A real folder you drop into your repo.
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-gray-400">
+            Not a course. Not a SaaS dashboard. A small set of markdown files
+            and starter configs that live in your project alongside your code.
+          </p>
+
+          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-[1fr,1.1fr]">
+            <div className="glass-strong overflow-hidden rounded-2xl shadow-glow">
+              <div className="flex items-center justify-between border-b border-white/10 bg-black/30 px-4 py-2.5 text-xs text-gray-400">
+                <div className="flex items-center gap-1.5">
+                  <span className="h-2.5 w-2.5 rounded-full bg-rose-400/70" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-amber-400/70" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/70" />
+                </div>
+                <span className="font-mono">your-repo / VibeCode-Safety-Kit</span>
+                <span className="font-mono text-violet-300">main</span>
+              </div>
+              <pre className="overflow-x-auto px-5 py-5 font-mono text-[13px] leading-relaxed text-gray-300">
+{`VibeCode Safety Kit/
+├── START_HERE.md
+├── AI_REVIEWER_PROMPT.md
+├── BUILDER_PROMPT.md
+├── PRE_DEPLOY_CHECKLIST.md
+├── SECURITY_GUARDRAILS.md
+├── SUPABASE_CHECKLIST.md
+├── STRIPE_BILLING_CHECKLIST.md
+├── GITLEAKS_SETUP.md
+├── GITHUB_ACTIONS_STARTER.md
+└── CRITICAL_FLOWS_CHECKLIST.md`}
+              </pre>
+            </div>
+
+            <ul className="grid grid-cols-1 gap-2.5">
+              {kitFiles.map((f) => (
+                <li
+                  key={f.name}
+                  className="glass flex items-start gap-3 rounded-xl p-4"
+                >
+                  <span className="mt-0.5 inline-flex h-7 w-7 flex-none items-center justify-center rounded-md bg-violet-500/15 text-violet-300 ring-1 ring-violet-400/30">
+                    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+                      <path d="M14 3v6h6" />
+                    </svg>
+                  </span>
+                  <div className="min-w-0">
+                    <div className="truncate font-mono text-sm text-white">
+                      {f.name}
+                    </div>
+                    <div className="text-xs text-gray-400">{f.desc}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* PROBLEM */}
       <section className="relative border-t border-white/5">
         <div className="mx-auto max-w-7xl px-6 py-24">
@@ -542,6 +627,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* USE CASES — "this is for you if" */}
+      <section className="relative border-t border-white/5">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <Eyebrow>THIS IS FOR YOU IF…</Eyebrow>
+          <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            You&apos;ve been in <span className="violet-text">one of these moments.</span>
+          </h2>
+          <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {useCases.map((u) => (
+              <div
+                key={u}
+                className="glass flex items-start gap-3 rounded-2xl p-6"
+              >
+                <span className="mt-1 inline-flex h-7 w-7 flex-none items-center justify-center rounded-full bg-violet-500/15 text-violet-300 ring-1 ring-violet-400/30">
+                  <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 8v5" />
+                    <path d="M12 17h.01" />
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                </span>
+                <p className="text-base text-gray-200">{u}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-gray-500">
+            If any of these felt familiar, the kit is built for that exact
+            five minutes before you ship.
+          </p>
+        </div>
+      </section>
+
       {/* WHO IT'S FOR */}
       <section id="who-its-for" className="relative border-t border-white/5">
         <div className="mx-auto max-w-7xl px-6 py-24">
@@ -661,9 +777,28 @@ export default function Home() {
                 Early version pricing. One-time purchase. No subscription
                 required.
               </p>
-              <p className="mt-2 text-center text-[11px] text-gray-600">
-                This kit helps reduce risk, but it does not guarantee bug-free
-                or secure software.
+
+              {/* Mini guarantee */}
+              <div className="mt-6 rounded-xl border border-emerald-400/25 bg-emerald-400/5 p-4">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-300">
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                  7-day simple refund policy
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-gray-300">
+                  If you open the kit and feel like it does not help you
+                  review AI-generated code more clearly, email us within 7
+                  days for a full refund.
+                </p>
+              </div>
+
+              {/* Honest disclaimer */}
+              <p className="mt-4 text-center text-[11px] leading-relaxed text-gray-500">
+                This is not a security audit or a replacement for a senior
+                developer. It is a practical guardrail system that helps
+                AI-assisted builders catch more issues before they ship.
               </p>
             </div>
           </div>
@@ -765,7 +900,13 @@ export default function Home() {
           className="orb left-1/2 top-10 h-[420px] w-[420px] -translate-x-1/2 bg-violet-600/30"
         />
         <div className="mx-auto max-w-4xl px-6 py-28 text-center">
-          <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
+          <div className="flex justify-center">
+            <span className="pill">
+              <span className="pill-dot" />
+              BEFORE YOUR NEXT COMMIT, PUSH, OR DEPLOY
+            </span>
+          </div>
+          <h2 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-6xl">
             Before you commit, push, or deploy —{" "}
             <span className="violet-text">run the review.</span>
           </h2>
