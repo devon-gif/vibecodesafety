@@ -2,7 +2,7 @@ import { LegalShell } from "@/components/LegalShell";
 import { SUPPORT_EMAIL } from "@/lib/checkout";
 
 export const metadata = {
-  title: "No Refunds / Returns Policy — VibeCode Safety Kit",
+  title: "No Refunds / Returns Policy - VibeCode Safety Kit",
 };
 
 export default function RefundPolicyPage() {

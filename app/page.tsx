@@ -8,7 +8,7 @@ import { ContactForm } from "@/components/ContactForm";
 
 const trustPills = [
   "Works with Claude, Codex, Cursor, Windsurf, Copilot & more",
-  "Beginner-friendly setup — copy 3 files, paste 1 prompt",
+  "Beginner-friendly setup - copy 3 files, paste 1 prompt",
   "Designed for solo founders, not enterprise teams",
 ];
 
@@ -460,7 +460,7 @@ export default function Home() {
             </h1>
             <p className="mt-6 text-pretty text-lg text-gray-300">
               VibeCode Safety Kit gives you a copy-paste safety workflow for
-              AI-built apps — repo rules, review prompts, checklists, and
+              AI-built apps - repo rules, review prompts, checklists, and
               pre-ship guardrails that help catch risky AI-generated changes
               before you commit, push, or deploy.
             </p>
@@ -692,7 +692,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PREVIEW WHAT'S INSIDE — file tree */}
+      {/* PREVIEW WHAT'S INSIDE - file tree */}
       <section className="relative border-t border-white/5">
         <div className="mx-auto max-w-7xl px-6 py-24">
           <Eyebrow>PREVIEW WHAT&apos;S INSIDE</Eyebrow>
@@ -805,7 +805,7 @@ export default function Home() {
               {
                 label: "Example founder reaction",
                 quote:
-                  "This is exactly what I needed after using AI to build fast — a simple way to slow down for five minutes before I ship something risky.",
+                  "This is exactly what I needed after using AI to build fast - a simple way to slow down for five minutes before I ship something risky.",
                 who: "Solo SaaS founder",
               },
               {
@@ -1224,7 +1224,7 @@ export default function Home() {
               Plain Markdown. Use it today.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-gray-300">
-              Every file is plain Markdown — no app to install, no account to
+              Every file is plain Markdown - no app to install, no account to
               create. Open QUICKSTART.md and you&apos;re reviewing AI code in under
               5 minutes.
             </p>

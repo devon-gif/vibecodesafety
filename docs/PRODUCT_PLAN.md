@@ -1,7 +1,7 @@
-# VibeCode Safety Kit — Product Plan
+# VibeCode Safety Kit - Product Plan
 
 ## Product
-**VibeCode Safety Kit — Launch Edition** — a one-time, $29.99 digital kit for beginner vibe coders and AI-assisted founders.
+**VibeCode Safety Kit - Launch Edition** - a one-time, $29.99 digital kit for beginner vibe coders and AI-assisted founders.
 
 ## Positioning
 > Ship faster without shipping blind.
@@ -10,7 +10,7 @@
 
 **Core promise:** copy 3 files, paste 1 prompt, don't ship until the review passes.
 
-A practical guardrail system — prompts, checklists, repo rules, and pre-deploy workflows that help catch broken flows, exposed secrets, schema drift, and risky AI-generated changes before they go live.
+A practical guardrail system - prompts, checklists, repo rules, and pre-deploy workflows that help catch broken flows, exposed secrets, schema drift, and risky AI-generated changes before they go live.
 
 ## Why now
 - AI coding tools (Claude, Codex, Cursor, Windsurf, etc.) make it easy to ship fast.
@@ -49,9 +49,9 @@ A practical guardrail system — prompts, checklists, repo rules, and pre-deploy
 All Core Guardrails are included as templates and starter docs. The site does not run these tools automatically.
 
 ## Review statuses (used in reviewer prompt)
-- **PASS** — safe to commit
-- **PASS WITH WARNINGS** — review follow-ups
-- **BLOCKED** — fix before push/deploy
+- **PASS** - safe to commit
+- **PASS WITH WARNINGS** - review follow-ups
+- **BLOCKED** - fix before push/deploy
 
 ## Pricing
 - **Launch Edition: $29.99 one-time.**

@@ -1,10 +1,10 @@
-# Stripe Setup — VibeCode Safety Kit
+# Stripe Setup - VibeCode Safety Kit
 
 This site sells a **single one-time digital product** at **$29.99**. The
 simplest path is a Stripe Payment Link. We do **not** install the Stripe
 SDK, write API routes, or handle webhooks for v1.
 
-## Step 1 — Create the product in Stripe
+## Step 1 - Create the product in Stripe
 
 1. Sign in to https://dashboard.stripe.com/.
 2. **Products → Add product.**
@@ -13,7 +13,7 @@ SDK, write API routes, or handle webhooks for v1.
 5. Pricing model: **One time**. Price: **29.99 USD**.
 6. Save.
 
-## Step 2 — Create a Payment Link
+## Step 2 - Create a Payment Link
 
 1. **Payment links → New.**
 2. Select the price you just created.
@@ -23,11 +23,11 @@ SDK, write API routes, or handle webhooks for v1.
 6. (Optional) Custom field: a single optional checkbox labeled
    *"Send me product updates and AI coding safety tips by email"*.
    Leave it **unchecked by default**. Mark it **optional**.
-7. Save. Copy the resulting URL — it looks like
+7. Save. Copy the resulting URL - it looks like
    `https://buy.stripe.com/test_xxx` (test mode) or
    `https://buy.stripe.com/xxx` (live mode).
 
-## Step 3 — Wire the URL into the site
+## Step 3 - Wire the URL into the site
 
 Add to `.env.local` for local dev:
 
@@ -44,7 +44,7 @@ open the Payment Link in a new tab.
 If the env var is unset, every Buy button routes to `/checkout-coming-soon`
 instead of breaking.
 
-## Step 4 — Test mode end-to-end
+## Step 4 - Test mode end-to-end
 
 1. Use a **test mode** Payment Link (toggle in the Stripe dashboard).
 2. On the site, click any Buy button.
@@ -53,7 +53,7 @@ instead of breaking.
 4. Confirm you land on `/access/vcs-launch-edition-2026-k9p4`.
 5. Confirm Stripe shows the test payment under **Payments**.
 
-## Step 5 — Switch to live mode
+## Step 5 - Switch to live mode
 
 1. Create the product and Payment Link again in **live mode** (Stripe
    keeps test and live separate).
@@ -62,7 +62,7 @@ instead of breaking.
 4. Make a real $29.99 purchase from your own account. Refund yourself
    after confirming the hidden access page works.
 
-## Step 6 — Download delivery
+## Step 6 - Download delivery
 
 We do not have webhook-verified delivery in v1. The simplest delivery path:
 
@@ -82,4 +82,4 @@ See `docs/CHECKOUT_TODO.md` for the email-consent and webhook upgrade path.
 - No subscriptions.
 - No customer portal.
 - No coupon / promo codes (Payment Link supports them natively if you
-  enable them in the dashboard — no code needed).
+  enable them in the dashboard - no code needed).

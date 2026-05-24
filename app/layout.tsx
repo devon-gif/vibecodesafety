@@ -6,9 +6,9 @@ import { StickyCTA } from "@/components/StickyCTA";
 import { ChatWidget } from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
-  title: "VibeCode Safety Kit — Make AI check the AI before you ship.",
+  title: "VibeCode Safety Kit - Make AI check the AI before you ship.",
   description:
-    "A practical guardrail system for solo founders and AI builders — prompts, checklists, repo rules, and pre-deploy workflows that help catch broken flows, exposed secrets, schema drift, and risky AI-generated changes before they go live.",
+    "A practical guardrail system for solo founders and AI builders - prompts, checklists, repo rules, and pre-deploy workflows that help catch broken flows, exposed secrets, schema drift, and risky AI-generated changes before they go live.",
   metadataBase: new URL("https://vibecodesafetykit.com"),
   openGraph: {
     title: "VibeCode Safety Kit",

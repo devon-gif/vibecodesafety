@@ -1,6 +1,6 @@
 # Free / No Extra Cost Delivery Setup
 
-Recommended launch flow for VibeCode Safety Kit v1 — zero additional tools required.
+Recommended launch flow for VibeCode Safety Kit v1 - zero additional tools required.
 
 ---
 
@@ -84,8 +84,8 @@ when this variable is set.
 ## 6. Create Stripe Payment Link
 
 1. Stripe Dashboard → Products → Create product.
-2. Name: `VibeCode Safety Kit — Launch Edition`
-3. Price: `$29.99` — **one-time** (not recurring).
+2. Name: `VibeCode Safety Kit - Launch Edition`
+3. Price: `$29.99` - **one-time** (not recurring).
 4. Create Payment Link.
 5. Set **After payment** → Redirect to:
    `https://yourdomain.com/access/vcs-launch-edition-2026-k9p4`
@@ -110,7 +110,7 @@ Stripe Dashboard → Settings → Emails:
 
 ## 8. Create a Google Sheet buyer tracker
 
-Create a sheet named: `VibeCode Safety Kit — Buyers`
+Create a sheet named: `VibeCode Safety Kit - Buyers`
 
 Columns:
 

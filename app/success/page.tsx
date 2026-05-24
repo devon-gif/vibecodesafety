@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SUPPORT_EMAIL } from "@/lib/checkout";
 
 export const metadata: Metadata = {
-  title: "Payment complete — VibeCode Safety Kit",
+  title: "Payment complete - VibeCode Safety Kit",
 };
 
 export default function SuccessPage() {

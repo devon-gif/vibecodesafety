@@ -1,4 +1,4 @@
-# Launch Checklist — VibeCode Safety Kit
+# Launch Checklist - VibeCode Safety Kit
 
 Run through this before flipping the site to "live".
 
@@ -15,14 +15,14 @@ Run through this before flipping the site to "live".
 
 ## Pages
 
-- [ ] `/` — homepage.
-- [ ] `/checkout-coming-soon` — placeholder when env var unset.
-- [ ] `/success` — general thank-you page with no download button.
-- [ ] `/access/vcs-launch-edition-2026-k9p4` — hidden post-checkout
+- [ ] `/` - homepage.
+- [ ] `/checkout-coming-soon` - placeholder when env var unset.
+- [ ] `/success` - general thank-you page with no download button.
+- [ ] `/access/vcs-launch-edition-2026-k9p4` - hidden post-checkout
       download access page.
-- [ ] `/privacy` — current copy, dated.
-- [ ] `/terms` — current copy, dated.
-- [ ] `/refund-policy` — current copy, dated.
+- [ ] `/privacy` - current copy, dated.
+- [ ] `/terms` - current copy, dated.
+- [ ] `/refund-policy` - current copy, dated.
 - [ ] Footer legal links work on desktop and mobile:
       Privacy Policy, Terms & Agreements, Refund Policy, Contact.
 
@@ -147,7 +147,7 @@ Run through this before flipping the site to "live".
       `digital-product/final/VibeCode-Safety-Kit-v1-Launch-Edition.zip`
 - [ ] Upload ZIP as a single Google Drive file, not only as a folder:
       `VibeCode-Safety-Kit-v1-Launch-Edition-FINAL.zip`
-- [ ] Set Google Drive sharing to "Anyone with the link — Viewer"
+- [ ] Set Google Drive sharing to "Anyone with the link - Viewer"
 - [ ] Create direct download link:
       `https://drive.google.com/uc?export=download&id=FILE_ID`
 - [ ] Add direct download link to `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` in .env.local

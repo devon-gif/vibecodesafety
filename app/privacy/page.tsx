@@ -1,7 +1,7 @@
 import { LegalShell } from "@/components/LegalShell";
 import { SUPPORT_EMAIL } from "@/lib/checkout";
 
-export const metadata = { title: "Privacy Policy — VibeCode Safety Kit" };
+export const metadata = { title: "Privacy Policy - VibeCode Safety Kit" };
 
 export default function PrivacyPage() {
   return (

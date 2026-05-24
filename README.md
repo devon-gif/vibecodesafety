@@ -1,6 +1,6 @@
-# VibeCode Safety Kit — Landing Site
+# VibeCode Safety Kit - Landing Site
 
-Standalone landing page for the **VibeCode Safety Kit** — a one-time digital product that helps solo founders and AI builders review AI-generated code before they ship.
+Standalone landing page for the **VibeCode Safety Kit** - a one-time digital product that helps solo founders and AI builders review AI-generated code before they ship.
 
 > **Make AI check the AI before you ship.**
 
@@ -13,13 +13,13 @@ This repo only contains the marketing site. It does **not** depend on any other 
 - A premium dark landing page for selling a one-time $29.99 digital kit (Launch Edition).
 - Next.js 14 (App Router) + React 18 + TypeScript + Tailwind CSS v3.
 - No database. No auth. No subscriptions. No cart. No API routes.
-- Stripe checkout is **not** wired yet — see `docs/CHECKOUT_TODO.md`.
+- Stripe checkout is **not** wired yet - see `docs/CHECKOUT_TODO.md`.
 
 ## Product positioning
 
 - **Name:** VibeCode Safety Kit
 - **Positioning:** “Make AI check the AI before you ship.”
-- **One-liner:** A practical guardrail system for solo founders and AI builders — prompts, checklists, repo rules, and pre-deploy workflows that help catch broken flows, exposed secrets, schema drift, and risky AI-generated changes before they go live.
+- **One-liner:** A practical guardrail system for solo founders and AI builders - prompts, checklists, repo rules, and pre-deploy workflows that help catch broken flows, exposed secrets, schema drift, and risky AI-generated changes before they go live.
 - **Price:** $29.99 one-time (Launch Edition). Not a subscription.
 - **Primary CTA:** “Get the kit”
 - **Secondary CTA:** “See what's inside”
@@ -82,11 +82,11 @@ kit-preview/             # Placeholder previews of kit contents (not the real ki
 
 ## Next steps
 
-1. Wire up Stripe (one-time payment) — see `docs/CHECKOUT_TODO.md`.
+1. Wire up Stripe (one-time payment) - see `docs/CHECKOUT_TODO.md`.
 2. Build the actual kit ZIP and set up delivery (e.g., signed download link or email).
 3. Hook up analytics.
 4. Add `og-image.png`, favicon, and a real domain.
-5. Launch — see `docs/LAUNCH_CHECKLIST.md`.
+5. Launch - see `docs/LAUNCH_CHECKLIST.md`.
 
 ## What this project is **not**
 

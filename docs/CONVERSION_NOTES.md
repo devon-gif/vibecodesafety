@@ -1,4 +1,4 @@
-# Conversion Notes — VibeCode Safety Kit
+# Conversion Notes - VibeCode Safety Kit
 
 Working notes about what is placeholder / illustrative on the site so we
 do not accidentally ship misleading claims.
@@ -28,7 +28,7 @@ do not accidentally ship misleading claims.
 - The horizontal pill strip lists tool names only (Claude, Codex,
   Cursor, Windsurf, GitHub Copilot, Lovable, Bolt, Replit, v0).
 - No official logos are used.
-- Compatibility is shown for context only — **no endorsement implied**.
+- Compatibility is shown for context only - **no endorsement implied**.
 - Disclaimer line appears below the strip:
   > Tool names are shown for compatibility context only. VibeCode Safety
   > Kit is independent and is not affiliated with or endorsed by these
@@ -83,8 +83,8 @@ Always say:
 
 ## Cross-references
 
-- `docs/LAUNCH_CHECKLIST.md` — pre-launch sanity list.
-- `docs/CHECKOUT_TODO.md` — Stripe Payment Link setup.
-- `docs/STRIPE_SETUP.md` — step-by-step setup.
-- `app/sign-up/page.tsx` — placeholder sign-up route.
-- `components/SiteHeader.tsx` — no Sign In link for v1.
+- `docs/LAUNCH_CHECKLIST.md` - pre-launch sanity list.
+- `docs/CHECKOUT_TODO.md` - Stripe Payment Link setup.
+- `docs/STRIPE_SETUP.md` - step-by-step setup.
+- `app/sign-up/page.tsx` - placeholder sign-up route.
+- `components/SiteHeader.tsx` - no Sign In link for v1.

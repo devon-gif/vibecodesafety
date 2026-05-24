@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Checkout coming soon — VibeCode Safety Kit",
+  title: "Checkout coming soon - VibeCode Safety Kit",
 };
 
 export default function CheckoutComingSoonPage() {

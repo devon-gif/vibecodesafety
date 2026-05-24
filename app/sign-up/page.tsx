@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { BuyLink } from "@/components/BuyLink";
 
 export const metadata: Metadata = {
-  title: "Create your VibeCode Safety account — coming soon",
+  title: "Create your VibeCode Safety account - coming soon",
 };
 
 function GoogleG({ className = "h-4 w-4" }: { className?: string }) {
