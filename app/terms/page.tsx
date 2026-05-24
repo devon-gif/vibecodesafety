@@ -1,7 +1,7 @@
 import { LegalShell } from "@/components/LegalShell";
 import { SUPPORT_EMAIL } from "@/lib/checkout";
 
-export const metadata = { title: "Terms & Agreements - VibeCode Safety Kit" };
+export const metadata = { title: "Terms & Agreements - VibeCode Safety" };
 
 export default function TermsPage() {
   return (
@@ -10,16 +10,16 @@ export default function TermsPage() {
       updated="May 24, 2026"
       intro={
         <p>
-          By purchasing or using VibeCode Safety Kit, you agree to these
+          By purchasing or using VibeCode Safety, you agree to these
           Terms &amp; Agreements.
         </p>
       }
     >
       <h2>1. Product Description</h2>
       <p>
-        VibeCode Safety Kit is a digital product containing prompts,
-        checklists, templates, documentation, and workflow guidance for
-        AI-assisted builders.
+        VibeCode Safety is a subscription membership containing prompts,
+        checklists, templates, documentation, safety drops, and workflow
+        guidance for AI-assisted builders.
       </p>
       <p>
         It is designed to help users review AI-generated code more
@@ -28,17 +28,17 @@ export default function TermsPage() {
 
       <h2>2. Not Professional Advice</h2>
       <p>
-        VibeCode Safety Kit does not provide legal, financial, security,
+        VibeCode Safety does not provide legal, financial, security,
         compliance, or professional engineering advice.
       </p>
       <p>
-        The kit is not a replacement for a senior developer, QA process,
+        The membership is not a replacement for a senior developer, QA process,
         security audit, or professional review.
       </p>
 
       <h2>3. No Guarantees</h2>
       <p>
-        We do not guarantee that use of the kit will make your software
+        We do not guarantee that use of the membership will make your software
         bug-free, secure, compliant, production-ready, or free from
         vulnerabilities.
       </p>
@@ -60,18 +60,18 @@ export default function TermsPage() {
         <li>complying with applicable laws and platform rules</li>
       </ul>
 
-      <h2>5. Digital Product License</h2>
+      <h2>5. Membership License</h2>
       <p>
-        Your purchase gives you a personal or internal business-use license
-        to use the kit in your own projects.
+        Your active membership gives you a personal or internal business-use
+        license to use the included materials in your own projects.
       </p>
       <p>
         You may not resell, redistribute, repackage, upload, share, or claim
-        the kit as your own product.
+        the membership materials as your own product.
       </p>
       <p>
         You may use the templates inside your own projects and client work,
-        but you may not sell the kit itself as a competing product.
+        but you may not sell the materials themselves as a competing product.
       </p>
 
       <h2>6. Payments</h2>
@@ -83,23 +83,26 @@ export default function TermsPage() {
 
       <h2>7. No Refunds / Returns</h2>
       <p>
-        Because this is a digital product with immediate access, all sales
-        are final unless otherwise required by law.
+        Because this membership includes immediate access to digital files and
+        workflows, payments are generally non-refundable unless otherwise
+        required by law. You can cancel future billing through Stripe support
+        flows or support while the automated portal is being connected.
       </p>
       <p>Please review the product description before purchasing.</p>
 
       <h2>8. Updates</h2>
       <p>
-        We may update, improve, or change the kit over time. Future updates
-        are not guaranteed unless explicitly stated.
+        We may update, improve, or change the membership materials over time.
+        Active members receive ongoing updates and monthly safety drops while
+        subscribed.
       </p>
 
       <h2>9. Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by law, VibeCode Safety Kit and its
+        To the maximum extent permitted by law, VibeCode Safety and its
         creators are not liable for damages, losses, security incidents,
         bugs, downtime, lost revenue, or other issues related to your use of
-        the kit or your software projects.
+        the membership materials or your software projects.
       </p>
 
       <h2>10. Contact</h2>
