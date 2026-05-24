@@ -203,15 +203,16 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_78%_20%,rgba(124,58,237,0.26),transparent_46%),radial-gradient(ellipse_at_50%_110%,rgba(76,29,149,0.2),transparent_48%)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_78%_20%,rgba(139,92,246,0.28),transparent_46%),radial-gradient(ellipse_at_15%_90%,rgba(22,11,46,0.55),transparent_50%),linear-gradient(180deg,#05030B_0%,#0B0616_50%,#160B2E_100%)]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,5,16,0)_0%,rgba(7,5,16,0.75)_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,3,11,0)_0%,rgba(5,3,11,0.78)_100%)]"
         />
         {/* Animated swirl orbs */}
         <div aria-hidden className="hero-swirl hero-swirl-1 -left-24 top-0" />
         <div aria-hidden className="hero-swirl hero-swirl-2 right-0 top-20" />
+        <div aria-hidden className="hero-swirl hero-swirl-warm right-8 bottom-12" />
         <div aria-hidden className="hero-swirl hero-swirl-ambient left-1/4 bottom-0" />
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 pb-24 pt-20 lg:grid-cols-[0.88fr,1.12fr] lg:gap-16 lg:pb-28 lg:pt-32">
           <div>
@@ -346,10 +347,10 @@ export default function Home() {
           <ol className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
             {steps.map((s) => (
               <li key={s.n} className="light-glass relative rounded-2xl p-6">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-violetglow-500 to-violetglow-700 font-semibold text-white shadow-glow">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#8B5CF6] font-semibold text-white shadow-[0_0_24px_-6px_rgba(139,92,246,0.70)]">
                   {s.n}
                 </div>
-                <div className="mt-4 font-semibold text-purple-950">{s.t}</div>
+                <div className="mt-4 font-semibold text-[#2E1065]">{s.t}</div>
                 <p className="light-copy mt-2 text-sm leading-relaxed">{s.b}</p>
               </li>
             ))}
@@ -365,7 +366,7 @@ export default function Home() {
                   <span className={`h-2 w-2 rounded-full ${toneDot[s.tone]}`} />
                   {s.l}
                 </div>
-                <p className="mt-1.5 text-sm text-purple-800">{s.b}</p>
+                <p className="mt-1.5 text-sm text-[#6D5A88]">{s.b}</p>
               </div>
             ))}
           </div>
@@ -415,8 +416,8 @@ export default function Home() {
           <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {riskZones.map((r) => (
               <div key={r.t} className="light-glass rounded-2xl p-5">
-                <div className="flex items-center gap-2 text-sm font-semibold text-purple-950">
-                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-rose-400/10 text-rose-500 ring-1 ring-rose-400/30">
+                <div className="flex items-center gap-2 text-sm font-semibold text-[#2E1065]">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-[#F59E0B]/10 text-[#F59E0B] ring-1 ring-[#F59E0B]/25">
                     <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M12 2 2 21h20L12 2Z" />
                       <path d="M12 9v5" />
@@ -514,7 +515,7 @@ export default function Home() {
                 key={f.q}
                 className="light-glass group rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden"
               >
-                <summary className="flex cursor-pointer items-center justify-between gap-4 text-purple-950">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-[#2E1065]">
                   <span className="font-medium">{f.q}</span>
                   <span className="text-violet-400 transition group-open:rotate-45">+</span>
                 </summary>
