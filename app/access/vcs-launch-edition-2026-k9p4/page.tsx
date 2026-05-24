@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
 const steps = [
   "Download the ZIP",
-  "Open QUICKSTART.md",
-  "Open 00-Beginner-Mode",
+  "Open QUICKSTART.md first",
+  "If you are brand new, open 00-START-HERE/5_MINUTE_SETUP.md",
   "Copy the safety files into your repo",
   "Paste the Daily VibeCode Prompt after your next AI coding change",
 ];
@@ -39,7 +39,8 @@ export default function LaunchEditionAccessPage() {
 
         <p className="mt-6 text-gray-300">
           Thanks for purchasing VibeCode Safety Kit. Download the ZIP below,
-          then start with QUICKSTART.md and the Beginner Mode folder.
+          then open QUICKSTART.md first. If you are brand new, go directly to
+          00-START-HERE/5_MINUTE_SETUP.md.
         </p>
 
         {hasDownload ? (
