@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { SUPPORT_EMAIL } from "@/lib/checkout";
 
 export function SiteFooter() {
   return (
@@ -76,7 +75,7 @@ export function SiteFooter() {
               Refund Policy
             </Link>
             <a
-              href={`mailto:${SUPPORT_EMAIL}`}
+              href="/#contact"
               className="text-gray-400 transition hover:text-violet-300"
             >
               Contact

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SafetyReport } from "@/components/SafetyReport";
 import { BuyLink } from "@/components/BuyLink";
 import { EmailConsentCheckbox } from "@/components/EmailConsentCheckbox";
+import { ContactForm } from "@/components/ContactForm";
 
 /* ---------- data ---------- */
 
@@ -1272,6 +1273,37 @@ export default function Home() {
                 </p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="relative border-t border-white/5 bg-gradient-to-b from-transparent via-violet-500/[0.04] to-transparent"
+      >
+        <div
+          aria-hidden
+          className="orb right-[-180px] top-20 h-[420px] w-[420px] bg-violet-700/25"
+        />
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-24 lg:grid-cols-[0.9fr,1.1fr] lg:items-start">
+          <div>
+            <span className="pill">
+              <span className="pill-dot" />
+              Questions before you buy?
+            </span>
+            <h2 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
+              Ask about <span className="violet-text">the kit.</span>
+            </h2>
+            <p className="mt-5 max-w-xl text-base leading-8 text-gray-300">
+              Not sure if VibeCode Safety Kit fits your workflow? Send a quick
+              message and I&apos;ll help you figure out whether it makes sense
+              for your project.
+            </p>
+          </div>
+
+          <div className="glass-strong rounded-2xl p-5 shadow-glow md:p-7">
+            <ContactForm />
           </div>
         </div>
       </section>
