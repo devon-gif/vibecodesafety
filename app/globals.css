@@ -37,6 +37,7 @@ body {
 
 .glass:hover {
   border-color: rgba(196, 181, 253, 0.5);
+  transform: translateY(-2px);
   box-shadow:
     0 24px 80px -42px rgba(139, 92, 246, 0.9),
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
@@ -130,6 +131,10 @@ body {
 .light-tool-pill:hover {
   border-color: rgba(124, 58, 237, 0.34);
   background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 20px 54px -34px rgba(91, 33, 182, 0.62),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
 }
 
 .orb {
@@ -171,6 +176,10 @@ body {
   transition: transform 150ms ease, box-shadow 150ms ease, filter 150ms ease;
 }
 
+.btn-primary svg {
+  transition: transform 150ms ease;
+}
+
 .btn-primary:hover {
   transform: translateY(-1px);
   filter: brightness(1.08);
@@ -178,6 +187,10 @@ body {
     0 0 0 1px rgba(196, 181, 253, 0.7),
     0 16px 50px -10px rgba(124, 58, 237, 0.9),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover svg:last-child {
+  transform: translateX(3px);
 }
 
 .btn-secondary {
@@ -191,12 +204,13 @@ body {
   color: #e5e7eb;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: border-color 150ms ease, background 150ms ease;
+  transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
 }
 
 .btn-secondary:hover {
   border-color: rgba(167, 139, 250, 0.45);
   background: rgba(139, 92, 246, 0.07);
+  transform: translateY(-1px);
 }
 
 .pill {
