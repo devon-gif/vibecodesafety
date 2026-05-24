@@ -17,7 +17,9 @@ Run through this before flipping the site to "live".
 
 - [ ] `/` — homepage.
 - [ ] `/checkout-coming-soon` — placeholder when env var unset.
-- [ ] `/success` — post-Stripe success page with delivery instructions.
+- [ ] `/success` — general thank-you page with no download button.
+- [ ] `/access/vcs-launch-edition-2026-k9p4` — hidden post-checkout
+      download access page.
 - [ ] `/privacy` — current copy, dated.
 - [ ] `/terms` — current copy, dated.
 - [ ] `/refund-policy` — current copy, dated.
@@ -27,7 +29,8 @@ Run through this before flipping the site to "live".
 ## Stripe (see `docs/STRIPE_SETUP.md`)
 
 - [ ] Product created at $29.99 one-time (NOT subscription).
-- [ ] Payment Link created with success URL = `/success`.
+- [ ] Payment Link created with success URL =
+      `/access/vcs-launch-edition-2026-k9p4`.
 - [ ] `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` set in production env.
 - [ ] Test purchase succeeds end-to-end in test mode.
 - [ ] Switched to live mode for production.
@@ -76,9 +79,12 @@ Run through this before flipping the site to "live".
       with the prompt pack, scorecard, and one-page deploy checklist.
 - [ ] A new buyer reading `READ_THIS_FIRST.md` could be set up in 5
       minutes without asking questions.
-- [ ] `/success` clearly explains the next 5 minutes (open QUICKSTART,
-      copy Beginner Mode files, fill profile, paste Daily Prompt, run
-      Reviewer Prompt).
+- [ ] `/success` does not show the download button in production.
+- [ ] Hidden access page shows the next 5 minutes (download ZIP, open
+      QUICKSTART, open Beginner Mode, copy safety files, paste Daily
+      Prompt).
+- [ ] Hidden access page shows support email if
+      `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` is missing.
 
 ## Site sanity
 
@@ -86,6 +92,8 @@ Run through this before flipping the site to "live".
       pricing, sticky CTA, chat widget, final CTA).
 - [ ] Footer legal links work on desktop AND mobile (Privacy Policy,
       Terms & Agreements, Refund Policy, Contact mailto).
+- [ ] Hidden access page is not linked in the public nav, footer, or
+      homepage.
 - [ ] Site is responsive on a real phone: sticky CTA and chat widget
       do not cover important content; modals can be closed.
 - [ ] Local dev runs on `http://localhost:3001` (`pnpm run dev`).
@@ -137,20 +145,24 @@ Run through this before flipping the site to "live".
 - [ ] Create Google Drive delivery folder (owned by that Gmail)
 - [ ] Test final ZIP opens:
       `digital-product/final/VibeCode-Safety-Kit-v1-Launch-Edition.zip`
-- [ ] Upload final ZIP to Google Drive:
-      `VibeCode-Safety-Kit-v1-Launch-Edition.zip`
+- [ ] Upload ZIP as a single Google Drive file, not only as a folder:
+      `VibeCode-Safety-Kit-v1-Launch-Edition-FINAL.zip`
 - [ ] Set Google Drive sharing to "Anyone with the link — Viewer"
-- [ ] Test Google Drive download link in an incognito window
-- [ ] Add download link to `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` in .env.local
+- [ ] Create direct download link:
+      `https://drive.google.com/uc?export=download&id=FILE_ID`
+- [ ] Add direct download link to `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` in .env.local
 - [ ] Create Stripe Payment Link ($29.99 one-time, NOT subscription)
-- [ ] Set Stripe success redirect to `/success`
+- [ ] Set Stripe success redirect to hidden access page:
+      `/access/vcs-launch-edition-2026-k9p4`
 - [ ] Add Stripe checkout link to `NEXT_PUBLIC_CHECKOUT_LINK` in .env.local
 - [ ] Enable Stripe customer receipts (Settings → Emails)
 - [ ] Enable Stripe successful-payment account notifications
 - [ ] Create Google Sheet buyer tracker (columns: Purchase Date, Customer Name, Customer Email, Stripe Payment ID, Access Sent?, Opted Into Updates?, Issue?, Notes)
 - [ ] Test purchase flow end-to-end in Stripe test mode
-- [ ] Test `/success` page download button appears
-- [ ] Test `/success` page download button opens the Google Drive folder
+- [ ] Confirm `/success` does not show the download in production
+- [ ] Confirm hidden access page is not linked in the public nav/footer/homepage
+- [ ] Confirm direct download starts or opens Google's download confirmation
+- [ ] Confirm support email appears if link is missing
 - [ ] Confirm no account is required to purchase or download
 - [ ] Confirm no CRM is needed for v1
 - [ ] Switch Stripe to live mode before launch

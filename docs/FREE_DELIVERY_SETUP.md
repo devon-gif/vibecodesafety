@@ -39,15 +39,45 @@ Before upload, open the ZIP locally and confirm it contains
 
 ---
 
+## Direct Google Drive File Download
+
+For direct download, use a file link, not a folder link.
+
+Steps:
+
+1. Upload `VibeCode-Safety-Kit-v1-Launch-Edition-FINAL.zip` as a single file to Google Drive.
+2. Set sharing to anyone with the link can view.
+3. Copy the file share link.
+4. Extract the file id from:
+   `https://drive.google.com/file/d/FILE_ID/view?usp=sharing`
+5. Convert it to:
+   `https://drive.google.com/uc?export=download&id=FILE_ID`
+6. Add that to `.env.local`:
+   `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK=https://drive.google.com/uc?export=download&id=FILE_ID`
+
+---
+
+## Hidden Access Page
+
+Use this as the Stripe success redirect:
+`https://YOUR-VERCEL-URL/access/vcs-launch-edition-2026-k9p4`
+
+This is not true security. It is obscurity-based launch delivery. True
+protection requires server-side payment verification or a digital delivery
+platform.
+
+---
+
 ## 5. Add the download link to your environment
 
 In `.env.local`:
 
 ```
-NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK=https://drive.google.com/...
+NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK=https://drive.google.com/uc?export=download&id=FILE_ID
 ```
 
-The `/success` page will automatically show a **Download VibeCode Safety Kit** button when this variable is set.
+The hidden access page will automatically show a **Download the ZIP** button
+when this variable is set.
 
 ---
 
@@ -57,7 +87,8 @@ The `/success` page will automatically show a **Download VibeCode Safety Kit** b
 2. Name: `VibeCode Safety Kit — Launch Edition`
 3. Price: `$29.99` — **one-time** (not recurring).
 4. Create Payment Link.
-5. Set **After payment** → Redirect to: `https://yourdomain.com/success`
+5. Set **After payment** → Redirect to:
+   `https://yourdomain.com/access/vcs-launch-edition-2026-k9p4`
 6. Copy the Payment Link URL.
 
 Add it to `.env.local`:
@@ -86,7 +117,7 @@ Columns:
 | Purchase Date | Customer Name | Customer Email | Stripe Payment ID | Access Sent? | Opted Into Updates? | Issue? | Notes |
 |---|---|---|---|---|---|---|---|
 
-After each Stripe notification email arrives, log the buyer manually and confirm they have the Google Drive link (it is included automatically via the /success redirect).
+After each Stripe notification email arrives, log the buyer manually and confirm they have the Google Drive link (it is included automatically via the hidden access page redirect).
 
 ---
 
@@ -94,10 +125,10 @@ After each Stripe notification email arrives, log the buyer manually and confirm
 
 1. Set Stripe to **test mode**.
 2. Use a test card to complete a purchase.
-3. Confirm you are redirected to `/success`.
-4. Confirm the **Download VibeCode Safety Kit** button appears.
-5. Click the button and confirm the Google Drive folder opens in an
-   incognito window.
+3. Confirm you are redirected to `/access/vcs-launch-edition-2026-k9p4`.
+4. Confirm the **Download the ZIP** button appears.
+5. Click the button and confirm the direct ZIP download starts or Google
+   shows its download confirmation.
 6. Switch Stripe to **live mode** for production.
 
 ---

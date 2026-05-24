@@ -6,6 +6,8 @@ export const metadata: Metadata = {
 };
 
 export default function CheckoutComingSoonPage() {
+  const showTestLink = process.env.NODE_ENV === "development";
+
   return (
     <section className="relative overflow-hidden">
       <div
@@ -43,6 +45,17 @@ export default function CheckoutComingSoonPage() {
           Stripe checkout and Google Drive delivery will be connected here before
           launch.
         </div>
+
+        {showTestLink ? (
+          <div className="mt-8">
+            <Link
+              href="/access/vcs-launch-edition-2026-k9p4"
+              className="text-xs text-gray-500 underline decoration-white/20 underline-offset-4 transition hover:text-violet-300"
+            >
+              Test hidden download page
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   );

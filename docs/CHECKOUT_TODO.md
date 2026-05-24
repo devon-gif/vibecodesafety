@@ -17,7 +17,7 @@ checkout link. When both are **blank**, every "Get the Kit" button routes to `/c
 3. Set price: **$29.99 one-time** (mode = `payment`, not `subscription`).
 4. Create a **Stripe Payment Link** for that price.
 5. Set the success redirect URL on the Payment Link to:
-   `https://yourdomain.com/success`
+   `https://yourdomain.com/access/vcs-launch-edition-2026-k9p4`
 6. Copy the Payment Link.
 7. Add it to your env (locally in `.env.local`, in production via your host's
    env settings):
