@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { StickyCTA } from "@/components/StickyCTA";
 
 export const metadata: Metadata = {
   title: "VibeCode Safety Kit — Make AI check the AI before you ship.",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+        <StickyCTA />
       </body>
     </html>
   );
