@@ -7,7 +7,7 @@ Run through this before flipping the site to "live".
 - [ ] No one-time pricing language remains on homepage.
 - [ ] Subscription price $6.99/month appears correctly.
 - [ ] Yearly option $59/year appears correctly.
-- [ ] "Cancel anytime" copy is accurate (support email until portal is live).
+- [ ] "Cancel anytime" copy is accurate and matches Stripe Customer Portal behavior.
 - [ ] Support email (vibecodesafety@gmail.com) is visible on access and success pages.
 - [ ] No manual audit is promised at $6.99/month.
 - [ ] No "guaranteed security", "bug-free", or "production-ready" language.
@@ -20,7 +20,7 @@ Run through this before flipping the site to "live".
 - [ ] Sticky CTA shows "$6.99/mo or $59/yr · cancel anytime".
 - [ ] Chat widget CTA shows "Start for $6.99/month".
 - [ ] All "Get Started" / "Start for $6.99/month" buttons go to monthly checkout or `/checkout-coming-soon`.
-- [ ] "Choose yearly — $59/year" button goes to yearly checkout or `/checkout-coming-soon`.
+- [ ] "Choose yearly - $59/year" button goes to yearly checkout or `/checkout-coming-soon`.
 
 ## Pages
 
@@ -37,17 +37,28 @@ Run through this before flipping the site to "live".
 
 - [ ] Monthly subscription price created at $6.99/month.
 - [ ] Yearly subscription price created at $59/year.
+- [ ] Stripe Customer Portal configured for subscription cancellation.
 - [ ] Monthly Payment Link created with success URL = `/access/vcs-launch-edition-2026-k9p4`.
 - [ ] Yearly Payment Link created with success URL = `/access/vcs-launch-edition-2026-k9p4`.
 - [ ] `NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK` set in production env.
 - [ ] `NEXT_PUBLIC_YEARLY_CHECKOUT_LINK` set in production env.
+- [ ] `NEXT_PUBLIC_CHECKOUT_LINK` set as the active fallback checkout link if needed.
 - [ ] Test monthly purchase succeeds end-to-end in test mode.
 - [ ] Test yearly purchase succeeds end-to-end in test mode.
+- [ ] Test cancellation in Stripe Customer Portal.
 - [ ] Switched to live mode for production.
 - [ ] Cancellation policy on the site matches Stripe behavior.
+- [ ] Confirm no manual human audit is promised.
+- [ ] Confirm no GitHub repo scanning backend is promised for v1.
 
 ## Digital product (Member Kit)
 
+- [ ] `digital-product/member-kit/` exists.
+- [ ] Auditor Agent files are present.
+- [ ] Heavy-duty repo audit workflow is present.
+- [ ] Daily build guardrails are present.
+- [ ] Monthly safety drops are present.
+- [ ] Support and cancellation docs are present.
 - [ ] `digital-product/VibeCode-Safety-Kit-v1/` reviewed for typos.
 - [ ] Final ZIP opens locally.
 - [ ] Delivery method confirmed (Google Drive direct download link).
