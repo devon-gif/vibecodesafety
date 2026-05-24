@@ -561,13 +561,13 @@ export default function Home() {
       </section>
 
       {/* COMPATIBLE AI TOOLS */}
-      <section className="relative border-t border-white/5">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+      <section className="light-section">
+        <div className="relative mx-auto max-w-7xl px-6 py-20">
           <Eyebrow>COMPATIBLE WITH YOUR AI CODING WORKFLOW</Eyebrow>
-          <h2 className="mx-auto mt-5 max-w-3xl text-center text-2xl font-semibold tracking-tight text-white md:text-3xl">
+          <h2 className="light-heading mx-auto mt-5 max-w-3xl text-center text-2xl font-semibold tracking-tight md:text-3xl">
             Works with the AI coding tools you already use.
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-gray-400">
+          <p className="light-copy mx-auto mt-3 max-w-2xl text-center text-sm">
             Use the kit with repo rules, prompts, and review workflows
             across popular AI-assisted coding tools.
           </p>
@@ -586,7 +586,7 @@ export default function Home() {
             ].map((t) => (
               <li
                 key={t}
-                className="inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-white/[0.03] px-4 py-2 text-sm font-medium text-gray-200 transition hover:border-violet-400/40 hover:bg-violet-500/10"
+                className="light-tool-pill inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
                 {t}
@@ -594,7 +594,7 @@ export default function Home() {
             ))}
           </ul>
 
-          <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-gray-500">
+          <p className="light-muted mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed">
             Tool names are shown for compatibility context only. VibeCode
             Safety Kit is independent and is not affiliated with or
             endorsed by these companies.
@@ -658,21 +658,21 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" className="relative border-t border-white/5">
-        <div className="mx-auto max-w-7xl px-6 py-24">
+      <section id="how-it-works" className="light-section">
+        <div className="relative mx-auto max-w-7xl px-6 py-24">
           <Eyebrow>SIMPLE WORKFLOW</Eyebrow>
-          <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+          <h2 className="light-heading mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight md:text-5xl">
             The workflow is simple enough to use today.
           </h2>
 
           <ol className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-5">
             {steps.map((s) => (
-              <li key={s.n} className="glass relative rounded-2xl p-5">
+              <li key={s.n} className="light-glass relative rounded-2xl p-5">
                 <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-violetglow-500 to-violetglow-700 font-semibold text-white shadow-glow">
                   {s.n}
                 </div>
-                <div className="mt-4 font-semibold text-white">{s.t}</div>
-                <p className="mt-2 text-sm leading-relaxed text-gray-400">
+                <div className="mt-4 font-semibold text-purple-950">{s.t}</div>
+                <p className="light-copy mt-2 text-sm leading-relaxed">
                   {s.b}
                 </p>
               </li>
@@ -683,13 +683,13 @@ export default function Home() {
             {statuses.map((s) => (
               <div
                 key={s.l}
-                className={`rounded-xl border p-5 ${toneClass[s.tone]}`}
+                className={`light-glass rounded-xl border p-5 ${toneClass[s.tone]}`}
               >
                 <div className="flex items-center gap-2 text-xs font-semibold tracking-wider">
                   <span className={`h-2 w-2 rounded-full ${toneDot[s.tone]}`} />
                   {s.l}
                 </div>
-                <p className="mt-2 text-sm text-gray-300">{s.b}</p>
+                <p className="mt-2 text-sm text-purple-800">{s.b}</p>
               </div>
             ))}
           </div>
@@ -790,16 +790,16 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIAL-STYLE REACTIONS (PLACEHOLDER) */}
-      <section className="relative border-t border-white/5">
-        <div className="mx-auto max-w-7xl px-6 py-24">
+      <section id="who-its-for" className="light-section">
+        <div className="relative mx-auto max-w-7xl px-6 py-24">
           <Eyebrow>BUILT FOR THE WAY AI BUILDERS ACTUALLY SHIP</Eyebrow>
-          <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+          <h2 className="light-heading mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight md:text-5xl">
             Designed for the moment right before you push.
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-center text-gray-400">
+          <p className="light-copy mx-auto mt-5 max-w-2xl text-center">
             VibeCode Safety Kit is built around the real anxiety of
             AI-assisted development:{" "}
-            <span className="text-violet-200">
+            <span className="font-medium text-violet-700">
               &ldquo;It works&hellip; but what did it quietly break?&rdquo;
             </span>
           </p>
@@ -827,31 +827,31 @@ export default function Home() {
             ].map((t) => (
               <figure
                 key={t.who}
-                className="glass-strong relative flex flex-col rounded-2xl p-6 shadow-glow"
+                className="light-glass relative flex flex-col rounded-2xl p-6"
               >
-                <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-violet-400/30 bg-violet-500/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-violet-200">
+                <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-violet-400/25 bg-violet-500/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-violet-700">
                   <span className="h-1.5 w-1.5 rounded-full bg-violet-300" />
                   {t.label}
                 </span>
                 <svg
                   viewBox="0 0 24 24"
-                  className="mt-5 h-6 w-6 text-violet-400/60"
+                  className="mt-5 h-6 w-6 text-violet-500/50"
                   fill="currentColor"
                   aria-hidden
                 >
                   <path d="M7 7h4v4H8c0 2 1 3 3 3v3c-4 0-7-2-7-7V7Zm10 0h4v4h-3c0 2 1 3 3 3v3c-4 0-7-2-7-7V7Z" />
                 </svg>
-                <blockquote className="mt-3 flex-1 text-base leading-relaxed text-gray-100">
+                <blockquote className="mt-3 flex-1 text-base leading-relaxed text-purple-950">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <figcaption className="mt-5 text-sm text-gray-400">
-                  &mdash; {t.who}
+                <figcaption className="mt-5 text-sm text-purple-700">
+                  - {t.who}
                 </figcaption>
               </figure>
             ))}
           </div>
 
-          <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-gray-500">
+          <p className="light-muted mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed">
             Placeholder reactions shown for product positioning. Real buyer
             testimonials will be added after launch.
           </p>
@@ -1111,7 +1111,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <Eyebrow>SIMPLE PRICING</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Launch Edition &mdash;{" "}
+            Launch Edition -{" "}
             <span className="violet-text">$29.99 one-time.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
@@ -1129,7 +1129,7 @@ export default function Home() {
               <div className="flex items-center justify-center">
                 <span className="pill">
                   <SettingsIcon />
-                  LAUNCH EDITION &mdash; ONE-TIME PURCHASE
+                  LAUNCH EDITION - ONE-TIME PURCHASE
                 </span>
               </div>
 
@@ -1300,12 +1300,12 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="relative border-t border-white/5">
-        <div className="mx-auto max-w-3xl px-6 py-24">
-          <h2 className="text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+      <section id="faq" className="light-section">
+        <div className="relative mx-auto max-w-3xl px-6 py-24">
+          <h2 className="light-heading text-center text-4xl font-semibold tracking-tight md:text-5xl">
             Questions vibe coders usually ask.
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-gray-500">
+          <p className="light-muted mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed">
             Built from practical AI coding workflow patterns and common
             secure-coding review principles, simplified for beginner vibe
             coders. Not affiliated with or endorsed by any AI coding tool,
@@ -1315,15 +1315,15 @@ export default function Home() {
             {faqs.map((f) => (
               <details
                 key={f.q}
-                className="glass group rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden"
+                className="light-glass group rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden"
               >
-                <summary className="flex cursor-pointer items-center justify-between gap-4 text-white">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-purple-950">
                   <span className="font-medium">{f.q}</span>
                   <span className="text-violet-300 transition group-open:rotate-45">
                     +
                   </span>
                 </summary>
-                <p className="mt-3 text-sm leading-relaxed text-gray-400">
+                <p className="light-copy mt-3 text-sm leading-relaxed">
                   {f.a}
                 </p>
               </details>
