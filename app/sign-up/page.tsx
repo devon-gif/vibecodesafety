@@ -47,9 +47,9 @@ export default function SignUpPage() {
             <span className="violet-text">VibeCode Safety account</span>.
           </h1>
           <p className="mt-6 text-gray-300">
-            Account access is coming soon. For launch, VibeCode Safety Kit is
-            delivered after the one-time Stripe checkout using the email
-            entered at purchase.
+            Account access is coming later. For launch, VibeCode Safety
+            membership checkout delivers the current member kit through the
+            post-checkout access page.
           </p>
         </div>
 
@@ -76,17 +76,17 @@ export default function SignUpPage() {
 
           <div className="my-6 flex items-center gap-3 text-xs text-gray-500">
             <span className="h-px flex-1 bg-white/10" />
-            <span>OR BUY THE KIT NOW</span>
+            <span>OR START MEMBERSHIP NOW</span>
             <span className="h-px flex-1 bg-white/10" />
           </div>
 
           <BuyLink className="btn-primary w-full text-base">
-            Get the Kit for $29.99
+            Start for $6.99/month
           </BuyLink>
 
           <p className="mt-3 text-center text-xs text-gray-500">
-            One-time purchase. No subscription. No account required for v1.
-            Access instructions are sent to the email used at checkout.
+            Monthly or yearly billing. Cancel anytime. No account dashboard is
+            required for the v1 launch flow.
           </p>
         </div>
 

@@ -13,10 +13,9 @@ export function SiteFooter() {
               A practical safety system for AI-assisted builders.
             </p>
             <p className="mt-6 max-w-xl text-xs leading-relaxed text-gray-500">
-              VibeCode Safety Kit helps reduce risk but does not guarantee
-              bug-free, secure, or production-ready software. It is not a
-              replacement for professional engineering, QA, or security
-              review.
+              VibeCode Safety helps reduce risk but does not guarantee secure,
+              bug-free, compliant, or production-ready software. It does not
+              replace professional engineering, QA, or security review.
             </p>
           </div>
           <div>
@@ -50,7 +49,7 @@ export function SiteFooter() {
 
         {/* Bottom: subtle legal row */}
         <div className="mt-6 flex flex-col items-start justify-between gap-4 text-xs text-gray-500 md:flex-row md:items-center">
-          <div>&copy; 2026 VibeCode Safety Kit. All rights reserved.</div>
+          <div>&copy; 2026 VibeCode Safety. All rights reserved.</div>
 
           <nav
             aria-label="Legal"
