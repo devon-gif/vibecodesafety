@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 /* ─── data ──────────────────────────────────────────────────────────── */
 
 const SCORE_TARGET = 92;
-const SCORE_DURATION = 1800; // ms
-const SCORE_DELAY = 600;     // ms before ring starts
+const SCORE_DURATION = 3200; // ms
+const SCORE_DELAY = 900;     // ms before ring starts
 
 type RowStatus = "Passed" | "Warnings" | "Blocked";
 
@@ -120,8 +120,8 @@ export function SafetyReport() {
     }, SCORE_DELAY);
 
     /* stagger checklist rows — start after ring is ~done */
-    const ROW_BASE_DELAY  = SCORE_DELAY + SCORE_DURATION + 100; // ~2500ms
-    const ROW_STAGGER     = 200; // ms per row
+    const ROW_BASE_DELAY  = SCORE_DELAY + SCORE_DURATION + 250;
+    const ROW_STAGGER     = 420; // ms per row
     const rowTimers: number[] = [];
     checklistRows.forEach((_, i) => {
       rowTimers.push(window.setTimeout(() => setRowsVisible(i + 1), ROW_BASE_DELAY + i * ROW_STAGGER));
@@ -130,7 +130,7 @@ export function SafetyReport() {
     /* final verdict after all rows */
     const verdictTimer: number = window.setTimeout(
       () => setVerdictVisible(true),
-      ROW_BASE_DELAY + checklistRows.length * ROW_STAGGER + 250
+      ROW_BASE_DELAY + checklistRows.length * ROW_STAGGER + 600
     );
 
     return () => {

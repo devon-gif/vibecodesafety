@@ -213,34 +213,33 @@ export default function Home() {
           <div>
             <span className="pill mb-6 inline-flex">
               <span className="pill-dot" />
-              Launch Edition — built for early AI-assisted builders.
+              Repo audit &middot; Daily guardrails &middot; Ongoing updates.
             </span>
             <h1 className="text-balance text-6xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl">
-              Ship faster
+              Audit your repo.
               <br />
               <span className="violet-text">
-                without
+                Guard every
                 <br />
-                shipping blind.
+                AI change.
               </span>
             </h1>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
-              A beginner-friendly safety workflow for AI-built apps. Copy the
-              files into your repo, paste the daily review prompt, and make AI
-              check risky changes before you ship.
+              VibeCode Safety gives AI-assisted builders a heavy-duty repo
+              audit workflow plus daily guardrails for every AI coding change.
             </p>
 
             <div className="mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
               <BuyLink className="btn-primary px-7 py-4 text-base">
-                Get the Kit for $29.99
+                Start for $6.99/month
               </BuyLink>
-              <a href="#video" className="btn-secondary px-7 py-4 text-base">
-                Watch 35-sec Overview
+              <a href="#how-it-works" className="btn-secondary px-7 py-4 text-base">
+                See how it works
               </a>
             </div>
 
             <p className="mt-4 text-sm text-gray-500">
-              One-time purchase. No subscription.
+              Monthly or yearly billing. Cancel anytime.
             </p>
 
             <p className="mt-6 flex items-center gap-3 text-sm text-gray-400">
@@ -334,9 +333,9 @@ export default function Home() {
       {/* HOW IT WORKS */}
       <section id="how-it-works" className="light-section">
         <div className="relative mx-auto max-w-7xl px-6 py-20">
-          <Eyebrow>SIMPLE WORKFLOW</Eyebrow>
+          <Eyebrow>HOW IT WORKS</Eyebrow>
           <h2 className="light-heading mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight md:text-5xl">
-            The workflow is simple enough to use today.
+            How VibeCode Safety works.
           </h2>
 
           <ol className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -373,14 +372,14 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <Eyebrow>WHAT YOU GET</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            What you get
+            A safety workflow that grows with your repo.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-            Designed for beginner vibe coders first, with stronger guardrails
-            for Next.js, Supabase, Stripe, GitHub, and Vercel-style projects.
+            Start with a heavy-duty repo audit, then guard every AI coding
+            change as you build.
           </p>
 
-          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2">
             {insideCards.map((c) => (
               <div key={c.t} className="glass flex flex-col rounded-2xl p-6">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-violet-500/15 text-violet-300 ring-1 ring-violet-400/30">
@@ -394,9 +393,9 @@ export default function Home() {
 
           <p className="mx-auto mt-10 max-w-3xl text-center text-xs leading-relaxed text-gray-500">
             Built from practical AI coding workflow patterns and common
-            secure-coding review principles, simplified for beginner vibe
-            coders. Not affiliated with or endorsed by any AI coding tool,
-            hosting platform, payment provider, or security organization.
+            secure-coding review principles. Not affiliated with or endorsed by
+            any AI coding tool, hosting platform, payment provider, or security
+            organization.
           </p>
         </div>
       </section>
@@ -437,12 +436,12 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <Eyebrow>SIMPLE PRICING</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Launch Edition &mdash;{" "}
-            <span className="violet-text">$29.99 one-time.</span>
+            Simple pricing for{" "}
+            <span className="violet-text">solo builders.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-            A one-time digital kit for vibe coders and AI-assisted founders
-            who want a simple review workflow before shipping AI-generated code.
+            One subscription. Repo audit workflow, daily guardrails, and
+            ongoing updates.
           </p>
 
           <div className="mx-auto mt-12 max-w-2xl">
@@ -451,14 +450,20 @@ export default function Home() {
               <div className="flex items-center justify-center">
                 <span className="pill">
                   <SettingsIcon />
-                  LAUNCH EDITION &mdash; ONE-TIME PURCHASE
+                  VIBECODESAFETY — SUBSCRIPTION
                 </span>
               </div>
 
-              <div className="mt-6 text-center">
-                <div className="text-6xl font-semibold text-white">$29.99</div>
-                <div className="mt-1 text-violet-300">One-time purchase</div>
-                <div className="mt-1 text-sm text-gray-400">Pay once. Use forever.</div>
+              <div className="mt-6 grid grid-cols-2 gap-4 text-center">
+                <div className="rounded-2xl border border-violet-300/20 bg-violet-500/[0.07] p-4">
+                  <div className="text-4xl font-semibold text-white">$6.99</div>
+                  <div className="mt-1 text-sm text-violet-300">per month</div>
+                </div>
+                <div className="rounded-2xl border border-violet-300/30 bg-violet-500/[0.12] p-4">
+                  <div className="text-4xl font-semibold text-white">$59</div>
+                  <div className="mt-1 text-sm text-violet-300">per year</div>
+                  <div className="mt-1 text-[11px] text-gray-400">Save with yearly billing.</div>
+                </div>
               </div>
 
               <div className="my-6 divider-line" />
@@ -473,25 +478,20 @@ export default function Home() {
 
               <BuyLink className="btn-primary mt-5 w-full text-base">
                 <CartIcon />
-                Get the Kit for $29.99
+                Start for $6.99/month
+              </BuyLink>
+              <BuyLink href={YEARLY_CHECKOUT_LINK} className="btn-secondary mt-3 w-full text-base">
+                Choose yearly — $59/year
               </BuyLink>
               <p className="mt-3 text-center text-xs text-gray-500">
-                One-time purchase. No subscription.
-              </p>
-              <p className="mt-2 text-center text-xs text-violet-200">
-                Have an invite code? Enter it at checkout.
+                Cancel anytime. Helps reduce risk, but does not guarantee
+                secure, bug-free, or production-ready software.
               </p>
               <p className="mt-4 text-center text-xs leading-relaxed text-gray-500">
-                This is a digital product. All sales are final.{" "}
                 <a href="/refund-policy" className="underline hover:text-gray-400">
-                  Refund policy
+                  Refund &amp; cancellation policy
                 </a>
                 .
-              </p>
-              <p className="mt-3 text-center text-[11px] leading-relaxed text-gray-500">
-                Helps reduce risk. Does not guarantee secure, bug-free, or
-                production-ready software. Not a replacement for a senior
-                developer, QA, or a professional security audit.
               </p>
             </div>
           </div>
@@ -534,15 +534,15 @@ export default function Home() {
           <div>
             <span className="pill">
               <span className="pill-dot" />
-              Questions before you buy?
+              Questions about the subscription?
             </span>
             <h2 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-              Ask about <span className="violet-text">the kit.</span>
+              Ask about <span className="violet-text">VibeCode Safety.</span>
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-gray-300">
-              Not sure if VibeCode Safety Kit fits your workflow? Send a quick
-              message and I&apos;ll help you figure out whether it makes sense
-              for your project.
+              Not sure if VibeCode Safety fits your workflow? Send a quick
+              message and I&apos;ll help you figure out whether the subscription
+              makes sense for your project.
             </p>
           </div>
           <div className="glass-strong rounded-2xl p-5 shadow-glow md:p-7">
@@ -565,24 +565,24 @@ export default function Home() {
             </span>
           </div>
           <h2 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-6xl">
-            Ship faster{" "}
-            <span className="violet-text">without shipping blind.</span>
+            Audit your repo.{" "}
+            <span className="violet-text">Guard every AI change.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-gray-400">
-            Copy 3 files. Paste 1 prompt. Don&apos;t ship until the review
-            passes.
+            Start with the heavy-duty repo audit. Add the daily guardrails.
+            Ship with fewer surprises.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <BuyLink className="btn-primary">
               <CartIcon />
-              Get the Kit for $29.99
+              Start for $6.99/month
             </BuyLink>
             <Link href="#whats-inside" className="btn-secondary">
               See What&apos;s Inside
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Make AI check the AI. No subscription required.
+            Monthly or yearly billing. Cancel anytime.
           </p>
         </div>
       </section>
