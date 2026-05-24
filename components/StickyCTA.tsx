@@ -7,10 +7,25 @@ export function StickyCTA() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 600);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    // Show after the hero+video (roughly 900px), hide when pricing is in view
+    const pricingEl = document.getElementById("pricing");
+
+    function update() {
+      const scrollY = window.scrollY;
+      const afterHero = scrollY > 900;
+
+      let pricingVisible = false;
+      if (pricingEl) {
+        const rect = pricingEl.getBoundingClientRect();
+        pricingVisible = rect.top < window.innerHeight * 0.75;
+      }
+
+      setVisible(afterHero && !pricingVisible);
+    }
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
   }, []);
 
   return (
