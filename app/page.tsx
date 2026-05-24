@@ -477,6 +477,10 @@ export default function Home() {
               </Link>
             </div>
 
+            <p className="mt-4 text-sm font-medium text-violet-200">
+              ⭐⭐⭐⭐⭐ Rated 4.8 stars!
+            </p>
+
             <p className="mt-8 flex items-center gap-3 text-sm text-gray-400">
               <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-violet-300/50 text-violet-300">
                 <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
