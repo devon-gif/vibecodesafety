@@ -508,6 +508,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PRODUCT VIDEO */}
+      <section className="relative border-t border-white/5 bg-gradient-to-b from-violet-500/[0.06] via-transparent to-transparent">
+        <div
+          aria-hidden
+          className="orb left-1/2 top-10 h-[360px] w-[360px] -translate-x-1/2 bg-violet-700/25"
+        />
+        <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-20">
+          <Eyebrow>SEE THE WORKFLOW</Eyebrow>
+          <h2 className="mx-auto mt-5 max-w-3xl text-center text-3xl font-semibold tracking-tight text-white md:text-5xl">
+            Watch how VibeCode Safety Kit works.
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-gray-400 md:text-base">
+            In 35 seconds, see how the kit helps AI-assisted builders review
+            risky changes before commit, push, or deploy.
+          </p>
+
+          <div className="mx-auto mt-10 max-w-5xl">
+            <div className="relative rounded-3xl border border-violet-300/20 bg-white/[0.04] p-2 shadow-[0_0_80px_rgba(139,92,246,0.18)] backdrop-blur-xl sm:p-3">
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-black aspect-video">
+                <video
+                  src="/video/vibecodesafetyvideo.mp4"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  className="h-full w-full bg-black"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <p className="mt-4 text-center text-xs text-gray-500">
+              Video overview of the VibeCode Safety Kit pre-ship workflow.
+            </p>
+            <p className="mt-2 text-center text-sm text-violet-200">
+              Press play to hear the 35-second overview.
+            </p>
+
+            <div className="mt-7 flex justify-center">
+              <BuyLink className="btn-primary">
+                <CartIcon />
+                Get the Kit for $29.99
+              </BuyLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* COMPATIBLE AI TOOLS */}
       <section className="relative border-t border-white/5">
         <div className="mx-auto max-w-7xl px-6 py-16">
