@@ -1,5 +1,9 @@
 # Conversion Notes - VibeCode Safety Kit
 
+Deprecated internal note: this file includes notes from the earlier one-time
+launch page. Use the current homepage and subscription docs for active public
+positioning.
+
 Working notes about what is placeholder / illustrative on the site so we
 do not accidentally ship misleading claims.
 

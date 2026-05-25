@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 /**
  * Optional email-updates checkbox shown next to the purchase CTA.
@@ -15,6 +15,7 @@ import { useState } from "react";
  */
 export function EmailConsentCheckbox() {
   const [checked, setChecked] = useState(false);
+  const helpId = useId();
 
   return (
     <label className="mt-5 flex cursor-pointer items-start gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left transition hover:border-violet-400/30">
@@ -24,7 +25,7 @@ export function EmailConsentCheckbox() {
           checked={checked}
           onChange={(e) => setChecked(e.target.checked)}
           className="peer sr-only"
-          aria-describedby="email-consent-help"
+          aria-describedby={helpId}
         />
         <span
           aria-hidden
@@ -51,7 +52,7 @@ export function EmailConsentCheckbox() {
           tips by email.
         </span>
         <span
-          id="email-consent-help"
+          id={helpId}
           className="mt-1 block text-xs text-gray-500"
         >
           Optional. No spam. You can unsubscribe anytime.

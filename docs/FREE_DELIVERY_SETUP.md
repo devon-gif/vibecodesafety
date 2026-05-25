@@ -1,5 +1,10 @@
 # Free / No Extra Cost Delivery Setup
 
+Deprecated internal note: this file documents the earlier one-time launch
+delivery flow. The current public product is VibeCode Safety Membership at
+$6.99/month or $59/year. Use `docs/CHECKOUT_TODO.md` and
+`docs/LAUNCH_CHECKLIST.md` for the active subscription launch flow.
+
 Recommended launch flow for VibeCode Safety Kit v1 - zero additional tools required.
 
 ---

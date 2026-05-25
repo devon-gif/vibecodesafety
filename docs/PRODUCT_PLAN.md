@@ -1,5 +1,9 @@
 # VibeCode Safety Kit - Product Plan
 
+Deprecated internal note: this plan describes the earlier launch-edition
+one-time product. The current public product is VibeCode Safety Membership at
+$6.99/month or $59/year.
+
 ## Product
 **VibeCode Safety Kit - Launch Edition** - a one-time, $29.99 digital kit for beginner vibe coders and AI-assisted founders.
 
