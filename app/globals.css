@@ -34,6 +34,17 @@
   --color-success-green:     #4ADE80;
   --color-warning-orange:    #F59E0B;
   --color-soft-orange:       #FB923C;
+
+  --hero-black:              #05030B;
+  --hero-black-purple:       #0B0616;
+  --hero-left-plum:          #1C0F35;
+  --hero-top-haze:           #251540;
+  --hero-bottom-plum:        #2A174B;
+  --hero-right-violet:       #382359;
+  --hero-edge-haze:          #48396C;
+  --hero-muted-edge:         #303247;
+  --hero-glow-purple:        #8B5CF6;
+  --hero-soft-lavender:      #C4B5FD;
 }
 
 html,
@@ -338,6 +349,15 @@ body {
   box-shadow: 0 0 10px #a78bfa;
 }
 
+.hero-section {
+  background:
+    radial-gradient(circle at 76% 44%, rgba(72, 57, 108, 0.34), transparent 34%),
+    radial-gradient(circle at 80% 58%, rgba(56, 35, 89, 0.40), transparent 46%),
+    radial-gradient(circle at 62% 68%, rgba(42, 23, 75, 0.42), transparent 50%),
+    radial-gradient(circle at 72% 22%, rgba(37, 21, 64, 0.36), transparent 38%),
+    linear-gradient(135deg, #05030B 0%, #0B0616 28%, #1C0F35 50%, #251540 68%, #382359 100%);
+}
+
 .hero-bg-video {
   background:
     radial-gradient(circle at 76% 44%, rgba(72, 57, 108, 0.34), transparent 34%),
@@ -347,7 +367,29 @@ body {
     linear-gradient(135deg, #05030B 0%, #0B0616 28%, #1C0F35 50%, #251540 68%, #382359 100%);
 }
 
-.hero-product-video-wrap {
+.hero-video-color-match {
+  background:
+    radial-gradient(circle at 76% 44%, rgba(72, 57, 108, 0.20), transparent 34%),
+    radial-gradient(circle at 80% 58%, rgba(56, 35, 89, 0.24), transparent 46%),
+    radial-gradient(circle at 62% 68%, rgba(42, 23, 75, 0.24), transparent 50%),
+    radial-gradient(circle at 72% 22%, rgba(37, 21, 64, 0.22), transparent 38%),
+    radial-gradient(circle at 88% 50%, rgba(48, 50, 71, 0.16), transparent 34%),
+    linear-gradient(135deg, rgba(5, 3, 11, 0.28) 0%, rgba(11, 6, 22, 0.24) 28%, rgba(28, 15, 53, 0.22) 50%, rgba(37, 21, 64, 0.22) 68%, rgba(56, 35, 89, 0.24) 100%);
+}
+
+.hero-left-readability {
+  background:
+    linear-gradient(
+      to right,
+      rgba(5, 3, 11, 0.96) 0%,
+      rgba(11, 6, 22, 0.86) 34%,
+      rgba(28, 15, 53, 0.48) 64%,
+      rgba(56, 35, 89, 0.18) 100%
+    ),
+    linear-gradient(to bottom, transparent 66%, #05030B 100%);
+}
+
+.hero-product-visual {
   filter:
     drop-shadow(0 44px 110px rgba(72, 57, 108, 0.44))
     drop-shadow(0 16px 48px rgba(42, 23, 75, 0.36));
@@ -356,21 +398,37 @@ body {
 .hero-product-video-mask {
   -webkit-mask-image:
     radial-gradient(
-      ellipse 88% 90% at center,
-      black 52%,
-      rgba(0, 0, 0, 0.94) 64%,
-      rgba(0, 0, 0, 0.68) 78%,
-      rgba(0, 0, 0, 0.28) 90%,
-      transparent 100%
+      ellipse at center,
+      black 48%,
+      rgba(0, 0, 0, 0.94) 60%,
+      rgba(0, 0, 0, 0.68) 74%,
+      rgba(0, 0, 0, 0.28) 86%,
+      transparent 98%
     );
   mask-image:
     radial-gradient(
-      ellipse 88% 90% at center,
-      black 52%,
-      rgba(0, 0, 0, 0.94) 64%,
-      rgba(0, 0, 0, 0.68) 78%,
-      rgba(0, 0, 0, 0.28) 90%,
-      transparent 100%
+      ellipse at center,
+      black 48%,
+      rgba(0, 0, 0, 0.94) 60%,
+      rgba(0, 0, 0, 0.68) 74%,
+      rgba(0, 0, 0, 0.28) 86%,
+      transparent 98%
+    );
+}
+
+.hero-product-video {
+  display: block;
+  height: auto;
+  background: transparent;
+}
+
+.hero-product-video-edge-overlay {
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 44%,
+      rgba(28, 15, 53, 0.18) 68%,
+      rgba(5, 3, 11, 0.50) 100%
     );
 }
 
