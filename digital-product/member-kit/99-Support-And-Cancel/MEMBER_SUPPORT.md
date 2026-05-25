@@ -1,7 +1,7 @@
 # Member Support
 
 VibeCode Safety is a self-serve membership. The subscription gives you the
-member kit, audit prompts, and ongoing safety drops — not a personal support
+member kit, audit prompts, Weekly Safety Notes, and Monthly Safety Drops — not a personal support
 line or manual audit service.
 
 ---

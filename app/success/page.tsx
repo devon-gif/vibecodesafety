@@ -35,10 +35,10 @@ export default function SuccessPage() {
         </h1>
 
         <p className="mt-6 text-gray-300">
-          Download the current member kit below. Start with the heavy-duty repo
-          audit, then add the daily guardrails to your project. Weekly Safety
-          Notes and Monthly Safety Drops are there when a topic matters to your
-          build.
+          Your member kit access is available from the post-checkout access
+          page. Start with the heavy-duty repo audit, then add the daily
+          guardrails to your project. Weekly Safety Notes and Monthly Safety
+          Drops are there when a topic matters to your build.
         </p>
 
         <div className="glass mx-auto mt-8 rounded-2xl p-5 text-left">

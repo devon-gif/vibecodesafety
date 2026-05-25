@@ -19,7 +19,7 @@ After every AI coding change:
 3. Do not ship while the result is BLOCKED.
 4. Track warnings and fix anything that affects auth, billing, data access, secrets, or deploys.
 
-## Monthly safety drops
+## Weekly notes and monthly drops
 
 Each week adds a short Safety Note with one focused risk, a quick checklist, and a copy-paste prompt. Use weekly notes when that topic matches your current work.
 

@@ -9,7 +9,8 @@ VibeCode Safety Membership gives you a repeatable system for reviewing AI-genera
 - Tool-specific auditor-agent instructions.
 - Daily AI change review prompts.
 - Pre-commit, pre-push, and pre-deploy guardrails.
-- Monthly safety drops.
+- Weekly Safety Notes.
+- Monthly Safety Drops.
 - Support and cancellation instructions.
 
 ## Heavy-duty repo audit
@@ -20,9 +21,13 @@ Run this when you are starting a project, preparing to launch, inheriting a repo
 
 Use the daily guardrails after every AI change. The goal is to catch risk while the change is still fresh and small.
 
+## Weekly notes
+
+Weekly Safety Notes are short updates with one focused risk, a quick checklist, and a copy-paste prompt. Use them when the topic matches your current work.
+
 ## Monthly drops
 
-Monthly drops are focused safety packs. They do not replace the full repo audit. They help you review one risk area deeply, such as Stripe checkout, Supabase RLS, or auth sessions.
+Monthly Safety Drops are larger focused safety packs. They do not replace the full repo audit. They help you review one risk area deeply, such as Stripe checkout, Supabase RLS, or auth sessions.
 
 ## Limits
 

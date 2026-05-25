@@ -11,7 +11,8 @@ The VibeCode Safety membership includes:
 - The VibeCode Auditor Agent instructions for AI tools
 - The heavy-duty repo audit workflow
 - Daily build guardrail prompts
-- Monthly safety drops
+- Weekly Safety Notes
+- Monthly Safety Drops
 
 ---
 

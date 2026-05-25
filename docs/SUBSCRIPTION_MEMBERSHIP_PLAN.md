@@ -47,6 +47,15 @@ The access page URL is a private slug:
 
 This slug is shared in the post-checkout success page.
 
+## Update Schedule
+
+- Weekly Safety Notes: short member update with one risk, a quick checklist,
+  and a copy-paste prompt.
+- Monthly Safety Drops: larger themed audit pack with prompts, checklists,
+  scorecards, guardrails, implementation notes, and fix-first guidance.
+- Member update process: send update emails manually or through the chosen
+  email provider. Do not build dashboard automation yet.
+
 ## Billing management
 
 Subscribers manage their billing through the Stripe Customer Portal.
