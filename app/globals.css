@@ -9,15 +9,21 @@
   color-scheme: dark;
 
   /* --- Core palette --- */
+  --color-luxury-black:      #030208;
   --color-deep-black:        #05030B;
-  --color-near-black-purple: #0B0616;
-  --color-dark-purple:       #160B2E;
+  --color-deep-plum:         #10061F;
+  --color-black-purple:      #180B2D;
+  --color-luxury-purple:     #2A1450;
+  --color-near-black-purple: #10061F;
+  --color-dark-purple:       #180B2D;
   --color-card-purple:       #24153F;
 
   /* --- Brand purple --- */
   --color-primary-purple:    #8B5CF6;
+  --color-muted-violet-glow: #7C3AED;
   --color-bright-purple:     #A78BFA;
   --color-soft-lavender:     #C4B5FD;
+  --color-lavender-highlight:#D8B4FE;
 
   /* --- Light section palette --- */
   --color-light-lavender-bg: #F6F2FF;
@@ -32,7 +38,7 @@
 
 html,
 body {
-  background: var(--color-deep-black);
+  background: var(--color-luxury-black);
   color: #e5e7eb;
 }
 
@@ -40,9 +46,9 @@ body {
   font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
   background:
-    radial-gradient(ellipse 80% 60% at 80% -10%, rgba(139, 92, 246, 0.18), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 0% 30%,  rgba(139, 92, 246, 0.10), transparent 60%),
-    var(--color-deep-black);
+    radial-gradient(ellipse 80% 60% at 80% -10%, rgba(124, 58, 237, 0.18), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 0% 30%, rgba(42, 20, 80, 0.26), transparent 60%),
+    linear-gradient(180deg, var(--color-luxury-black), var(--color-deep-black));
   background-attachment: fixed;
 }
 
@@ -52,15 +58,16 @@ body {
 .glass {
   background: linear-gradient(
     160deg,
-    rgba(255, 255, 255, 0.10),
-    rgba(36, 21, 63, 0.70)
+    rgba(216, 180, 254, 0.10),
+    rgba(36, 21, 63, 0.72),
+    rgba(24, 11, 45, 0.82)
   );
-  border: 1px solid rgba(196, 181, 253, 0.22);
+  border: 1px solid rgba(216, 180, 254, 0.22);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
   box-shadow:
-    0 0 0 1px rgba(139, 92, 246, 0.08) inset,
-    0 20px 70px -40px rgba(139, 92, 246, 0.82),
+    0 0 0 1px rgba(216, 180, 254, 0.08) inset,
+    0 24px 78px -44px rgba(124, 58, 237, 0.86),
     inset 0 1px 0 rgba(255, 255, 255, 0.16);
   transition:
     border-color 180ms ease,
@@ -81,16 +88,17 @@ body {
 .glass-strong {
   background: linear-gradient(
     160deg,
-    rgba(167, 139, 250, 0.18),
-    rgba(36, 21, 63, 0.88)
+    rgba(216, 180, 254, 0.18),
+    rgba(36, 21, 63, 0.82),
+    rgba(16, 6, 31, 0.92)
   );
-  border: 1px solid rgba(196, 181, 253, 0.28);
+  border: 1px solid rgba(216, 180, 254, 0.30);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   box-shadow:
-    0 0 0 1px rgba(167, 139, 250, 0.12) inset,
-    0 32px 90px -44px rgba(139, 92, 246, 0.95),
-    0 0 60px -30px rgba(139, 92, 246, 0.22),
+    0 0 0 1px rgba(216, 180, 254, 0.13) inset,
+    0 34px 96px -44px rgba(124, 58, 237, 0.96),
+    0 0 70px -32px rgba(139, 92, 246, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
@@ -101,8 +109,8 @@ body {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 70% 55% at 10% -5%, rgba(196, 181, 253, 0.36), transparent 58%),
-    radial-gradient(ellipse 60% 50% at 92% 10%, rgba(196, 181, 253, 0.48), transparent 58%),
+    radial-gradient(ellipse 70% 55% at 10% -5%, rgba(216, 180, 254, 0.26), transparent 58%),
+    radial-gradient(ellipse 60% 50% at 92% 10%, rgba(196, 181, 253, 0.38), transparent 58%),
     radial-gradient(ellipse 40% 35% at 50% 100%, rgba(167, 139, 250, 0.10), transparent 60%),
     linear-gradient(180deg, #ffffff 0%, #F6F2FF 55%, #ede5ff 100%);
   color: var(--color-deep-text-purple);
@@ -130,8 +138,8 @@ body {
 
 /* Light-section pill override */
 .light-section .pill {
-  border-color: rgba(139, 92, 246, 0.25);
-  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(124, 58, 237, 0.22);
+  background: rgba(255, 255, 255, 0.78);
   color: #8B5CF6;
   box-shadow:
     0 14px 40px -28px rgba(139, 92, 246, 0.70),
@@ -148,14 +156,14 @@ body {
 .light-glass {
   background: linear-gradient(
     160deg,
-    rgba(255, 255, 255, 0.90),
-    rgba(246, 242, 255, 0.72)
+    rgba(255, 255, 255, 0.92),
+    rgba(246, 242, 255, 0.76)
   );
   border: 1px solid rgba(196, 181, 253, 0.35);
   box-shadow:
     0 0 0 1px rgba(139, 92, 246, 0.06) inset,
-    0 28px 80px -40px rgba(139, 92, 246, 0.55),
-    0 4px 20px -6px rgba(139, 92, 246, 0.10),
+    0 30px 86px -42px rgba(124, 58, 237, 0.48),
+    0 4px 20px -6px rgba(46, 16, 101, 0.10),
     inset 0 1px 0 rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -225,9 +233,9 @@ body {
   color: transparent;
 }
 
-/* Hero headline gradient - #C4B5FD to #8B5CF6 to #A78BFA */
+/* Hero headline gradient - #D8B4FE to #A78BFA to #8B5CF6 */
 .violet-text {
-  background: linear-gradient(90deg, #c4b5fd 0%, #8b5cf6 50%, #a78bfa 100%);
+  background: linear-gradient(90deg, #d8b4fe 0%, #a78bfa 46%, #8b5cf6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -280,8 +288,8 @@ body {
   border-radius: 0.75rem;
   font-weight: 500;
   color: #e5e7eb;
-  background: rgba(11, 6, 22, 0.30);
-  border: 1px solid rgba(196, 181, 253, 0.25);
+  background: rgba(3, 2, 8, 0.44);
+  border: 1px solid rgba(216, 180, 254, 0.26);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: border-color 150ms ease, background 150ms ease, box-shadow 150ms ease, transform 150ms ease;
@@ -328,6 +336,12 @@ body {
   border-radius: 9999px;
   background: #a78bfa;
   box-shadow: 0 0 10px #a78bfa;
+}
+
+.hero-bg-video {
+  background:
+    radial-gradient(circle at 72% 42%, rgba(124, 58, 237, 0.20), transparent 45%),
+    linear-gradient(180deg, #030208 0%, #05030B 100%);
 }
 
 /* ======================================================
@@ -553,11 +567,16 @@ body {
   .report-row,
   .report-score,
   .report-status,
+  .hero-bg-video,
   .hero-swirl-1,
   .hero-swirl-2,
   .hero-swirl-warm,
   .hero-swirl-ambient {
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .hero-bg-video {
+    display: none;
   }
 }

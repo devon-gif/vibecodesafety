@@ -205,13 +205,28 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative overflow-hidden">
+        {/* TODO: Compress this cinematic background into a smaller hero MP4/WebM before high-traffic launch. */}
+        <video
+          className="hero-bg-video pointer-events-none absolute inset-0 h-full w-full object-cover opacity-55"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source
+            src="/video/Seedance%202_0%20-%20Animate%20this%20abstract%20black-and-purple%20GrowthDrop%20website%20background%20into%20an%20ultra-sl.mp4"
+            type="video/mp4"
+          />
+        </video>
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_78%_20%,rgba(139,92,246,0.28),transparent_46%),radial-gradient(ellipse_at_15%_90%,rgba(22,11,46,0.55),transparent_50%),linear-gradient(180deg,#05030B_0%,#0B0616_50%,#160B2E_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,2,8,0.74),rgba(3,2,8,0.72)),radial-gradient(circle_at_75%_45%,rgba(124,58,237,0.22),transparent_45%),radial-gradient(ellipse_at_78%_20%,rgba(139,92,246,0.18),transparent_48%),linear-gradient(180deg,#030208_0%,#05030B_45%,#10061F_100%)]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,3,11,0)_0%,rgba(5,3,11,0.78)_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(3,2,8,0.94),rgba(3,2,8,0.72),rgba(3,2,8,0.35)),linear-gradient(to_bottom,transparent_58%,#05030B_100%)]"
         />
         {/* Animated swirl orbs */}
         <div aria-hidden className="hero-swirl hero-swirl-1 -left-24 top-0" />

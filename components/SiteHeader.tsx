@@ -10,19 +10,19 @@ export function SiteHeader() {
           <Logo />
         </Link>
         <nav className="hidden items-center gap-9 text-sm text-gray-300 md:flex">
-          <a href="#whats-inside" className="hover:text-white">
+          <a href="/#whats-inside" className="hover:text-white">
             What&apos;s Inside
           </a>
-          <a href="#how-it-works" className="hover:text-white">
+          <a href="/#how-it-works" className="hover:text-white">
             How It Works
           </a>
-          <a href="#pricing" className="hover:text-white">
+          <a href="/#pricing" className="hover:text-white">
             Pricing
           </a>
-          <a href="#faq" className="hover:text-white">
+          <a href="/#faq" className="hover:text-white">
             FAQ
           </a>
-          <a href="#contact" className="hover:text-white">
+          <a href="/#contact" className="hover:text-white">
             Contact
           </a>
         </nav>

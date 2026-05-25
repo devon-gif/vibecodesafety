@@ -32,8 +32,8 @@ const changedFiles = [
 
 function StatusBadge({ status, detail }: { status: RowStatus; detail?: string }) {
   const styles: Record<RowStatus, string> = {
-    Passed:   "border-[#4ADE80]/35 bg-[#4ADE80]/12 text-[#4ADE80]",
-    Warnings: "border-[#F59E0B]/40 bg-[#F59E0B]/12 text-[#F59E0B]",
+    Passed:   "border-[#4ADE80]/28 bg-[#4ADE80]/10 text-[#86EFAC]",
+    Warnings: "border-[#F59E0B]/36 bg-[#F59E0B]/12 text-[#FBBF24] shadow-[0_0_22px_-14px_rgba(245,158,11,0.80)]",
     Blocked:  "border-rose-400/35 bg-rose-400/10 text-rose-300",
   };
   return (
@@ -160,15 +160,15 @@ export function SafetyReport() {
   return (
     <div className="safety-report-float relative mx-auto w-full max-w-lg lg:max-w-none">
       {/* ambient glow */}
-      <div aria-hidden className="absolute -inset-10 rounded-[3rem] bg-[#8B5CF6]/14 blur-3xl" />
+      <div aria-hidden className="absolute -inset-10 rounded-[3rem] bg-[#7C3AED]/18 blur-3xl" />
 
       {/* card */}
-      <div className="glass-strong relative rounded-[1.5rem] p-4 shadow-[0_32px_100px_-40px_rgba(139,92,246,0.90)] sm:p-5">
+      <div className="relative rounded-[1.5rem] border border-[#D8B4FE]/24 bg-[linear-gradient(145deg,rgba(36,21,63,0.76),rgba(24,11,45,0.84),rgba(16,6,31,0.90))] p-4 shadow-[0_34px_110px_-42px_rgba(124,58,237,0.95),inset_0_1px_0_rgba(216,180,254,0.16)] backdrop-blur-2xl sm:p-5">
 
         {/* ── header ─────────────────────────────────────────── */}
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-9 w-9 flex-none items-center justify-center rounded-xl bg-gradient-to-br from-[#A78BFA] to-[#6D28D9] text-white shadow-glow">
+            <span className="inline-flex h-9 w-9 flex-none items-center justify-center rounded-xl bg-gradient-to-br from-[#D8B4FE] via-[#A78BFA] to-[#7C3AED] text-white shadow-[0_0_34px_-10px_rgba(124,58,237,0.95)]">
               <ShieldCheckIcon className="h-4.5 w-4.5" />
             </span>
             <div>
@@ -177,8 +177,8 @@ export function SafetyReport() {
             </div>
           </div>
           {/* live indicator */}
-          <span className="flex items-center gap-1.5 rounded-full border border-[#4ADE80]/25 bg-[#4ADE80]/08 px-2.5 py-1 text-[10px] font-medium text-[#4ADE80]">
-            <span className="report-status-dot h-1.5 w-1.5 rounded-full bg-[#4ADE80]" />
+          <span className="flex items-center gap-1.5 rounded-full border border-[#4ADE80]/22 bg-[#4ADE80]/08 px-2.5 py-1 text-[10px] font-medium text-[#86EFAC]">
+            <span className="report-status-dot h-1.5 w-1.5 rounded-full bg-[#4ADE80]/85" />
             Live
           </span>
         </div>
@@ -187,16 +187,16 @@ export function SafetyReport() {
         <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-[auto,1fr]">
 
           {/* ── left: score panel ─────────────────────────────── */}
-          <div className="flex flex-col items-center rounded-xl border border-[#C4B5FD]/14 bg-[#24153F]/55 p-4 backdrop-blur-md sm:w-[148px]">
+          <div className="flex flex-col items-center rounded-xl border border-[#D8B4FE]/16 bg-[#180B2D]/62 p-4 backdrop-blur-md sm:w-[148px]">
             {/* score ring */}
             <div
               className="score-ring relative flex h-28 w-28 items-center justify-center rounded-full"
               style={{
-                background: `conic-gradient(from 220deg, #8B5CF6 0deg, #A78BFA ${scoreAngle}deg, rgba(36,21,63,0.55) ${scoreAngle}deg, rgba(36,21,63,0.55) 360deg)`,
-                boxShadow: `0 0 48px -10px rgba(139,92,246,0.45)`,
+                background: `conic-gradient(from 220deg, #8B5CF6 0deg, #D8B4FE ${scoreAngle}deg, rgba(36,21,63,0.55) ${scoreAngle}deg, rgba(36,21,63,0.55) 360deg)`,
+                boxShadow: `0 0 54px -12px rgba(124,58,237,0.62)`,
               }}
             >
-              <div className="absolute inset-2.5 rounded-full bg-[#160B2E]" />
+              <div className="absolute inset-2.5 rounded-full bg-[#10061F]" />
               <div className="relative flex flex-col items-center justify-center">
                 <span className="report-score text-2xl font-bold leading-none text-white tabular-nums">{score}</span>
                 <span className="text-[10px] text-[#C4B5FD]/60 font-medium">/100</span>
@@ -204,8 +204,8 @@ export function SafetyReport() {
             </div>
 
             {/* status */}
-            <div className="report-status mt-3 flex items-center gap-1.5 text-xs font-medium text-[#4ADE80]">
-              <span className="report-status-dot h-2 w-2 rounded-full bg-[#4ADE80]" />
+            <div className="report-status mt-3 flex items-center gap-1.5 text-xs font-medium text-[#86EFAC]">
+              <span className="report-status-dot h-2 w-2 rounded-full bg-[#4ADE80]/90" />
               Good to Ship
             </div>
 
@@ -239,8 +239,8 @@ export function SafetyReport() {
                     "transition-all duration-300",
                     visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2",
                     isWarning
-                      ? "border-[#F59E0B]/22 bg-[#F59E0B]/05 report-row-warning"
-                      : "border-[#C4B5FD]/10 bg-[#24153F]/35",
+                      ? "border-[#F59E0B]/24 bg-[#F59E0B]/06 report-row-warning"
+                      : "border-[#D8B4FE]/12 bg-[#24153F]/34",
                   ].join(" ")}
                   style={{ transitionDelay: visible ? `0ms` : undefined }}
                 >
@@ -255,12 +255,12 @@ export function SafetyReport() {
             {/* ── final verdict ─────────────────────────────── */}
             <div
               className={[
-                "mt-auto flex items-center justify-between gap-3 rounded-xl border-2 border-[#A78BFA]/35 bg-gradient-to-r from-[#8B5CF6]/12 to-[#A78BFA]/08 px-3.5 py-3 transition-all duration-500",
+                "mt-auto flex items-center justify-between gap-3 rounded-xl border-2 border-[#D8B4FE]/30 bg-gradient-to-r from-[#7C3AED]/16 to-[#D8B4FE]/09 px-3.5 py-3 transition-all duration-500",
                 verdictVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3",
               ].join(" ")}
             >
               <div className="flex items-center gap-2.5">
-                <span className="flex h-7 w-7 flex-none items-center justify-center rounded-lg bg-[#8B5CF6]/20 text-[#C4B5FD]">
+                <span className="flex h-7 w-7 flex-none items-center justify-center rounded-lg bg-[#7C3AED]/22 text-[#D8B4FE]">
                   <FlagIcon />
                 </span>
                 <div>
@@ -272,7 +272,7 @@ export function SafetyReport() {
                   </div>
                 </div>
               </div>
-              <span className="flex-none rounded-full border border-[#A78BFA]/40 bg-[#A78BFA]/15 px-2.5 py-1 text-[11px] font-semibold text-[#C4B5FD]">
+              <span className="flex-none rounded-full border border-[#D8B4FE]/36 bg-[#D8B4FE]/12 px-2.5 py-1 text-[11px] font-semibold text-[#D8B4FE]">
                 2 warnings
               </span>
             </div>
