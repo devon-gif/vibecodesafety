@@ -46,12 +46,12 @@ const insideCards = [
     b: "Use short prompts after AI edits code so risky changes get checked before commit, push, or deploy.",
   },
   {
-    t: "Monthly Safety Drops",
-    b: "Get new audit prompts, checklists, scorecards, and guardrails as the product evolves.",
+    t: "Weekly Safety Notes",
+    b: "Get quick weekly prompts and checklists for the mistakes AI-assisted builders commonly miss.",
   },
   {
-    t: "Repo Rules",
-    b: "Drop in Claude, Codex, Cursor, Windsurf, and Copilot instruction templates.",
+    t: "Monthly Safety Drops",
+    b: "Get one larger monthly audit pack with themed prompts, scorecards, checklists, and guardrails.",
   },
   {
     t: "Launch Guardrails",
@@ -96,19 +96,19 @@ const riskZones = [
 
 const pricingIncludes = [
   "Heavy-duty repo audit workflow",
-  "VibeCode Auditor Agent",
-  "Daily AI change review prompts",
-  "Project safety profile",
+  "VibeCode Auditor Agent files",
+  "Daily AI Change Reviews",
+  "Weekly Safety Notes",
+  "Monthly Safety Drops",
   "Repo instruction templates",
   "Auth, billing, env var, API, Supabase, and Stripe checklists",
-  "Monthly Safety Drops",
   "Ongoing prompt and checklist updates",
 ];
 
 const faqs = [
   {
     q: "Is this a one-time kit?",
-    a: "No. VibeCode Safety is a subscription membership so members can receive ongoing audit workflows, prompt updates, checklists, and monthly safety drops.",
+    a: "No. VibeCode Safety is a subscription membership so members can receive ongoing audit workflows, weekly notes, monthly drops, prompt updates, and checklists.",
   },
   {
     q: "Is there a free trial?",
@@ -132,7 +132,19 @@ const faqs = [
   },
   {
     q: "What do I get as a member?",
-    a: "You get the current member kit, heavy-duty repo audit workflow, VibeCode Auditor Agent files, daily AI change review prompts, repo instruction templates, checklists, monthly safety drops, and ongoing updates.",
+    a: "You get the current member kit, heavy-duty repo audit workflow, VibeCode Auditor Agent files, daily AI change review prompts, Weekly Safety Notes, Monthly Safety Drops, repo instruction templates, checklists, and ongoing updates.",
+  },
+  {
+    q: "What are Weekly Safety Notes?",
+    a: "Short weekly updates with one focused risk, a quick checklist, and a copy-paste prompt you can use in your AI coding workflow.",
+  },
+  {
+    q: "What are Monthly Safety Drops?",
+    a: "Larger themed audit packs released monthly. Each drop includes prompts, checklists, scorecards, and guardrails for a specific risk area like Stripe, Supabase, auth, env vars, or deployment readiness.",
+  },
+  {
+    q: "Do I need to use every update?",
+    a: "No. Start with the heavy-duty repo audit and daily guardrails. Weekly notes and monthly drops are there when that topic matters to your project.",
   },
   {
     q: "Does it work with Cursor, Claude, Codex, and Windsurf?",
@@ -229,7 +241,7 @@ export default function Home() {
           <div>
             <span className="pill mb-6 inline-flex">
               <span className="pill-dot" />
-              Repo audit &middot; Daily guardrails &middot; Ongoing updates.
+              Repo audit &middot; Weekly notes &middot; Monthly drops.
             </span>
             <h1 className="text-balance text-6xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl">
               Audit your repo.
@@ -242,8 +254,9 @@ export default function Home() {
             </h1>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
               VibeCode Safety gives AI-assisted builders a heavy-duty repo
-              audit workflow, daily AI change reviews, and monthly safety
-              drops so you can catch risky code before you ship.
+              audit workflow, daily AI change reviews, Weekly Safety Notes,
+              and Monthly Safety Drops so you can catch risky code before
+              you ship.
             </p>
 
             <div className="mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
@@ -470,7 +483,9 @@ export default function Home() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
             Start with a heavy-duty repo audit, then guard every AI coding
-            change as you build.
+            change as you build. Members get short weekly safety notes and one
+            larger monthly Safety Drop with new audit prompts, checklists, and
+            guardrails.
           </p>
 
           <ReviewWorkflowCards cards={insideCards} />
@@ -524,8 +539,8 @@ export default function Home() {
             <span className="violet-text">AI-assisted builders.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-            One subscription. Repo audit workflow, daily guardrails, and
-            ongoing updates.
+            One subscription. Repo audit workflow, daily guardrails, Weekly
+            Safety Notes + Monthly Safety Drops.
           </p>
 
           <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-5 lg:grid-cols-2">

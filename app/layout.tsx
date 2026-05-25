@@ -9,7 +9,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "VibeCode Safety Membership - Audit your repo. Guard every AI change.",
   description:
-    "A subscription membership for AI-assisted builders with a heavy-duty repo audit workflow, VibeCode Auditor Agent, daily change-review guardrails, and monthly safety drops.",
+    "A subscription membership for AI-assisted builders with a heavy-duty repo audit workflow, VibeCode Auditor Agent, daily change-review guardrails, Weekly Safety Notes, and Monthly Safety Drops.",
   metadataBase: new URL("https://vibecodesafetykit.com"),
   openGraph: {
     title: "VibeCode Safety Membership",
