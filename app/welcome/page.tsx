@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 const steps = [
   "Download Member Kit",
   "Open QUICKSTART.md",
-  "Paste the VibeCode Auditor Agent instructions into your AI tool",
+  "Paste the VibeCode Auditor prompt into your AI tool",
   "Run the Heavy-Duty Repo Audit",
   "Add Daily Guardrails",
   "Check the latest Weekly Safety Note",
@@ -29,16 +29,16 @@ export default function WelcomePage() {
             Member onboarding
           </span>
           <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Welcome to <span className="violet-text">VibeCode Safety.</span>
+            Run your first audit{" "}
+            <span className="violet-text">before you keep building.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-gray-300">
-            After you download the member kit, start with the repo audit, add
-            the daily guardrails, then use weekly notes and monthly drops when
-            they match what you are building.
+            Start here. Download the kit, paste the auditor prompt into your AI
+            tool, and check your repo for risky AI-generated changes.
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-400">
-            You do not need to use every file on day one. Start with the repo
-            audit, then add the daily review prompt.
+            Do not try to use every file today. Run the first audit, then add
+            the daily guardrails.
           </p>
         </div>
 

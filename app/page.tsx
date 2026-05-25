@@ -11,18 +11,18 @@ import { YEARLY_CHECKOUT_LINK } from "@/lib/checkout";
 const steps = [
   {
     n: "1",
-    t: "Audit your repo",
-    b: "Find risky auth, checkout, env var, API, database, and deploy issues before you keep building.",
+    t: "Subscribe and download",
+    b: "Join for $6.99/month or $59/year and get the member kit after checkout.",
   },
   {
     n: "2",
-    t: "Add guardrails",
-    b: "Drop the project profile, repo rules, and daily review prompt into your workflow.",
+    t: "Run your first repo audit",
+    b: "Paste the audit prompt into Claude, Codex, Cursor, Windsurf, ChatGPT, or your AI coding tool.",
   },
   {
     n: "3",
     t: "Review every AI change",
-    b: "Use PASS / WARNING / BLOCKED before commit, push, or deploy.",
+    b: "Use PASS / WARNING / BLOCKED before you commit, push, or deploy.",
   },
 ];
 
@@ -36,7 +36,7 @@ const setupSteps = [
   {
     n: "1",
     t: "Download after purchase",
-    b: "Get the current VibeCode Safety Member Kit instantly after checkout.",
+    b: "Download the current member kit.",
   },
   {
     n: "2",
@@ -63,23 +63,23 @@ const setupSteps = [
 const insideCards = [
   {
     t: "Heavy-Duty Repo Audit",
-    b: "Run a structured AI-assisted audit on your current repo to spot auth gaps, checkout risks, exposed config, API issues, and deployment problems.",
+    b: "Find risky auth, checkout, env var, API, database, and deploy issues before they become production problems.",
   },
   {
     t: "VibeCode Auditor Agent",
-    b: "Prompt and instruction files that help Claude, Codex, Cursor, Windsurf, or ChatGPT act as your repo safety reviewer.",
+    b: "Turn Claude, Codex, Cursor, Windsurf, or ChatGPT into a structured repo safety reviewer.",
   },
   {
     t: "Daily AI Change Reviews",
-    b: "Use short prompts after AI edits code so risky changes get checked before commit, push, or deploy.",
+    b: "Check every AI-generated change before commit, push, or deploy.",
   },
   {
     t: "Weekly Safety Notes",
-    b: "Get quick weekly prompts and checklists for the mistakes AI-assisted builders commonly miss.",
+    b: "Short weekly prompts for the mistakes AI-assisted builders commonly miss.",
   },
   {
     t: "Monthly Safety Drops",
-    b: "Get one larger monthly audit pack with themed prompts, scorecards, checklists, and guardrails.",
+    b: "Larger audit packs for high-risk areas like Stripe, Supabase, auth, env vars, and deployment readiness.",
   },
   {
     t: "Launch Guardrails",
@@ -90,23 +90,23 @@ const insideCards = [
 const riskZones = [
   {
     t: "Exposed secrets",
-    b: "API keys, tokens, webhook secrets, and service keys should never end up in your repo.",
+    b: "Keys, tokens, and webhooks should never leak into the repo.",
   },
   {
     t: "Public env mistakes",
-    b: "Server-only values should not be moved into browser-exposed variables.",
+    b: "Server-only values can accidentally become browser-visible.",
   },
   {
     t: "Broken auth",
-    b: "AI can accidentally weaken login, protected routes, sessions, or user access boundaries.",
+    b: "AI can weaken login, protected routes, sessions, or user access rules.",
   },
   {
     t: "Billing regressions",
-    b: "Checkout, success pages, webhooks, and test/live keys need extra review.",
+    b: "Checkout, success pages, webhooks, and live/test keys need extra review.",
   },
   {
     t: "Supabase policy drift",
-    b: "Tables, storage, and RLS assumptions need to be checked before shipping.",
+    b: "Tables, storage, and RLS assumptions can quietly change.",
   },
   {
     t: "Dependency drift",
@@ -140,7 +140,7 @@ const faqs = [
   },
   {
     q: "Is there a free trial?",
-    a: "Not right now. VibeCode Safety includes downloadable prompts, templates, and member files, so access starts with a paid membership. You can preview the free checklist before joining and cancel anytime.",
+    a: "No. VibeCode Safety includes downloadable member files and ongoing updates, so access starts with a paid membership. You can preview the free checklist before joining.",
   },
   {
     q: "Do you personally audit my repo?",
@@ -156,7 +156,19 @@ const faqs = [
   },
   {
     q: "Does this guarantee my app is secure?",
-    a: "No. It helps reduce risk and improve review habits, but it does not replace professional engineering, QA, or a security audit.",
+    a: "No. It helps reduce risk and improve review habits, but it does not replace professional engineering, QA, or security review.",
+  },
+  {
+    q: "Why should I pay monthly?",
+    a: "Because AI-built apps keep changing. The membership gives you the core audit workflow plus weekly safety notes and monthly drops for new risks, tools, and common failure points.",
+  },
+  {
+    q: "What do I do right after subscribing?",
+    a: "Download the member kit, open QUICKSTART.md, paste the auditor prompt into your AI coding tool, and run your first repo audit.",
+  },
+  {
+    q: "Do I need a dashboard or GitHub connection?",
+    a: "No. V1 works inside the AI coding tool you already use.",
   },
   {
     q: "What do I get as a member?",
@@ -269,23 +281,22 @@ export default function Home() {
           <div>
             <span className="pill mb-6 inline-flex">
               <span className="pill-dot" />
-              Repo audit &middot; Weekly notes &middot; Monthly drops.
+              Repo audit &middot; Daily guardrails &middot; Weekly updates.
             </span>
             <h1 className="text-balance text-6xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl">
-              Audit your repo.
+              Don&apos;t ship
               <br />
-              <span className="violet-text">
-                Guard every
-                <br />
-                AI change.
-              </span>
+              <span className="violet-text">AI code blind.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
-              VibeCode Safety gives AI-assisted builders a heavy-duty repo
-              audit workflow, daily AI change reviews, Weekly Safety Notes,
-              and Monthly Safety Drops so you can catch risky code before
-              you ship.
+              AI coding tools move fast and can quietly break auth, checkout,
+              env vars, database rules, or deploy flows. VibeCode Safety gives
+              you a simple repo audit workflow and daily AI change reviews
+              before you ship.
             </p>
+            <div className="mt-6 inline-flex rounded-2xl border border-violet-300/20 bg-white/[0.05] px-4 py-3 text-sm font-medium text-violet-100 shadow-[0_0_34px_rgba(139,92,246,0.12)] backdrop-blur-xl">
+              Working build ≠ safe release.
+            </div>
 
             <div className="mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
               <BuyLink className="btn-primary px-7 py-4 text-base">
@@ -297,7 +308,7 @@ export default function Home() {
             </div>
 
             <p className="mt-4 text-sm text-gray-500">
-              Monthly or yearly billing. Cancel anytime.
+              Run your first audit today. Cancel anytime.
             </p>
             <p className="mt-2 text-sm text-gray-500">
               Free checklist available before joining.{" "}
@@ -316,7 +327,7 @@ export default function Home() {
                   <path d="m5 12 5 5L20 7" />
                 </svg>
               </span>
-              Works with Claude, Codex, Cursor, Windsurf, Copilot &amp; more.
+              Works with Claude, Codex, Cursor, Windsurf, ChatGPT &amp; more.
             </p>
           </div>
 
@@ -429,11 +440,11 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-6 py-20">
           <Eyebrow>HOW IT WORKS</Eyebrow>
           <h2 className="light-heading mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight md:text-5xl">
-            How VibeCode Safety works.
+            Subscribe. Download. Run the audit.
           </h2>
           <p className="light-copy mx-auto mt-4 max-w-2xl text-center text-base leading-7 md:text-lg">
-            Run a repo audit first, then use the daily review workflow every
-            time AI changes your code.
+            No new dashboard to learn. Use it inside the AI coding tool you
+            already use.
           </p>
 
           <div className="relative mt-12">
@@ -487,7 +498,7 @@ export default function Home() {
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <span className="text-sm font-medium text-[#6D5A88]">
-              Ready to run your first repo audit?
+              Five minutes of review can save hours of cleanup.
             </span>
             <BuyLink className="btn-primary px-5 py-3 text-sm">
               Start for $6.99/month
@@ -511,7 +522,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <Eyebrow>SIMPLE SETUP</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Start in <span className="violet-text">5 minutes.</span>
+            What happens after you subscribe?
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-8 text-gray-300 md:text-lg">
             Download the member kit, drop the agent files into your AI coding
@@ -536,11 +547,10 @@ export default function Home() {
 
           <div className="glass-strong mx-auto mt-8 max-w-3xl rounded-2xl p-5 text-center shadow-glow">
             <p className="text-base font-semibold text-white">
-              No new dashboard to learn.
+              Subscribe. Download the kit. Run your first audit.
             </p>
             <p className="mt-2 text-sm leading-6 text-gray-400">
-              Start with the AI coding tool you already use. No GitHub
-              connection required for v1.
+              No GitHub connection required. No dashboard required for v1.
             </p>
           </div>
         </div>
@@ -551,13 +561,11 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <Eyebrow>WHAT YOU GET</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            A safety workflow that grows with your repo.
+            Everything you need to stop shipping blind.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-            Start with a heavy-duty repo audit, then guard every AI coding
-            change as you build. Members get short weekly safety notes and one
-            larger monthly Safety Drop with new audit prompts, checklists, and
-            guardrails.
+            A practical safety workflow for the places AI-built apps usually
+            break.
           </p>
 
           <ReviewWorkflowCards cards={insideCards} />
@@ -576,8 +584,12 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-6 py-20">
           <Eyebrow>HIGH-RISK ZONES</Eyebrow>
           <h2 className="light-heading mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight md:text-5xl">
-            The kit focuses on the mistakes that hurt founders most.
+            AI can break the parts users actually touch.
           </h2>
+          <p className="light-copy mx-auto mt-4 max-w-2xl text-center text-base leading-7">
+            VibeCode Safety focuses on the silent failures that can survive a
+            normal build.
+          </p>
           <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {riskZones.map((r) => (
               <div key={r.t} className="light-glass rounded-2xl p-5">
@@ -607,12 +619,12 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <Eyebrow>SIMPLE PRICING</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Simple pricing for{" "}
-            <span className="violet-text">AI-assisted builders.</span>
+            Start protecting your{" "}
+            <span className="violet-text">AI-built app today.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-            One subscription. Repo audit workflow, daily guardrails, Weekly
-            Safety Notes + Monthly Safety Drops.
+            A low-cost monthly safety workflow for builders who do not want to
+            ship blind.
           </p>
 
           <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-5 lg:grid-cols-2">
@@ -630,7 +642,7 @@ export default function Home() {
                 <span className="pb-2 text-sm text-violet-300">/month</span>
               </div>
               <p className="mt-3 text-sm text-gray-400">
-                Best for active builders. Cancel anytime.
+                Best for active builders.
               </p>
               <EmailConsentCheckbox />
               <BuyLink className="btn-primary mt-5 w-full text-base">
@@ -653,7 +665,7 @@ export default function Home() {
                 <span className="pb-2 text-sm text-violet-300">/year</span>
               </div>
               <p className="mt-3 text-sm text-gray-400">
-                Best value. Save compared to monthly billing.
+                Best value.
               </p>
               <EmailConsentCheckbox />
               <BuyLink href={YEARLY_CHECKOUT_LINK} className="btn-primary mt-5 w-full text-base">
@@ -671,8 +683,8 @@ export default function Home() {
               ))}
             </ul>
             <p className="mt-5 text-xs leading-relaxed text-gray-500">
-              Helps reduce risk, but does not guarantee secure, bug-free, or
-              production-ready software.
+              Cancel anytime. Helps reduce risk, but does not guarantee secure,
+              bug-free, or production-ready software.
             </p>
             <p className="mt-2 text-xs leading-relaxed text-gray-500">
               Have an invite code? Enter it at checkout.
