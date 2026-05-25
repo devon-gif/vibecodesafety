@@ -204,10 +204,10 @@ export default function Home() {
     <div className="relative overflow-hidden">
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="hero-section relative overflow-hidden">
         {/* TODO: Compress this cinematic background into a smaller hero MP4/WebM before high-traffic launch. */}
         <video
-          className="hero-bg-video pointer-events-none absolute inset-0 h-full w-full object-cover opacity-90"
+          className="hero-bg-video pointer-events-none absolute inset-0 h-full w-full object-cover opacity-75"
           autoPlay
           muted
           loop
@@ -222,11 +222,11 @@ export default function Home() {
         </video>
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(circle_at_76%_44%,rgba(72,57,108,0.34),transparent_34%),radial-gradient(circle_at_80%_58%,rgba(56,35,89,0.40),transparent_46%),radial-gradient(circle_at_62%_68%,rgba(42,23,75,0.42),transparent_50%),radial-gradient(circle_at_72%_22%,rgba(37,21,64,0.36),transparent_38%),linear-gradient(135deg,#05030B_0%,#0B0616_28%,#1C0F35_50%,#251540_68%,#382359_100%)]"
+          className="hero-video-color-match pointer-events-none absolute inset-0"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(5,3,11,0.96)_0%,rgba(11,6,22,0.84)_34%,rgba(28,15,53,0.45)_64%,rgba(56,35,89,0.22)_100%),radial-gradient(circle_at_78%_42%,rgba(139,92,246,0.10),transparent_34%),linear-gradient(to_bottom,transparent_66%,#05030B_100%)]"
+          className="hero-left-readability pointer-events-none absolute inset-0"
         />
         {/* Animated swirl orbs */}
         <div aria-hidden className="hero-swirl hero-swirl-1 -left-24 top-0" />
@@ -277,23 +277,23 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative lg:pl-0">
-            <div className="hero-product-video-wrap relative mx-auto w-full max-w-[960px] origin-center lg:scale-[1.10] xl:scale-[1.16]">
+          <div className="relative lg:-ml-10 lg:-translate-y-2 lg:pl-0 xl:-ml-16">
+            <div className="hero-product-visual relative mx-auto w-full max-w-[920px] origin-center lg:scale-[1.1] xl:scale-[1.13]">
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-[-18%] -z-20 rounded-[72px] bg-[radial-gradient(circle_at_58%_52%,rgba(72,57,108,0.50),rgba(56,35,89,0.36)_34%,rgba(42,23,75,0.24)_52%,transparent_76%)] blur-3xl"
+                className="pointer-events-none absolute inset-[-18%] -z-20 rounded-[80px] bg-[radial-gradient(circle_at_58%_52%,rgba(72,57,108,0.42),rgba(56,35,89,0.28)_34%,rgba(42,23,75,0.18)_52%,transparent_78%)] blur-3xl"
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-[-28%] -z-30 rounded-[90px] bg-[radial-gradient(circle_at_60%_55%,rgba(28,15,53,0.68),rgba(11,6,22,0.50)_48%,rgba(5,3,11,0.24)_70%,transparent_86%)] blur-2xl"
+                className="pointer-events-none absolute inset-[-26%] -z-30 rounded-[100px] bg-[radial-gradient(circle_at_60%_55%,rgba(28,15,53,0.58),rgba(11,6,22,0.42)_48%,rgba(5,3,11,0.22)_72%,transparent_88%)] blur-2xl"
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute bottom-[2%] left-[8%] right-[4%] -z-10 h-[28%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.32),rgba(42,23,75,0.30)_44%,rgba(28,15,53,0.18)_64%,transparent_82%)] blur-3xl"
+                className="pointer-events-none absolute bottom-[6%] left-[10%] right-[8%] -z-10 h-[24%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.24),rgba(42,23,75,0.22)_44%,transparent_76%)] blur-3xl"
               />
-              <div className="hero-product-video-mask relative aspect-[16/10] w-full overflow-hidden">
+              <div className="hero-product-video-mask relative w-full">
                 <video
-                  className="h-full w-full object-contain opacity-95"
+                  className="hero-product-video w-full object-contain opacity-95"
                   autoPlay
                   muted
                   loop
@@ -305,7 +305,7 @@ export default function Home() {
                 </video>
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_44%,rgba(28,15,53,0.22)_66%,rgba(11,6,22,0.55)_84%,rgba(5,3,11,0.72)_100%)]"
+                  className="hero-product-video-edge-overlay pointer-events-none absolute inset-0"
                 />
               </div>
             </div>
