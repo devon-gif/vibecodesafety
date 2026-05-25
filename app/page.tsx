@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SafetyReport } from "@/components/SafetyReport";
 import { BuyLink } from "@/components/BuyLink";
 import { EmailConsentCheckbox } from "@/components/EmailConsentCheckbox";
 import { ContactForm } from "@/components/ContactForm";
@@ -208,7 +207,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         {/* TODO: Compress this cinematic background into a smaller hero MP4/WebM before high-traffic launch. */}
         <video
-          className="hero-bg-video pointer-events-none absolute inset-0 h-full w-full object-cover opacity-55"
+          className="hero-bg-video pointer-events-none absolute inset-0 h-full w-full object-cover opacity-90"
           autoPlay
           muted
           loop
@@ -223,11 +222,11 @@ export default function Home() {
         </video>
         <div
           aria-hidden
-          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,2,8,0.74),rgba(3,2,8,0.72)),radial-gradient(circle_at_75%_45%,rgba(124,58,237,0.22),transparent_45%),radial-gradient(ellipse_at_78%_20%,rgba(139,92,246,0.18),transparent_48%),linear-gradient(180deg,#030208_0%,#05030B_45%,#10061F_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,2,8,0.36),rgba(3,2,8,0.48)),radial-gradient(circle_at_75%_45%,rgba(124,58,237,0.16),transparent_45%),radial-gradient(ellipse_at_78%_20%,rgba(139,92,246,0.10),transparent_48%),linear-gradient(180deg,rgba(3,2,8,0.10)_0%,rgba(5,3,11,0.30)_54%,rgba(16,6,31,0.58)_100%)]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(3,2,8,0.94),rgba(3,2,8,0.72),rgba(3,2,8,0.35)),linear-gradient(to_bottom,transparent_58%,#05030B_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(3,2,8,0.92),rgba(3,2,8,0.56),rgba(3,2,8,0.12)),linear-gradient(to_bottom,transparent_62%,#05030B_100%)]"
         />
         {/* Animated swirl orbs */}
         <div aria-hidden className="hero-swirl hero-swirl-1 -left-24 top-0" />
@@ -279,7 +278,25 @@ export default function Home() {
           </div>
 
           <div className="relative lg:pl-2">
-            <SafetyReport />
+            <div className="hero-product-video-wrap relative mx-auto w-full max-w-xl lg:max-w-none">
+              <div
+                aria-hidden
+                className="absolute -inset-10 rounded-[3rem] bg-[#7C3AED]/20 blur-3xl"
+              />
+              <div className="hero-product-video-mask relative aspect-[16/10] w-full overflow-hidden">
+                <video
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-hidden="true"
+                >
+                  <source src="/video/Hero%20right%20block.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </section>
