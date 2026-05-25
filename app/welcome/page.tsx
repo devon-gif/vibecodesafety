@@ -6,9 +6,12 @@ export const metadata: Metadata = {
 };
 
 const steps = [
+  "Download Member Kit",
+  "Open QUICKSTART.md",
+  "Paste the VibeCode Auditor Agent instructions into your AI tool",
   "Run the Heavy-Duty Repo Audit",
-  "Add Daily Build Guardrails",
-  "Use Weekly Safety Notes when relevant",
+  "Add Daily Guardrails",
+  "Check the latest Weekly Safety Note",
   "Use the latest Monthly Safety Drop for deeper checks",
 ];
 
@@ -32,6 +35,10 @@ export default function WelcomePage() {
             After you download the member kit, start with the repo audit, add
             the daily guardrails, then use weekly notes and monthly drops when
             they match what you are building.
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-400">
+            You do not need to use every file on day one. Start with the repo
+            audit, then add the daily review prompt.
           </p>
         </div>
 

@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { CUSTOMER_PORTAL_LINK, isExternalCheckout } from "@/lib/checkout";
 
 export function SiteFooter() {
+  const manageSubscriptionHref = CUSTOMER_PORTAL_LINK || "/manage-subscription";
+  const manageSubscriptionExternal = isExternalCheckout(manageSubscriptionHref);
+
   return (
     <footer className="border-t border-white/5 bg-ink-950">
       <div className="mx-auto max-w-7xl px-6 py-14">
@@ -74,7 +78,10 @@ export function SiteFooter() {
               Refund / Cancellation Policy
             </Link>
             <Link
-              href="/manage-subscription"
+              href={manageSubscriptionHref}
+              {...(manageSubscriptionExternal
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               className="text-gray-400 transition hover:text-violet-300"
             >
               Manage Subscription

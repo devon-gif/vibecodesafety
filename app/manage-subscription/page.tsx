@@ -27,9 +27,8 @@ export default function ManageSubscriptionPage() {
         </h1>
 
         <p className="mt-6 text-gray-300">
-          Billing is handled through Stripe. When the customer portal is
-          connected, you can update payment details, view billing information,
-          or cancel from Stripe.
+          Billing is handled through Stripe. You can manage billing, invoices,
+          or cancellation through the Stripe Customer Portal once connected.
         </p>
 
         {hasPortal ? (

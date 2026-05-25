@@ -32,6 +32,34 @@ const statuses = [
   { l: "BLOCKED", b: "Fix before deploy.", dot: "bg-rose-400" },
 ];
 
+const setupSteps = [
+  {
+    n: "1",
+    t: "Download after purchase",
+    b: "Get the current VibeCode Safety Member Kit instantly after checkout.",
+  },
+  {
+    n: "2",
+    t: "Add it to your AI tool",
+    b: "Use the included instructions for Claude, Codex, Cursor, Windsurf, ChatGPT, or similar tools.",
+  },
+  {
+    n: "3",
+    t: "Run your first repo audit",
+    b: "Check auth, env vars, checkout, APIs, database rules, dependencies, and deploy readiness.",
+  },
+  {
+    n: "4",
+    t: "Review every AI change",
+    b: "Use PASS / WARNING / BLOCKED before commit, push, or deploy.",
+  },
+  {
+    n: "5",
+    t: "Get weekly and monthly updates",
+    b: "Members receive quick Weekly Safety Notes and larger Monthly Safety Drops with new prompts, checklists, and guardrails.",
+  },
+];
+
 const insideCards = [
   {
     t: "Heavy-Duty Repo Audit",
@@ -101,7 +129,7 @@ const pricingIncludes = [
   "Weekly Safety Notes",
   "Monthly Safety Drops",
   "Repo instruction templates",
-  "Auth, billing, env var, API, Supabase, and Stripe checklists",
+  "Launch guardrails and checklists",
   "Ongoing prompt and checklist updates",
 ];
 
@@ -470,6 +498,50 @@ export default function Home() {
             >
               See what&apos;s inside
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SIMPLE SETUP */}
+      <section className="relative border-t border-white/5 bg-gradient-to-b from-violet-500/[0.05] via-transparent to-transparent">
+        <div
+          aria-hidden
+          className="orb right-[-180px] top-20 h-[420px] w-[420px] bg-violet-700/20"
+        />
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <Eyebrow>SIMPLE SETUP</Eyebrow>
+          <h2 className="mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            Start in <span className="violet-text">5 minutes.</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-8 text-gray-300 md:text-lg">
+            Download the member kit, drop the agent files into your AI coding
+            workflow, and run your first repo audit before you keep building.
+          </p>
+
+          <ol className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-5">
+            {setupSteps.map((step) => (
+              <li key={step.n} className="glass relative rounded-2xl p-5">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/15 text-sm font-semibold text-violet-200 ring-1 ring-violet-300/30">
+                  {step.n}
+                </div>
+                <h3 className="mt-5 text-base font-semibold text-white">
+                  {step.t}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-gray-400">
+                  {step.b}
+                </p>
+              </li>
+            ))}
+          </ol>
+
+          <div className="glass-strong mx-auto mt-8 max-w-3xl rounded-2xl p-5 text-center shadow-glow">
+            <p className="text-base font-semibold text-white">
+              No new dashboard to learn.
+            </p>
+            <p className="mt-2 text-sm leading-6 text-gray-400">
+              Start with the AI coding tool you already use. No GitHub
+              connection required for v1.
+            </p>
           </div>
         </div>
       </section>

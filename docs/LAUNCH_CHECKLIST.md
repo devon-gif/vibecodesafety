@@ -75,7 +75,7 @@ Run through this before flipping the subscription site live.
 - [ ] Header, hero, pricing, sticky CTA, chat widget, and final CTA use monthly checkout by default.
 - [ ] Yearly pricing CTA uses yearly checkout.
 - [ ] Checkout fallback routes to `/checkout-coming-soon` when env vars are blank.
-- [ ] Manage Subscription footer link routes to `/manage-subscription`.
+- [ ] Manage Subscription footer link uses `NEXT_PUBLIC_CUSTOMER_PORTAL_LINK` when set and falls back to `/manage-subscription`.
 - [ ] Hidden access page is not linked in nav, footer, homepage public links, or sitemap.
 - [ ] Video does not autoplay, uses controls, and has sound when visitors press play.
 - [ ] Contact form does not expose the private recipient email in client code.

@@ -30,9 +30,9 @@ Set the hosted portal link in:
 NEXT_PUBLIC_CUSTOMER_PORTAL_LINK=
 ```
 
-The footer Manage Subscription link points to `/manage-subscription`. That page
-opens the Stripe Customer Portal when the env var is available. If the env var
-is missing, it shows support instructions.
+The footer Manage Subscription link uses `NEXT_PUBLIC_CUSTOMER_PORTAL_LINK`
+when the env var is available. If the env var is missing, it falls back to
+`/manage-subscription`, which shows support instructions.
 
 ## Later Option
 
