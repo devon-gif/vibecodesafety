@@ -11,7 +11,8 @@ Audit your repo. Guard every AI change. Ship with fewer surprises.
 - VibeCode Auditor Agent instructions for Claude, Codex, Cursor, Windsurf, and ChatGPT.
 - A heavy-duty repo audit workflow you can run before a launch, big refactor, or handoff.
 - Daily build guardrails for each AI-generated code change.
-- Monthly safety drops focused on one common risk area at a time.
+- Weekly Safety Notes with one focused risk, quick checks, and a copy-paste prompt.
+- Monthly Safety Drops with larger themed audit packs, scorecards, checklists, and guardrails.
 - Support and cancellation guidance for subscription members.
 
 ## How to use the membership
@@ -20,7 +21,8 @@ Audit your repo. Guard every AI change. Ship with fewer surprises.
 2. Run the heavy-duty repo audit prompt against your repo.
 3. Save the audit output into `REPO_RISK_MAP_TEMPLATE.md` and `AUDIT_REPORT_TEMPLATE.md`.
 4. Add the daily guardrail prompt to your AI coding workflow.
-5. Use the newest monthly safety drop for focused review.
+5. Use Weekly Safety Notes when the topic matters to your project.
+6. Use the newest Monthly Safety Drop for deeper review.
 
 ## Important limits
 

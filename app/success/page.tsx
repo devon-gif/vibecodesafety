@@ -36,8 +36,22 @@ export default function SuccessPage() {
 
         <p className="mt-6 text-gray-300">
           Download the current member kit below. Start with the heavy-duty repo
-          audit, then add the daily guardrails to your project.
+          audit, then add the daily guardrails to your project. Weekly Safety
+          Notes and Monthly Safety Drops are there when a topic matters to your
+          build.
         </p>
+
+        <div className="glass mx-auto mt-8 rounded-2xl p-5 text-left">
+          <div className="text-sm font-semibold uppercase tracking-wider text-violet-300">
+            Start here
+          </div>
+          <ol className="mt-4 space-y-2 text-sm leading-6 text-gray-300">
+            <li>1. Run the Heavy-Duty Repo Audit</li>
+            <li>2. Add Daily Build Guardrails</li>
+            <li>3. Use Weekly Safety Notes when relevant</li>
+            <li>4. Use the latest Monthly Safety Drop for deeper checks</li>
+          </ol>
+        </div>
 
         <p className="mt-4 text-sm leading-6 text-gray-400">
           If you reached this page directly and need help, email{" "}

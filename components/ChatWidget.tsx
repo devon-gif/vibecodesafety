@@ -8,7 +8,7 @@ type FAQ = { q: string; a: string };
 const faqs: FAQ[] = [
   {
     q: "Is this just a prompt pack?",
-    a: "No. It includes a heavy-duty repo audit workflow, VibeCode Auditor Agent files, daily guardrails, checklists, repo rules, and monthly safety drops.",
+    a: "No. It includes a heavy-duty repo audit workflow, VibeCode Auditor Agent files, daily guardrails, Weekly Safety Notes, Monthly Safety Drops, checklists, and repo rules.",
   },
   {
     q: "Does it run checks automatically?",
@@ -32,7 +32,7 @@ const faqs: FAQ[] = [
   },
   {
     q: "Is this a subscription?",
-    a: "Yes. VibeCode Safety is $6.99/month or $59/year. The subscription includes the repo audit workflow, daily guardrails, and ongoing updates. Cancel anytime.",
+    a: "Yes. VibeCode Safety is $6.99/month or $59/year. The subscription includes the repo audit workflow, daily guardrails, Weekly Safety Notes, Monthly Safety Drops, and ongoing updates. Cancel anytime.",
   },
   {
     q: "Will it guarantee my app is secure?",

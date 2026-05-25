@@ -15,7 +15,8 @@ const steps = [
   "Open QUICKSTART.md",
   "Run the Heavy-Duty Repo Audit workflow",
   "Add the daily guardrails to your repo",
-  "Use the Daily AI Change Review Prompt after AI coding changes",
+  "Use Weekly Safety Notes when relevant",
+  "Use the latest Monthly Safety Drop for deeper checks",
 ];
 
 export default function LaunchEditionAccessPage() {
@@ -39,7 +40,9 @@ export default function LaunchEditionAccessPage() {
 
         <p className="mt-6 text-gray-300">
           Download the current member kit below. Start with the heavy-duty repo
-          audit, then add the daily guardrails to your project.
+          audit, then add the daily guardrails to your project. Weekly Safety
+          Notes and Monthly Safety Drops help you go deeper when a topic
+          matters.
         </p>
 
         {hasDownload ? (
@@ -95,6 +98,17 @@ export default function LaunchEditionAccessPage() {
               </li>
             ))}
           </ol>
+        </div>
+
+        <div className="glass mx-auto mt-6 rounded-2xl p-5 text-left">
+          <div className="text-sm font-semibold uppercase tracking-wider text-violet-300">
+            How updates work
+          </div>
+          <p className="mt-3 text-sm leading-6 text-gray-300">
+            Each week, members get a small Safety Note. Each month, members get
+            a larger Safety Drop focused on a high-risk area like Stripe,
+            Supabase, auth, env vars, or deployment readiness.
+          </p>
         </div>
 
         <p className="mt-8 text-xs text-gray-500">

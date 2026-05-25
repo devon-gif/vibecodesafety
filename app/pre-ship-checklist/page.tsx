@@ -40,6 +40,7 @@ const kitFeatures = [
   "Daily AI change review prompts",
   "Project Safety Profile",
   "Repo instruction templates",
+  "Weekly Safety Notes",
   "Monthly Safety Drops",
   "Ongoing prompt and checklist updates",
 ];
@@ -47,7 +48,7 @@ const kitFeatures = [
 const faqs = [
   {
     q: "Is the checklist enough?",
-    a: "It is a helpful quick check, but the membership gives you the prompts, repo files, audit workflow, and monthly safety drops to make review repeatable.",
+    a: "It is a helpful quick check, but the membership gives you the prompts, repo files, audit workflow, Weekly Safety Notes, and Monthly Safety Drops to make review repeatable.",
   },
   {
     q: "Does this replace a developer?",
@@ -213,7 +214,7 @@ export default function PreShipChecklistPage() {
           <SectionHeader
             eyebrow="Quick check vs full workflow"
             title="The free checklist is the quick version."
-            body="VibeCode Safety Membership gives you the system behind the checklist: repo rules, project safety files, copy-paste reviewer prompts, repo audits, daily guardrails, and monthly safety drops."
+            body="VibeCode Safety Membership gives you the system behind the checklist: repo rules, project safety files, copy-paste reviewer prompts, repo audits, daily guardrails, Weekly Safety Notes, and Monthly Safety Drops."
           />
 
           <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2">
@@ -265,7 +266,7 @@ export default function PreShipChecklistPage() {
               </BuyLink>
             </div>
             <p className="mt-4 text-xs text-gray-500">
-              Includes ongoing updates and monthly safety drops.
+              Includes weekly notes, monthly drops, and ongoing updates.
             </p>
           </div>
         </div>

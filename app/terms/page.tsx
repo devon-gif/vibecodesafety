@@ -93,7 +93,7 @@ export default function TermsPage() {
       <h2>8. Updates</h2>
       <p>
         We may update, improve, or change the membership materials over time.
-        Active members receive ongoing updates and monthly safety drops while
+        Active members receive Weekly Safety Notes, Monthly Safety Drops, and ongoing updates while
         subscribed.
       </p>
 
