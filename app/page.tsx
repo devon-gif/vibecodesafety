@@ -120,7 +120,7 @@ const pricingIncludes = [
 const faqs = [
   {
     q: "Is this a one-time kit?",
-    a: "No. VibeCode Safety is now a subscription membership so members can receive ongoing audit workflows, prompt updates, checklists, and monthly safety drops.",
+    a: "No. VibeCode Safety is a subscription membership so members can receive ongoing audit workflows, prompt updates, checklists, and monthly safety drops.",
   },
   {
     q: "Do you personally audit my repo?",
@@ -132,7 +132,7 @@ const faqs = [
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes. Billing is handled through Stripe. Until an automated portal is fully connected, cancellation can be handled through support.",
+    a: "Yes. Billing is handled through Stripe. Until the automated customer portal is fully connected, cancellation can be handled through support.",
   },
   {
     q: "Does this guarantee my app is secure?",
