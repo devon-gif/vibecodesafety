@@ -379,38 +379,83 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" className="light-section">
+      <section id="how-it-works" className="workflow-section light-section">
+        <div
+          aria-hidden
+          className="absolute left-1/2 top-28 h-[360px] w-[820px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.20),rgba(196,181,253,0.14)_42%,transparent_72%)] blur-3xl"
+        />
         <div className="relative mx-auto max-w-7xl px-6 py-20">
           <Eyebrow>HOW IT WORKS</Eyebrow>
           <h2 className="light-heading mx-auto mt-5 max-w-3xl text-center text-4xl font-semibold tracking-tight md:text-5xl">
             How VibeCode Safety works.
           </h2>
+          <p className="light-copy mx-auto mt-4 max-w-2xl text-center text-base leading-7 md:text-lg">
+            Run a repo audit first, then use the daily review workflow every
+            time AI changes your code.
+          </p>
 
-          <ol className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
-            {steps.map((s) => (
-              <li key={s.n} className="light-glass relative rounded-2xl p-6">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#8B5CF6] font-semibold text-white shadow-[0_0_24px_-6px_rgba(139,92,246,0.70)]">
-                  {s.n}
-                </div>
-                <div className="mt-4 font-semibold text-[#2E1065]">{s.t}</div>
-                <p className="light-copy mt-2 text-sm leading-relaxed">{s.b}</p>
-              </li>
-            ))}
-          </ol>
+          <div className="relative mt-12">
+            <div
+              aria-hidden
+              className="workflow-connector absolute left-[16%] right-[16%] top-[4.75rem] hidden h-px md:block"
+            />
+            <ol className="relative grid grid-cols-1 gap-5 md:grid-cols-3">
+              {steps.map((s, index) => (
+                <li key={s.n} className="workflow-card relative rounded-3xl p-7">
+                  <div className="flex items-start justify-between gap-5">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#A78BFA] to-[#8B5CF6] text-lg font-semibold text-white shadow-[0_0_32px_-8px_rgba(139,92,246,0.95)] ring-1 ring-white/50">
+                      {s.n}
+                    </div>
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#C4B5FD]/45 bg-white/70 text-[#8B5CF6] shadow-[0_14px_34px_-24px_rgba(46,16,101,0.55)]">
+                      <WorkflowIcon index={index} />
+                    </div>
+                  </div>
+                  <div className="mt-6 text-lg font-semibold text-[#2E1065]">
+                    {s.t}
+                  </div>
+                  <p className="light-copy mt-3 text-sm leading-7">{s.b}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-3">
-            {statuses.map((s) => (
-              <div
-                key={s.l}
-                className={`light-glass rounded-xl border p-4 ${toneClass[s.tone]}`}
-              >
-                <div className="flex items-center gap-2 text-xs font-semibold tracking-wider">
-                  <span className={`h-2 w-2 rounded-full ${toneDot[s.tone]}`} />
-                  {s.l}
+          <div className="mt-10 text-center">
+            <p className="text-sm font-semibold text-[#2E1065]">
+              Every review ends with a clear verdict.
+            </p>
+            <div className="verdict-strip mx-auto mt-4 grid max-w-4xl grid-cols-1 overflow-hidden rounded-2xl md:grid-cols-3">
+              {statuses.map((s, index) => (
+                <div
+                  key={s.l}
+                  className={`px-5 py-4 text-left ${
+                    index === 0
+                      ? ""
+                      : "border-t border-[#C4B5FD]/30 md:border-l md:border-t-0"
+                  }`}
+                >
+                  <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-[#2E1065]">
+                    <span className={`h-2.5 w-2.5 rounded-full ${s.dot}`} />
+                    {s.l}
+                  </div>
+                  <p className="mt-1.5 text-sm text-[#6D5A88]">{s.b}</p>
                 </div>
-                <p className="mt-1.5 text-sm text-[#6D5A88]">{s.b}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <span className="text-sm font-medium text-[#6D5A88]">
+              Ready to run your first repo audit?
+            </span>
+            <BuyLink className="btn-primary px-5 py-3 text-sm">
+              Start for $6.99/month
+            </BuyLink>
+            <Link
+              href="#whats-inside"
+              className="text-sm font-medium text-[#6D28D9] underline decoration-[#8B5CF6]/35 underline-offset-4 transition hover:text-[#4C1D95]"
+            >
+              See what&apos;s inside
+            </Link>
           </div>
         </div>
       </section>
@@ -696,6 +741,39 @@ function SparkIcon() {
       strokeLinejoin="round"
     >
       <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" />
+    </svg>
+  );
+}
+
+function WorkflowIcon({ index }: { index: number }) {
+  const paths = [
+    <>
+      <path key="shield" d="M12 3 5 6v5c0 4.2 2.8 7.4 7 9 4.2-1.6 7-4.8 7-9V6l-7-3Z" />
+      <path key="check" d="m9 12 2 2 4-5" />
+    </>,
+    <>
+      <path key="rules-1" d="M6 7h12" />
+      <path key="rules-2" d="M6 12h12" />
+      <path key="rules-3" d="M6 17h7" />
+    </>,
+    <>
+      <path key="loop-1" d="M7 7h10v10H7z" />
+      <path key="loop-2" d="m9 12 2 2 4-5" />
+    </>,
+  ];
+
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-5 w-5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      {paths[index] ?? paths[0]}
     </svg>
   );
 }

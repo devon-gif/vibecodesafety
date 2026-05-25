@@ -194,6 +194,82 @@ body {
   transform: translateY(-2px);
 }
 
+.workflow-section {
+  background:
+    radial-gradient(ellipse 72% 48% at 50% 16%, rgba(216, 180, 254, 0.30), transparent 62%),
+    radial-gradient(ellipse 58% 40% at 14% 52%, rgba(196, 181, 253, 0.22), transparent 60%),
+    radial-gradient(ellipse 42% 38% at 88% 48%, rgba(139, 92, 246, 0.16), transparent 62%),
+    linear-gradient(180deg, #FAF8FF 0%, #F6F2FF 52%, #EFE7FF 100%);
+}
+
+.workflow-card {
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.78),
+    rgba(246, 242, 255, 0.66)
+  );
+  border: 1px solid rgba(196, 181, 253, 0.35);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.62) inset,
+    0 24px 80px rgba(139, 92, 246, 0.12),
+    0 10px 32px rgba(46, 16, 101, 0.07);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.workflow-card:hover {
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.72) inset,
+    0 28px 86px rgba(139, 92, 246, 0.18),
+    0 14px 38px rgba(46, 16, 101, 0.10);
+  transform: translateY(-4px);
+}
+
+.workflow-connector {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.22) 18%,
+    rgba(139, 92, 246, 0.46) 50%,
+    rgba(139, 92, 246, 0.22) 82%,
+    transparent
+  );
+}
+
+.workflow-connector::before,
+.workflow-connector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 9px;
+  width: 9px;
+  border-right: 2px solid rgba(139, 92, 246, 0.48);
+  border-top: 2px solid rgba(139, 92, 246, 0.48);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.workflow-connector::before { left: 47.5%; }
+.workflow-connector::after  { right: 15%; }
+
+.verdict-strip {
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.78),
+    rgba(246, 242, 255, 0.68)
+  );
+  border: 1px solid rgba(196, 181, 253, 0.38);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.65) inset,
+    0 22px 70px rgba(139, 92, 246, 0.13);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
 /* ======================================================
    TOOL PILLS - light sections
    ====================================================== */
