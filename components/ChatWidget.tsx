@@ -209,7 +209,7 @@ export function ChatWidget() {
                 : {})}
               className="btn-primary mt-3 w-full text-sm"
             >
-              Start for $6.99/month
+              Start for $6.99/mo
             </a>
           </div>
         </div>

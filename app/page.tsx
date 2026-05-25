@@ -123,6 +123,10 @@ const faqs = [
     a: "No. VibeCode Safety is a subscription membership so members can receive ongoing audit workflows, prompt updates, checklists, and monthly safety drops.",
   },
   {
+    q: "Is there a free trial?",
+    a: "Not right now. VibeCode Safety includes downloadable prompts, templates, and member files, so access starts with a paid membership. You can preview the free checklist before joining and cancel anytime.",
+  },
+  {
     q: "Do you personally audit my repo?",
     a: "Not on the $6.99/month plan. The membership gives you a heavy-duty AI-assisted repo audit workflow you can run with your coding tools. Manual audits may become a separate paid service later.",
   },
@@ -266,6 +270,16 @@ export default function Home() {
             <p className="mt-4 text-sm text-gray-500">
               Monthly or yearly billing. Cancel anytime.
             </p>
+            <p className="mt-2 text-sm text-gray-500">
+              Free checklist available before joining.{" "}
+              <Link
+                href="/pre-ship-checklist"
+                className="font-medium text-violet-300 underline decoration-violet-300/40 underline-offset-4 transition hover:text-violet-200"
+              >
+                Get the free checklist
+              </Link>
+              .
+            </p>
 
             <p className="mt-6 flex items-center gap-3 text-sm text-gray-400">
               <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-violet-300/50 text-violet-300">
@@ -336,7 +350,7 @@ export default function Home() {
               </div>
             </div>
             <p className="mt-3 text-center text-xs text-gray-500">
-              Press play to hear the 35-second overview.
+              Press play to hear the overview.
             </p>
           </div>
         </div>
@@ -505,7 +519,9 @@ export default function Home() {
                 <span className="text-5xl font-semibold text-white">$6.99</span>
                 <span className="pb-2 text-sm text-violet-300">/month</span>
               </div>
-              <p className="mt-3 text-sm text-gray-400">Best for active builders.</p>
+              <p className="mt-3 text-sm text-gray-400">
+                Best for active builders. Cancel anytime.
+              </p>
               <EmailConsentCheckbox />
               <BuyLink className="btn-primary mt-5 w-full text-base">
                 <CartIcon />
@@ -550,6 +566,13 @@ export default function Home() {
             </p>
             <p className="mt-2 text-xs leading-relaxed text-gray-500">
               Have an invite code? Enter it at checkout.
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-gray-500">
+              Want a preview first?{" "}
+              <Link href="/pre-ship-checklist" className="underline hover:text-gray-400">
+                Get the free checklist
+              </Link>
+              .
             </p>
             <p className="mt-3 text-xs leading-relaxed text-gray-500">
               <a href="/refund-policy" className="underline hover:text-gray-400">
