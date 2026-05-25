@@ -49,8 +49,11 @@ Subscribers manage their billing through the Stripe Customer Portal.
 
 - Portal URL: set via `NEXT_PUBLIC_CUSTOMER_PORTAL_LINK` env var
 - Cancel anytime: cancellation takes effect at end of billing period
+- Cancellation reasons: enable collection inside Stripe Customer Portal
 - Retention offer: optional coupon ($3.99/month for 3 months) - configure
   in Stripe Customer Portal settings
+- Site route: `/manage-subscription` opens the portal when the env var exists
+  and shows support instructions when it is missing
 
 ## Roadmap (no commitment)
 
@@ -63,6 +66,7 @@ Subscribers manage their billing through the Stripe Customer Portal.
 ## Stripe setup checklist
 
 See `docs/CHECKOUT_TODO.md` and `docs/STRIPE_SETUP.md`.
+See `docs/STRIPE_CUSTOMER_PORTAL.md` for portal setup.
 
 ## Launch Validation
 
@@ -70,7 +74,9 @@ See `docs/CHECKOUT_TODO.md` and `docs/STRIPE_SETUP.md`.
 - Create yearly Stripe subscription price: $59/year.
 - Add monthly checkout link to `NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK`.
 - Add yearly checkout link to `NEXT_PUBLIC_YEARLY_CHECKOUT_LINK`.
-- Configure Stripe Customer Portal later.
+- Configure Stripe Customer Portal.
+- Enable cancellation in Stripe Customer Portal.
+- Add optional retention coupon.
 - Test monthly checkout.
 - Test yearly checkout.
 - Test success redirect.

@@ -71,7 +71,13 @@ export function SiteFooter() {
               href="/refund-policy"
               className="text-gray-400 transition hover:text-violet-300"
             >
-              Refund Policy
+              Refund / Cancellation Policy
+            </Link>
+            <Link
+              href="/manage-subscription"
+              className="text-gray-400 transition hover:text-violet-300"
+            >
+              Manage Subscription
             </Link>
             <a
               href="/#contact"

@@ -27,11 +27,12 @@ export default function RefundPolicyPage() {
 
       <h2>2. Cancellation</h2>
       <p>
-        You may cancel your subscription at any time. To cancel, contact
-        support at{" "}
-        <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> until
-        automated account management is added. Cancellation stops future
-        billing. You retain access for the remainder of your paid period.
+        You may cancel your subscription at any time. Billing is handled
+        through Stripe. When the Stripe Customer Portal is connected, use the
+        Manage Subscription link in the footer. Until then, contact support at{" "}
+        <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>. Cancellation
+        stops future billing. You retain access for the remainder of your paid
+        period.
       </p>
 
       <h2>3. Refunds</h2>

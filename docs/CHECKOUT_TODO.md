@@ -10,6 +10,9 @@ The site uses checkout env vars with fallback:
 4. `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` (legacy fallback)
 5. `/checkout-coming-soon` (final fallback)
 
+Billing management uses `NEXT_PUBLIC_CUSTOMER_PORTAL_LINK` on the
+`/manage-subscription` support page.
+
 ## Stripe Setup - Subscription
 
 - [ ] Create Stripe account (or use existing).
@@ -19,10 +22,14 @@ The site uses checkout env vars with fallback:
 - [ ] Create **monthly Payment Link** for $6.99/month price.
 - [ ] Create **yearly Payment Link** for $59/year price.
 - [ ] Configure Stripe Customer Portal for self-serve cancellation and billing updates.
+- [ ] Enable cancellation in Stripe Customer Portal.
+- [ ] Collect cancellation reasons in Stripe Customer Portal.
+- [ ] Optional: add retention coupon, stay for **$3.99/month for 3 months**.
 - [ ] Set success redirect on both Payment Links to:
   `https://yourdomain.com/access/vcs-launch-edition-2026-k9p4`
 - [ ] Add monthly link to env: `NEXT_PUBLIC_MONTHLY_CHECKOUT_LINK`
 - [ ] Add yearly link to env: `NEXT_PUBLIC_YEARLY_CHECKOUT_LINK`
+- [ ] Add Stripe Customer Portal link to env: `NEXT_PUBLIC_CUSTOMER_PORTAL_LINK`
 - [ ] Keep `NEXT_PUBLIC_CHECKOUT_LINK` as the active fallback checkout link.
 - [ ] Test monthly checkout end-to-end in Stripe test mode.
 - [ ] Test yearly checkout end-to-end in Stripe test mode.
@@ -66,6 +73,7 @@ Use Stripe Customer Portal for v1 subscription billing management.
 
 - Members should cancel through Manage Subscription when the portal is live.
 - If the portal is not live yet, support can help cancel manually through Stripe.
+- See `docs/STRIPE_CUSTOMER_PORTAL.md` for setup and test steps.
 - Do not build a custom billing dashboard until auth and account management exist.
 
 ## Email Consent TODO

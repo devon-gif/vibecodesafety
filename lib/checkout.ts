@@ -25,6 +25,9 @@ export const STRIPE_PAYMENT_LINK = MONTHLY_CHECKOUT_LINK;
 export const PRODUCT_DOWNLOAD_LINK =
   process.env.NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK || "";
 
+export const CUSTOMER_PORTAL_LINK =
+  process.env.NEXT_PUBLIC_CUSTOMER_PORTAL_LINK || "";
+
 export const SUPPORT_EMAIL = "vibecodesafety@gmail.com";
 
 export function isExternalCheckout(href: string): boolean {
