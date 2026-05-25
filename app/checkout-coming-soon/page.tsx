@@ -29,8 +29,8 @@ export default function CheckoutComingSoonPage() {
           VibeCode Safety will be available for{" "}
           <span className="text-white">$6.99/month</span> or{" "}
           <span className="text-white">$59/year</span>. Members get the repo
-          audit workflow, VibeCode Auditor Agent, daily guardrails, monthly
-          safety drops, and ongoing updates.
+          audit workflow, VibeCode Auditor Agent, daily guardrails, Weekly
+          Safety Notes, Monthly Safety Drops, and ongoing updates.
         </p>
 
         <p className="mt-4 text-gray-400">
