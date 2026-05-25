@@ -2,7 +2,7 @@
 
 Welcome. This is your member kit.
 
-There are four things to do in order:
+There are five things to do in order:
 
 ---
 
@@ -40,11 +40,19 @@ Set up pre-commit and pre-deploy habits using the short checklists in the same f
 
 ---
 
-## Step 4 — Check Monthly Safety Drops
+## Step 4 — Use Weekly Safety Notes
 
-Go to `04-Monthly-Safety-Drops/` each month for focused audit prompts on specific risk areas.
+Go to `04-Weekly-Safety-Notes/` when a weekly topic matches your current work.
 
-Each drop is a short, focused checklist + audit prompt for one topic (Stripe checkout, Supabase RLS, auth sessions, etc.).
+Each note includes one focused risk, a quick checklist, and a copy-paste audit prompt.
+
+---
+
+## Step 5 — Check Monthly Safety Drops
+
+Go to `05-Monthly-Safety-Drops/` each month for larger audit packs on specific risk areas.
+
+Each drop includes prompts, checklists, scorecards, guardrails, implementation notes, and what to fix first.
 
 ---
 

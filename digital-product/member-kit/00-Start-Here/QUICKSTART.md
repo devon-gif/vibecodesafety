@@ -21,7 +21,9 @@ After every AI coding change:
 
 ## Monthly safety drops
 
-Each month adds a focused prompt, checklist, scorecard, and "fix first" guide. Start with the most relevant drop for your stack.
+Each week adds a short Safety Note with one focused risk, a quick checklist, and a copy-paste prompt. Use weekly notes when that topic matches your current work.
+
+Each month adds a larger Safety Drop with a focused audit pack, checklist, scorecard, implementation notes, and "fix first" guide. Start with the most relevant drop for your stack.
 
 ## Remember
 
