@@ -41,12 +41,12 @@ Billing management uses `NEXT_PUBLIC_CUSTOMER_PORTAL_LINK` on the
 - [ ] Confirm no public copy promises manual human audits, GitHub repo scanning, guaranteed security, or a SaaS dashboard.
 - [ ] Confirm no public copy guarantees secure, bug-free, compliant, or production-ready software.
 - [ ] Confirm CTA buttons route correctly:
-  - Header "Get Started"
+  - Header "Start for $6.99/month"
   - Hero "Start for $6.99/month"
   - Pricing card "Start monthly"
   - Pricing card "Start yearly"
   - Final CTA "Start for $6.99/month"
-  - Sticky CTA "Get Started"
+  - Sticky CTA "Start monthly"
   - Chat widget "Start for $6.99/month"
 - [ ] Switch to live mode before launch.
 

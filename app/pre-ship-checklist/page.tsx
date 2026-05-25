@@ -35,20 +35,19 @@ const freeFeatures = [
 ];
 
 const kitFeatures = [
-  "Beginner Mode files",
-  "Daily VibeCode Prompt",
-  "Reviewer AI Prompt",
+  "Heavy-duty repo audit workflow",
+  "VibeCode Auditor Agent",
+  "Daily AI change review prompts",
   "Project Safety Profile",
   "Repo instruction templates",
-  "Security guardrails",
-  "Pre-ship checklists",
-  "Advanced starter docs",
+  "Monthly Safety Drops",
+  "Ongoing prompt and checklist updates",
 ];
 
 const faqs = [
   {
     q: "Is the checklist enough?",
-    a: "It is a helpful quick check, but the full kit gives you the prompts and repo files to make the review repeatable.",
+    a: "It is a helpful quick check, but the membership gives you the prompts, repo files, audit workflow, and monthly safety drops to make review repeatable.",
   },
   {
     q: "Does this replace a developer?",
@@ -160,14 +159,14 @@ export default function PreShipChecklistPage() {
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
               <BuyLink className="btn-primary">
                 <CartIcon />
-                Get the Kit for $29.99
+                Start for $6.99/month
               </BuyLink>
               <a href="#checklist" className="btn-secondary">
                 Read the Checklist
               </a>
             </div>
             <p className="mt-4 text-xs text-gray-500">
-              One-time purchase. No subscription. Beginner-friendly setup.
+              Monthly or yearly billing. Cancel anytime.
             </p>
           </div>
 
@@ -262,11 +261,11 @@ export default function PreShipChecklistPage() {
             <div className="mt-8 flex justify-center">
               <BuyLink className="btn-primary">
                 <CartIcon />
-                Get the Kit for $29.99
+                Start for $6.99/month
               </BuyLink>
             </div>
             <p className="mt-4 text-xs text-gray-500">
-              One-time purchase. No subscription. Beginner-friendly setup.
+              Includes ongoing updates and monthly safety drops.
             </p>
           </div>
         </div>
@@ -301,7 +300,7 @@ export default function PreShipChecklistPage() {
             </div>
             <BuyLink className="btn-primary">
               <CartIcon />
-              Get the Kit for $29.99
+              Start for $6.99/month
             </BuyLink>
           </div>
         </div>

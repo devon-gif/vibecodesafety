@@ -1,4 +1,8 @@
-# Subscription Pivot — VibeCode Safety
+# Subscription Pivot - VibeCode Safety
+
+Internal note: this document intentionally references the prior one-time
+product so the pivot history is clear. Public pages should use the current
+subscription membership positioning only.
 
 **Updated:** May 24, 2026
 
