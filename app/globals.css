@@ -396,23 +396,24 @@ body {
 }
 
 .hero-product-video-mask {
+  overflow: visible;
   -webkit-mask-image:
     radial-gradient(
-      ellipse at center,
-      black 48%,
-      rgba(0, 0, 0, 0.94) 60%,
-      rgba(0, 0, 0, 0.68) 74%,
-      rgba(0, 0, 0, 0.28) 86%,
-      transparent 98%
+      ellipse 62% 58% at 58% 52%,
+      black 44%,
+      rgba(0, 0, 0, 0.92) 56%,
+      rgba(0, 0, 0, 0.58) 68%,
+      rgba(0, 0, 0, 0.22) 78%,
+      transparent 88%
     );
   mask-image:
     radial-gradient(
-      ellipse at center,
-      black 48%,
-      rgba(0, 0, 0, 0.94) 60%,
-      rgba(0, 0, 0, 0.68) 74%,
-      rgba(0, 0, 0, 0.28) 86%,
-      transparent 98%
+      ellipse 62% 58% at 58% 52%,
+      black 44%,
+      rgba(0, 0, 0, 0.92) 56%,
+      rgba(0, 0, 0, 0.58) 68%,
+      rgba(0, 0, 0, 0.22) 78%,
+      transparent 88%
     );
 }
 
@@ -425,11 +426,13 @@ body {
 .hero-product-video-edge-overlay {
   background:
     radial-gradient(
-      ellipse at center,
-      transparent 44%,
-      rgba(28, 15, 53, 0.18) 68%,
-      rgba(5, 3, 11, 0.50) 100%
+      ellipse 64% 60% at 58% 52%,
+      transparent 40%,
+      rgba(28, 15, 53, 0.22) 58%,
+      rgba(11, 6, 22, 0.46) 72%,
+      rgba(5, 3, 11, 0.78) 100%
     );
+  mix-blend-mode: multiply;
 }
 
 /* ======================================================

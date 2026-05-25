@@ -293,7 +293,7 @@ export default function Home() {
               />
               <div className="hero-product-video-mask relative w-full">
                 <video
-                  className="hero-product-video w-full object-contain opacity-95"
+                  className="hero-product-video w-full scale-[1.08] object-contain opacity-95 mix-blend-lighten"
                   autoPlay
                   muted
                   loop
