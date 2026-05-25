@@ -399,21 +399,21 @@ body {
   overflow: visible;
   -webkit-mask-image:
     radial-gradient(
-      ellipse 62% 58% at 58% 52%,
-      black 44%,
-      rgba(0, 0, 0, 0.92) 56%,
-      rgba(0, 0, 0, 0.58) 68%,
-      rgba(0, 0, 0, 0.22) 78%,
-      transparent 88%
+      ellipse 84% 80% at 58% 52%,
+      black 62%,
+      rgba(0, 0, 0, 0.96) 74%,
+      rgba(0, 0, 0, 0.70) 86%,
+      rgba(0, 0, 0, 0.32) 96%,
+      transparent 100%
     );
   mask-image:
     radial-gradient(
-      ellipse 62% 58% at 58% 52%,
-      black 44%,
-      rgba(0, 0, 0, 0.92) 56%,
-      rgba(0, 0, 0, 0.58) 68%,
-      rgba(0, 0, 0, 0.22) 78%,
-      transparent 88%
+      ellipse 84% 80% at 58% 52%,
+      black 62%,
+      rgba(0, 0, 0, 0.96) 74%,
+      rgba(0, 0, 0, 0.70) 86%,
+      rgba(0, 0, 0, 0.32) 96%,
+      transparent 100%
     );
 }
 
@@ -426,11 +426,11 @@ body {
 .hero-product-video-edge-overlay {
   background:
     radial-gradient(
-      ellipse 64% 60% at 58% 52%,
-      transparent 40%,
-      rgba(28, 15, 53, 0.22) 58%,
-      rgba(11, 6, 22, 0.46) 72%,
-      rgba(5, 3, 11, 0.78) 100%
+      ellipse 86% 82% at 58% 52%,
+      transparent 58%,
+      rgba(28, 15, 53, 0.12) 76%,
+      rgba(11, 6, 22, 0.26) 90%,
+      rgba(5, 3, 11, 0.48) 100%
     );
   mix-blend-mode: multiply;
 }
