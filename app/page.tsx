@@ -133,6 +133,29 @@ const pricingIncludes = [
   "Ongoing prompt and checklist updates",
 ];
 
+const compatibleTools = [
+  { name: "Claude", accent: "#8B5CF6" },
+  { name: "Codex", accent: "#06B6D4" },
+  { name: "Cursor", accent: "#A78BFA" },
+  { name: "Windsurf", accent: "#22C55E" },
+  { name: "GitHub Copilot", accent: "#C084FC" },
+  { name: "Lovable", accent: "#EC4899" },
+  { name: "Bolt", accent: "#F59E0B" },
+  { name: "Replit", accent: "#6366F1" },
+  { name: "v0", accent: "#14B8A6" },
+];
+
+function hexToRgb(hex: string) {
+  const value = hex.replace("#", "");
+  const numeric = Number.parseInt(value, 16);
+
+  return {
+    r: (numeric >> 16) & 255,
+    g: (numeric >> 8) & 255,
+    b: numeric & 255,
+  };
+}
+
 const faqs = [
   {
     q: "Is this a one-time kit?",
@@ -399,32 +422,50 @@ export default function Home() {
       </section>
 
       {/* COMPATIBLE AI TOOLS */}
-      <section className="light-section">
-        <div className="relative mx-auto max-w-7xl px-6 py-12">
-          <h2 className="light-heading mx-auto max-w-3xl text-center text-xl font-semibold tracking-tight md:text-2xl">
-            Works with the AI coding tools you already use.
+      <section className="compatibility-section light-section">
+        <div
+          aria-hidden
+          className="compatibility-blob compatibility-blob-purple"
+        />
+        <div
+          aria-hidden
+          className="compatibility-blob compatibility-blob-lavender"
+        />
+        <div
+          aria-hidden
+          className="compatibility-blob compatibility-blob-peach"
+        />
+        <div className="relative mx-auto max-w-7xl px-6 py-14">
+          <h2 className="light-heading mx-auto max-w-4xl text-center text-2xl font-semibold tracking-tight md:text-3xl">
+            Works with the{" "}
+            <span className="compatibility-heading-gradient">
+              AI coding tools
+            </span>{" "}
+            you already use.
           </h2>
-          <ul className="mx-auto mt-6 flex max-w-4xl flex-wrap items-center justify-center gap-2">
-            {[
-              "Claude",
-              "Codex",
-              "Cursor",
-              "Windsurf",
-              "GitHub Copilot",
-              "Lovable",
-              "Bolt",
-              "Replit",
-              "v0",
-            ].map((t) => (
+          <div className="compatibility-orbit mx-auto mt-8 max-w-5xl">
+            <ul className="relative flex flex-wrap items-center justify-center gap-3">
+              {compatibleTools.map((tool) => {
+                const { r, g, b } = hexToRgb(tool.accent);
+
+                return (
               <li
-                key={t}
-                className="light-tool-pill inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition"
+                key={tool.name}
+                className="light-tool-pill colorful-tool-pill inline-flex items-center gap-2.5 rounded-full px-4 py-2.5 text-sm font-semibold"
+                style={
+                  {
+                    "--tool-accent": tool.accent,
+                    "--tool-accent-rgb": `${r}, ${g}, ${b}`,
+                  } as React.CSSProperties
+                }
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
-                {t}
+                <span className="tool-accent-mark" />
+                {tool.name}
               </li>
-            ))}
-          </ul>
+                );
+              })}
+            </ul>
+          </div>
           <p className="light-muted mx-auto mt-5 max-w-2xl text-center text-xs leading-relaxed">
             Tool names are shown for compatibility context only. VibeCode
             Safety is independent and is not affiliated with or endorsed
