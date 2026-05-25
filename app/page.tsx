@@ -222,11 +222,11 @@ export default function Home() {
         </video>
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(circle_at_78%_42%,rgba(139,92,246,0.14),transparent_38%),radial-gradient(circle_at_83%_58%,rgba(58,27,104,0.18),transparent_44%),radial-gradient(circle_at_64%_50%,rgba(38,18,74,0.14),transparent_50%),linear-gradient(135deg,rgba(5,3,11,0.34)_0%,rgba(11,6,22,0.28)_34%,rgba(18,8,33,0.24)_58%,rgba(27,13,51,0.26)_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_76%_44%,rgba(72,57,108,0.34),transparent_34%),radial-gradient(circle_at_80%_58%,rgba(56,35,89,0.40),transparent_46%),radial-gradient(circle_at_62%_68%,rgba(42,23,75,0.42),transparent_50%),radial-gradient(circle_at_72%_22%,rgba(37,21,64,0.36),transparent_38%),linear-gradient(135deg,#05030B_0%,#0B0616_28%,#1C0F35_50%,#251540_68%,#382359_100%)]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(5,3,11,0.90),rgba(11,6,22,0.42),rgba(27,13,51,0.04)),radial-gradient(circle_at_78%_42%,rgba(196,181,253,0.05),transparent_32%),linear-gradient(to_bottom,transparent_66%,#05030B_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(5,3,11,0.96)_0%,rgba(11,6,22,0.84)_34%,rgba(28,15,53,0.45)_64%,rgba(56,35,89,0.22)_100%),radial-gradient(circle_at_78%_42%,rgba(139,92,246,0.10),transparent_34%),linear-gradient(to_bottom,transparent_66%,#05030B_100%)]"
         />
         {/* Animated swirl orbs */}
         <div aria-hidden className="hero-swirl hero-swirl-1 -left-24 top-0" />
@@ -277,15 +277,23 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative lg:pl-2">
-            <div className="hero-product-video-wrap relative mx-auto w-full max-w-xl lg:max-w-none">
+          <div className="relative lg:pl-0">
+            <div className="hero-product-video-wrap relative mx-auto w-full max-w-[840px] origin-center lg:scale-[1.08] xl:scale-[1.12]">
               <div
                 aria-hidden
-                className="absolute -inset-10 rounded-[3rem] bg-[#7C3AED]/20 blur-3xl"
+                className="pointer-events-none absolute inset-[-14%] -z-20 rounded-[64px] bg-[radial-gradient(circle_at_58%_52%,rgba(72,57,108,0.38),rgba(56,35,89,0.26)_34%,rgba(42,23,75,0.18)_52%,transparent_76%)] blur-3xl"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-[-22%] -z-30 rounded-[80px] bg-[radial-gradient(circle_at_60%_55%,rgba(28,15,53,0.55),rgba(11,6,22,0.38)_48%,rgba(5,3,11,0.18)_70%,transparent_86%)] blur-2xl"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute bottom-[4%] left-[12%] right-[8%] -z-10 h-[22%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.26),rgba(42,23,75,0.22)_44%,transparent_74%)] blur-3xl"
               />
               <div className="hero-product-video-mask relative aspect-[16/10] w-full overflow-hidden">
                 <video
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain opacity-95"
                   autoPlay
                   muted
                   loop
@@ -295,6 +303,10 @@ export default function Home() {
                 >
                   <source src="/video/rightblockvideo.mp4" type="video/mp4" />
                 </video>
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_42%,rgba(28,15,53,0.18)_68%,rgba(5,3,11,0.48)_100%)]"
+                />
               </div>
             </div>
           </div>
