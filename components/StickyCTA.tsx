@@ -69,7 +69,7 @@ export function StickyCTA() {
             : {})}
           className="btn-primary flex-none px-4 py-2 text-sm"
         >
-          Get Started
+          Start monthly
         </a>
       </div>
     </div>

@@ -28,7 +28,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-4">
           <BuyLink className="btn-primary px-5 py-2.5 text-sm">
-            Get Started
+            Start for $6.99/month
           </BuyLink>
         </div>
       </div>
