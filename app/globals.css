@@ -364,6 +364,47 @@ body {
 }
 
 /* ======================================================
+   PLACEHOLDER LOGO TICKER
+   ====================================================== */
+.logo-ticker-mask {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 9%,
+    #000 91%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 9%,
+    #000 91%,
+    transparent
+  );
+}
+
+.logo-ticker-track {
+  animation: logo-marquee 38s linear infinite;
+}
+
+.logo-ticker-mask:hover .logo-ticker-track {
+  animation-play-state: paused;
+}
+
+.logo-ticker-item {
+  opacity: 0.72;
+}
+
+.logo-ticker-item:hover {
+  opacity: 1;
+}
+
+@keyframes logo-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ======================================================
    SAFETY REPORT ANIMATIONS
    ====================================================== */
 .safety-report-float {
@@ -567,6 +608,7 @@ body {
   .report-row,
   .report-score,
   .report-status,
+  .logo-ticker-track,
   .hero-bg-video,
   .hero-swirl-1,
   .hero-swirl-2,
@@ -577,6 +619,16 @@ body {
   }
 
   .hero-bg-video {
+    display: none;
+  }
+
+  .logo-ticker-track {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo-ticker-track > li:nth-child(n + 13) {
     display: none;
   }
 }

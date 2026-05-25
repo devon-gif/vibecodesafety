@@ -3,6 +3,7 @@ import { SafetyReport } from "@/components/SafetyReport";
 import { BuyLink } from "@/components/BuyLink";
 import { EmailConsentCheckbox } from "@/components/EmailConsentCheckbox";
 import { ContactForm } from "@/components/ContactForm";
+import { LogoTicker } from "@/components/LogoTicker";
 import { YEARLY_CHECKOUT_LINK } from "@/lib/checkout";
 
 /* ---------- data ---------- */
@@ -282,6 +283,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <LogoTicker />
 
       {/* PRODUCT VIDEO */}
       <section id="video" className="relative border-t border-white/5 bg-gradient-to-b from-violet-500/[0.06] via-transparent to-transparent">
