@@ -10,13 +10,13 @@ import { YEARLY_CHECKOUT_LINK } from "@/lib/checkout";
 const steps = [
   {
     n: "1",
-    t: "Audit your current repo",
-    b: "Run the heavy-duty repo audit workflow to identify risky areas before you keep building.",
+    t: "Audit your repo",
+    b: "Find risky auth, checkout, env var, API, database, and deploy issues before you keep building.",
   },
   {
     n: "2",
-    t: "Add the safety guardrails",
-    b: "Copy the repo rules, project profile, and daily review prompt into your project.",
+    t: "Add guardrails",
+    b: "Drop the project profile, repo rules, and daily review prompt into your workflow.",
   },
   {
     n: "3",
@@ -26,23 +26,10 @@ const steps = [
 ];
 
 const statuses = [
-  { l: "PASS", b: "No blocking issue found.", tone: "emerald" as const },
-  { l: "WARNING", b: "Proceed carefully.", tone: "amber" as const },
-  { l: "BLOCKED", b: "Fix before shipping.", tone: "rose" as const },
+  { l: "PASS", b: "No blocking issue found.", dot: "bg-emerald-400" },
+  { l: "WARNING", b: "Review before shipping.", dot: "bg-[#F59E0B]" },
+  { l: "BLOCKED", b: "Fix before deploy.", dot: "bg-rose-400" },
 ];
-
-const toneClass: Record<"emerald" | "amber" | "rose", string> = {
-  emerald:
-    "border-emerald-400/40 bg-gradient-to-b from-emerald-400/10 to-emerald-500/0 text-emerald-300",
-  amber:
-    "border-amber-400/40 bg-gradient-to-b from-amber-400/10 to-amber-500/0 text-amber-300",
-  rose: "border-rose-400/40 bg-gradient-to-b from-rose-400/10 to-rose-500/0 text-rose-300",
-};
-const toneDot: Record<"emerald" | "amber" | "rose", string> = {
-  emerald: "bg-emerald-400",
-  amber: "bg-amber-400",
-  rose: "bg-rose-400",
-};
 
 const insideCards = [
   {

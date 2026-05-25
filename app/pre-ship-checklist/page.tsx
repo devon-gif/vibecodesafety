@@ -18,7 +18,7 @@ const checklist = [
   "Did it add dependencies?",
   "Did the app still build?",
   "Did critical forms still submit?",
-  "Did the Reviewer AI return PASS?",
+  "Did the reviewer return PASS / WARNING / BLOCKED?",
 ];
 
 const checklistText = `The 10-Point Pre-Ship Checklist for AI-Generated Code
@@ -58,8 +58,8 @@ const faqs = [
     a: "Yes. The workflow is designed to be tool-agnostic.",
   },
   {
-    q: "What does Reviewer AI return PASS mean?",
-    a: "It means your review prompt did not find a blocking issue based on the context provided. It is not a guarantee, but it gives you a stronger pre-ship habit.",
+    q: "What does PASS / WARNING / BLOCKED mean?",
+    a: "It is a simple pre-ship verdict: PASS means no blocking issue was found, WARNING means proceed carefully, and BLOCKED means fix before shipping. It is not a guarantee, but it gives you a stronger review habit.",
   },
 ];
 
