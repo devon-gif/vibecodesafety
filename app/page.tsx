@@ -278,10 +278,10 @@ export default function Home() {
           </div>
 
           <div className="relative lg:-ml-10 lg:-translate-y-2 lg:pl-0 xl:-ml-16">
-            <div className="hero-product-visual relative mx-auto w-full max-w-[920px] origin-center lg:scale-[1.1] xl:scale-[1.13]">
+            <div className="hero-product-visual relative mx-auto w-full max-w-[900px] origin-center lg:scale-[1.06] xl:scale-[1.09]">
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-[-18%] -z-20 rounded-[80px] bg-[radial-gradient(circle_at_58%_52%,rgba(72,57,108,0.42),rgba(56,35,89,0.28)_34%,rgba(42,23,75,0.18)_52%,transparent_78%)] blur-3xl"
+                className="hero-product-glow-pulse pointer-events-none absolute inset-[-16%] -z-20 rounded-[80px] bg-[radial-gradient(circle_at_58%_52%,rgba(139,92,246,0.32),rgba(72,57,108,0.34)_34%,rgba(42,23,75,0.22)_56%,transparent_78%)] blur-3xl"
               />
               <div
                 aria-hidden
@@ -291,21 +291,11 @@ export default function Home() {
                 aria-hidden
                 className="pointer-events-none absolute bottom-[6%] left-[10%] right-[8%] -z-10 h-[24%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.24),rgba(42,23,75,0.22)_44%,transparent_76%)] blur-3xl"
               />
-              <div className="hero-product-video-mask relative w-full">
-                <video
-                  className="hero-product-video w-full scale-[1.08] object-contain opacity-95 mix-blend-lighten"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-hidden="true"
-                >
-                  <source src="/video/rightblockvideo.mp4" type="video/mp4" />
-                </video>
-                <div
-                  aria-hidden
-                  className="hero-product-video-edge-overlay pointer-events-none absolute inset-0"
+              <div className="hero-product-image-wrap relative w-full">
+                <img
+                  src="/images/vibey.png"
+                  alt="VibeCode Safety report preview"
+                  className="hero-product-image relative z-10 w-full object-contain"
                 />
               </div>
             </div>
@@ -335,7 +325,7 @@ export default function Home() {
             <div className="relative rounded-3xl border border-violet-300/20 bg-white/[0.04] p-2 shadow-[0_0_80px_rgba(139,92,246,0.18)] backdrop-blur-xl sm:p-3">
               <div className="aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black">
                 <video
-                  src="/video/vibecode-safetyFINAL.mp4"
+                  src="/video/video-final.mp4"
                   controls
                   preload="metadata"
                   playsInline
