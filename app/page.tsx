@@ -278,18 +278,18 @@ export default function Home() {
           </div>
 
           <div className="relative lg:pl-0">
-            <div className="hero-product-video-wrap relative mx-auto w-full max-w-[840px] origin-center lg:scale-[1.08] xl:scale-[1.12]">
+            <div className="hero-product-video-wrap relative mx-auto w-full max-w-[960px] origin-center lg:scale-[1.10] xl:scale-[1.16]">
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-[-14%] -z-20 rounded-[64px] bg-[radial-gradient(circle_at_58%_52%,rgba(72,57,108,0.38),rgba(56,35,89,0.26)_34%,rgba(42,23,75,0.18)_52%,transparent_76%)] blur-3xl"
+                className="pointer-events-none absolute inset-[-18%] -z-20 rounded-[72px] bg-[radial-gradient(circle_at_58%_52%,rgba(72,57,108,0.50),rgba(56,35,89,0.36)_34%,rgba(42,23,75,0.24)_52%,transparent_76%)] blur-3xl"
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-[-22%] -z-30 rounded-[80px] bg-[radial-gradient(circle_at_60%_55%,rgba(28,15,53,0.55),rgba(11,6,22,0.38)_48%,rgba(5,3,11,0.18)_70%,transparent_86%)] blur-2xl"
+                className="pointer-events-none absolute inset-[-28%] -z-30 rounded-[90px] bg-[radial-gradient(circle_at_60%_55%,rgba(28,15,53,0.68),rgba(11,6,22,0.50)_48%,rgba(5,3,11,0.24)_70%,transparent_86%)] blur-2xl"
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute bottom-[4%] left-[12%] right-[8%] -z-10 h-[22%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.26),rgba(42,23,75,0.22)_44%,transparent_74%)] blur-3xl"
+                className="pointer-events-none absolute bottom-[2%] left-[8%] right-[4%] -z-10 h-[28%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.32),rgba(42,23,75,0.30)_44%,rgba(28,15,53,0.18)_64%,transparent_82%)] blur-3xl"
               />
               <div className="hero-product-video-mask relative aspect-[16/10] w-full overflow-hidden">
                 <video
@@ -305,7 +305,7 @@ export default function Home() {
                 </video>
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_42%,rgba(28,15,53,0.18)_68%,rgba(5,3,11,0.48)_100%)]"
+                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_44%,rgba(28,15,53,0.22)_66%,rgba(11,6,22,0.55)_84%,rgba(5,3,11,0.72)_100%)]"
                 />
               </div>
             </div>
