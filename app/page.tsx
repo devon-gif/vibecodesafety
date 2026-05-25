@@ -3,6 +3,7 @@ import { BuyLink } from "@/components/BuyLink";
 import { EmailConsentCheckbox } from "@/components/EmailConsentCheckbox";
 import { ContactForm } from "@/components/ContactForm";
 import { LogoTicker } from "@/components/LogoTicker";
+import { ReviewWorkflowCards } from "@/components/ReviewWorkflowCards";
 import { YEARLY_CHECKOUT_LINK } from "@/lib/checkout";
 
 /* ---------- data ---------- */
@@ -472,17 +473,7 @@ export default function Home() {
             change as you build.
           </p>
 
-          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2">
-            {insideCards.map((c) => (
-              <div key={c.t} className="glass flex flex-col rounded-2xl p-6">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-violet-500/15 text-violet-300 ring-1 ring-violet-400/30">
-                  <SparkIcon />
-                </div>
-                <h3 className="text-base font-semibold text-white">{c.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-400">{c.b}</p>
-              </div>
-            ))}
-          </div>
+          <ReviewWorkflowCards cards={insideCards} />
 
           <p className="mx-auto mt-10 max-w-3xl text-center text-xs leading-relaxed text-gray-500">
             Built from practical AI coding workflow patterns and common
@@ -725,22 +716,6 @@ function CartIcon() {
       <circle cx="9" cy="20" r="1.5" />
       <circle cx="18" cy="20" r="1.5" />
       <path d="M3 4h2l2.5 12h12l2-8H6" />
-    </svg>
-  );
-}
-
-function SparkIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-5 w-5"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" />
     </svg>
   );
 }

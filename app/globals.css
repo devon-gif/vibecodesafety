@@ -270,6 +270,70 @@ body {
   -webkit-backdrop-filter: blur(24px);
 }
 
+.inside-review-card {
+  border-color: rgba(216, 180, 254, 0.22);
+}
+
+.inside-review-card.is-scanning {
+  border-color: rgba(196, 181, 253, 0.44);
+  box-shadow:
+    0 0 0 1px rgba(196, 181, 253, 0.16) inset,
+    0 30px 82px -42px rgba(139, 92, 246, 0.92),
+    0 0 42px -26px rgba(139, 92, 246, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20);
+}
+
+.inside-review-card.is-complete {
+  animation: inside-review-success-edge 700ms ease-out both;
+  border-color: rgba(74, 222, 128, 0.24);
+  box-shadow:
+    0 0 0 1px rgba(74, 222, 128, 0.08) inset,
+    0 26px 80px -46px rgba(74, 222, 128, 0.42),
+    0 22px 78px -50px rgba(139, 92, 246, 0.82),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.inside-review-icon {
+  background: rgba(139, 92, 246, 0.15);
+  color: #C4B5FD;
+  border: 1px solid rgba(139, 92, 246, 0.30);
+  box-shadow:
+    0 0 0 1px rgba(196, 181, 253, 0.06) inset,
+    0 14px 38px -24px rgba(139, 92, 246, 0.80);
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.inside-review-icon.is-scanning {
+  color: #D8B4FE;
+  border-color: rgba(196, 181, 253, 0.46);
+  box-shadow:
+    0 0 0 1px rgba(216, 180, 254, 0.14) inset,
+    0 0 28px rgba(139, 92, 246, 0.22);
+}
+
+.inside-review-icon.is-complete {
+  color: #4ADE80;
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.32);
+  box-shadow:
+    0 0 0 1px rgba(74, 222, 128, 0.10) inset,
+    0 0 24px rgba(74, 222, 128, 0.18);
+  transform: scale(1.02);
+}
+
+.inside-review-spinner {
+  animation: inside-review-spin 680ms linear infinite;
+}
+
+.inside-review-check {
+  animation: inside-review-check-in 320ms ease-out both;
+}
+
 /* ======================================================
    TOOL PILLS - light sections
    ====================================================== */
@@ -672,6 +736,42 @@ body {
   50% {
     opacity: 1;
     transform: scale(1.05);
+  }
+}
+
+@keyframes inside-review-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes inside-review-check-in {
+  from {
+    opacity: 0;
+    transform: scale(0.72) translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes inside-review-success-edge {
+  0% {
+    box-shadow:
+      0 0 0 1px rgba(74, 222, 128, 0.02) inset,
+      0 24px 78px -44px rgba(124, 58, 237, 0.86);
+  }
+  42% {
+    box-shadow:
+      0 0 0 1px rgba(74, 222, 128, 0.16) inset,
+      0 0 34px -16px rgba(74, 222, 128, 0.30),
+      0 30px 82px -44px rgba(139, 92, 246, 0.78);
+  }
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(74, 222, 128, 0.08) inset,
+      0 26px 80px -46px rgba(74, 222, 128, 0.42),
+      0 22px 78px -50px rgba(139, 92, 246, 0.82),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
   }
 }
 

@@ -24,7 +24,7 @@ export function ReviewWorkflowCards({ cards }: Props) {
     const root = rootRef.current;
     if (!root) return;
 
-    const timers: ReturnType<typeof window.setTimeout>[] = [];
+    const timers: number[] = [];
 
     function setCardPhase(index: number, phase: Phase) {
       setPhases((current) =>
