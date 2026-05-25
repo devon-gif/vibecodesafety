@@ -314,7 +314,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-20">
           <Eyebrow>SEE THE WORKFLOW</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl text-center text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            See the workflow in 35 seconds.
+            See the workflow.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-gray-400 md:text-base">
             A quick overview of how VibeCode Safety helps you audit your repo
