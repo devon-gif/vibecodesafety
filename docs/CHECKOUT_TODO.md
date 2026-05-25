@@ -37,18 +37,30 @@ Billing management uses `NEXT_PUBLIC_CUSTOMER_PORTAL_LINK` on the
 - [ ] Confirm success redirect works after checkout.
 - [ ] Test member kit download from the hidden access page.
 - [ ] Confirm access/download page shows download button when env var is set.
+- [ ] Confirm member kit includes `04-Weekly-Safety-Notes/`.
+- [ ] Confirm member kit includes `05-Monthly-Safety-Drops/`.
+- [ ] Confirm member update email process is ready for weekly notes and monthly drops.
 - [ ] Confirm cancellation copy is accurate while the portal is not fully connected.
 - [ ] Confirm no public copy promises manual human audits, GitHub repo scanning, guaranteed security, or a SaaS dashboard.
 - [ ] Confirm no public copy guarantees secure, bug-free, compliant, or production-ready software.
 - [ ] Confirm CTA buttons route correctly:
-  - Header "Start for $6.99/month"
-  - Hero "Start for $6.99/month"
-  - Pricing card "Start monthly"
-  - Pricing card "Start yearly"
-  - Final CTA "Start for $6.99/month"
-  - Sticky CTA "Start monthly"
-  - Chat widget "Start for $6.99/month"
+- Header "Start for $6.99/month"
+- Hero "Start for $6.99/month"
+- Pricing card "Start monthly"
+- Pricing card "Start yearly"
+- Final CTA "Start for $6.99/month"
+- Sticky CTA "Start for $6.99/mo"
+- Chat widget "Start for $6.99/mo"
 - [ ] Switch to live mode before launch.
+
+## Member Updates
+
+- Weekly Safety Notes: send one focused note per week with a short risk,
+  quick checklist, and copy-paste prompt.
+- Monthly Safety Drops: send one larger practical audit pack per month.
+- Do not promise manual human audits.
+- Do not promise guaranteed security.
+- Use email/download instructions for v1. Do not build dashboard automation yet.
 
 ## How CTAs are wired
 

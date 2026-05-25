@@ -21,9 +21,13 @@ for vibe coders.
   deploy readiness)
 - **Daily Build Guardrails** - short copy-paste prompts for pre-commit,
   pre-push, and pre-deploy reviews
-- **Monthly Safety Drops** - focused monthly packs covering one risk area at
-  a time (Stripe, Supabase RLS, Auth Sessions, and more)
-- **Ongoing updates** - new drops and kit updates as part of the subscription
+- **Weekly Safety Notes** - short weekly updates with one focused risk, a
+  quick checklist, and a copy-paste prompt
+- **Monthly Safety Drops** - larger themed monthly packs with prompts,
+  checklists, scorecards, guardrails, implementation notes, and fix-first
+  guidance
+- **Ongoing updates** - new notes, drops, and kit updates as part of the
+  subscription
 
 ## What members do NOT get
 
@@ -58,7 +62,8 @@ Subscribers manage their billing through the Stripe Customer Portal.
 ## Roadmap (no commitment)
 
 - [ ] Stripe Customer Portal live link in site footer/header
-- [ ] More monthly drops (CORS, dependency scanning, error handling)
+- [ ] More weekly notes and monthly drops (CORS, dependency scanning, error handling)
+- [ ] Member email/update workflow for weekly notes and monthly drops
 - [ ] Video walkthrough of the audit workflow
 - [ ] Possible: member community (Discord or forum)
 - [ ] Possible: team/agency pricing tier
@@ -81,6 +86,9 @@ See `docs/STRIPE_CUSTOMER_PORTAL.md` for portal setup.
 - Test yearly checkout.
 - Test success redirect.
 - Test member kit download.
+- Confirm Weekly Safety Notes are included.
+- Confirm Monthly Safety Drops are included.
+- Confirm member email/update process is ready.
 - Confirm cancellation copy is accurate.
 - Confirm no manual audit promise exists.
 - Confirm no security guarantee exists.

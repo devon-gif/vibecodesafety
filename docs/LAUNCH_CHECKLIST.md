@@ -9,6 +9,7 @@ Run through this before flipping the subscription site live.
 - [ ] Yearly price shows $59/year.
 - [ ] No stale $29.99 one-time pricing language remains on public pages.
 - [ ] "Cancel anytime" copy matches the current Stripe support process.
+- [ ] Homepage mentions Weekly Safety Notes + Monthly Safety Drops.
 - [ ] No manual human audit is promised at $6.99/month.
 - [ ] No guaranteed security, bug-free, compliant, or production-ready promise exists.
 - [ ] Compatibility disclaimer says tool names are for context only and no endorsement is implied.
@@ -18,6 +19,7 @@ Run through this before flipping the subscription site live.
 - [ ] `/` renders without console errors.
 - [ ] `/checkout-coming-soon` uses subscription placeholder copy.
 - [ ] `/success` welcomes members without promising account-based access.
+- [ ] `/welcome` explains weekly notes and monthly drops.
 - [ ] `/access/vcs-launch-edition-2026-k9p4` shows the member kit download when `NEXT_PUBLIC_PRODUCT_DOWNLOAD_LINK` is set.
 - [ ] `/privacy` renders.
 - [ ] `/terms` renders.
@@ -55,8 +57,12 @@ Run through this before flipping the subscription site live.
 - [ ] VibeCode Auditor Agent files are present.
 - [ ] Heavy-Duty Repo Audit workflow is present.
 - [ ] Daily Build Guardrails are present.
+- [ ] Weekly Safety Notes are present.
 - [ ] Monthly Safety Drops are present.
 - [ ] Support and cancellation docs are present.
+- [ ] June weekly notes exist for env vars, auth routes, Stripe checkout, and Supabase RLS.
+- [ ] Monthly drops include implementation notes.
+- [ ] Member email/update workflow is ready.
 - [ ] Final member kit ZIP opens locally.
 - [ ] Upload the member kit ZIP as a single Google Drive file.
 - [ ] Create a direct Google Drive download link.
@@ -85,6 +91,9 @@ Run through this before flipping the subscription site live.
 
 ## After Launch
 
+- [ ] Send first Weekly Safety Note.
+- [ ] Send first Monthly Safety Drop.
+- [ ] Track update topics in `docs/MONTHLY_AND_WEEKLY_UPDATE_SYSTEM.md`.
 - [ ] Watch first 5 subscriptions and confirm each member received access.
 - [ ] Enable Stripe Customer Portal when ready.
 - [ ] Update FAQ cancellation answer once the portal is live.

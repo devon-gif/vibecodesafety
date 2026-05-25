@@ -2,7 +2,7 @@
 
 Use this template when creating a new monthly drop folder.
 
-Copy this into: `04-Monthly-Safety-Drops/YYYY-MM-TOPIC_SAFETY_DROP/`
+Copy this into: `05-Monthly-Safety-Drops/YYYY-MM-TOPIC-SAFETY-DROP/`
 
 ---
 
@@ -13,6 +13,7 @@ Copy this into: `04-Monthly-Safety-Drops/YYYY-MM-TOPIC_SAFETY_DROP/`
 - `CHECKLIST.md` — manual checklist to work through
 - `SCORECARD.md` — how to score PASS / WARNING / BLOCKED
 - `WHAT_TO_FIX_FIRST.md` — priority order for common issues found
+- `IMPLEMENTATION_NOTES.md` — practical guardrails and setup notes
 
 ---
 
@@ -105,4 +106,18 @@ BLOCKED: one or more HIGH risks found with no fix in place.
 
 These are the issues that most commonly cause real harm in production.
 Fix them in order.
+```
+
+---
+
+## IMPLEMENTATION_NOTES.md template
+
+```markdown
+# Implementation Notes
+
+- Keep secrets server-side.
+- Test the real user flow in a preview environment.
+- Do not ship while the verdict is BLOCKED.
+- Track WARNING items before deploy.
+- Re-run the audit after fixes.
 ```

@@ -1,9 +1,10 @@
 # Monthly Safety Drops
 
-Monthly safety drops are focused review packs for one specific risk area.
+Monthly Safety Drops are larger focused review packs for one specific risk area.
 
-Each drop includes a short audit prompt, a checklist, a scorecard, and a
-"what to fix first" guide. They are designed to take 20–40 minutes to run.
+Each drop includes an audit prompt, checklist, scorecard, guardrails,
+implementation notes, and a "what to fix first" guide. They are designed to
+take 30–60 minutes to run.
 
 ---
 
@@ -14,7 +15,8 @@ Each drop includes a short audit prompt, a checklist, a scorecard, and a
 3. Run the `AUDIT_PROMPT.md` in your AI tool with your repo context.
 4. Work through the `CHECKLIST.md`.
 5. Score it using `SCORECARD.md`.
-6. Use `WHAT_TO_FIX_FIRST.md` if you found issues.
+6. Read `IMPLEMENTATION_NOTES.md` for practical guardrails.
+7. Use `WHAT_TO_FIX_FIRST.md` if you found issues.
 
 ---
 
@@ -22,9 +24,9 @@ Each drop includes a short audit prompt, a checklist, a scorecard, and a
 
 | Month | Topic | Folder |
 |-------|-------|--------|
-| June 2026 | Stripe Checkout Safety | `2026-06-STRIPE_CHECKOUT_SAFETY_DROP/` |
-| July 2026 | Supabase RLS Safety | `2026-07-SUPABASE_RLS_SAFETY_DROP/` |
-| August 2026 | Auth Session Safety | `2026-08-AUTH_SESSION_SAFETY_DROP/` |
+| June 2026 | Stripe Checkout Safety | `2026-06-STRIPE-CHECKOUT-SAFETY-DROP/` |
+| July 2026 | Supabase RLS Safety | `2026-07-SUPABASE-RLS-SAFETY-DROP/` |
+| August 2026 | Auth Session Safety | `2026-08-AUTH-SESSION-SAFETY-DROP/` |
 
 More drops will be added each month as part of the VibeCode Safety membership.
 
