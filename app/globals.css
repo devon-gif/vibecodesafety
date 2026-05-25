@@ -779,6 +779,59 @@ body {
   100% { box-shadow: 0 0 0   rgba(245, 158, 11, 0); }
 }
 
+@keyframes hero-enter-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-visual-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes hero-visual-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-8px) scale(1); }
+}
+
+@keyframes workflow-number-glow {
+  0% {
+    box-shadow: 0 0 0 rgba(139, 92, 246, 0);
+  }
+  45% {
+    box-shadow:
+      0 0 0 5px rgba(139, 92, 246, 0.12),
+      0 0 34px rgba(139, 92, 246, 0.34);
+  }
+  100% {
+    box-shadow: 0 0 32px -8px rgba(139, 92, 246, 0.95);
+  }
+}
+
+@keyframes risk-warning-pulse-once {
+  0%   { box-shadow: 0 0 0 rgba(245, 158, 11, 0); }
+  45%  { box-shadow: 0 0 0 7px rgba(245, 158, 11, 0.12), 0 0 24px rgba(251, 146, 60, 0.20); }
+  100% { box-shadow: 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+@keyframes pricing-pill-glow {
+  0%   { box-shadow: 0 0 0 rgba(139, 92, 246, 0); }
+  45%  { box-shadow: 0 0 28px rgba(139, 92, 246, 0.28); }
+  100% { box-shadow: inherit; }
+}
+
 @keyframes hero-product-glow-pulse {
   0%, 100% {
     opacity: 0.72;
@@ -911,6 +964,8 @@ body {
 
   .reveal-section .reveal-heading,
   .reveal-section .reveal-card,
+  .hero-entrance,
+  .hero-visual-entrance,
   .report-row,
   .report-score,
   .report-status,
@@ -922,6 +977,14 @@ body {
   .hero-swirl-ambient {
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .workflow-connector {
+    transform: scaleX(1) !important;
+  }
+
+  .inside-review-spinner {
+    animation: none !important;
   }
 
   .hero-bg-video {
