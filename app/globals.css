@@ -88,7 +88,7 @@ body {
 
 .glass:hover {
   border-color: rgba(196, 181, 253, 0.50);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow:
     0 0 0 1px rgba(167, 139, 250, 0.18) inset,
     0 28px 80px -38px rgba(139, 92, 246, 0.95),
@@ -191,7 +191,7 @@ body {
     0 32px 90px -38px rgba(139, 92, 246, 0.68),
     0 6px 24px -6px rgba(139, 92, 246, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 1);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .workflow-section {
@@ -231,6 +231,8 @@ body {
 }
 
 .workflow-connector {
+  transform: scaleX(0);
+  transform-origin: left center;
   background: linear-gradient(
     90deg,
     transparent,
@@ -239,6 +241,7 @@ body {
     rgba(139, 92, 246, 0.22) 82%,
     transparent
   );
+  transition: transform 860ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .workflow-connector::before,
@@ -268,6 +271,34 @@ body {
     0 22px 70px rgba(139, 92, 246, 0.13);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
+}
+
+.reveal-section.is-visible .workflow-connector {
+  transform: scaleX(1);
+}
+
+.reveal-section.is-visible .workflow-number {
+  animation: workflow-number-glow 900ms ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-section.is-visible .verdict-strip {
+  transition-delay: 520ms;
+}
+
+.reveal-section.is-visible .risk-warning-icon {
+  animation: risk-warning-pulse-once 780ms ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.light-glass:hover .risk-warning-icon {
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.20);
+  border-color: rgba(245, 158, 11, 0.36);
+}
+
+.reveal-section.is-visible .pricing-best-value {
+  animation: pricing-pill-glow 1050ms ease-out both;
+  animation-delay: 280ms;
 }
 
 .inside-review-card {
@@ -660,16 +691,36 @@ body {
 /* ======================================================
    SCROLL REVEAL
    ====================================================== */
+.hero-entrance {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: hero-enter-up 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-entrance-eyebrow { animation-delay: 50ms; }
+.hero-entrance-headline { animation-delay: 150ms; transform: translateY(28px); }
+.hero-entrance-copy { animation-delay: 280ms; }
+.hero-entrance-cta { animation-delay: 380ms; transform: translateY(14px); }
+.hero-entrance-micro { animation-delay: 480ms; transform: translateY(10px); }
+
+.hero-visual-entrance {
+  opacity: 0;
+  transform: scale(0.96);
+  animation:
+    hero-visual-enter 860ms cubic-bezier(0.22, 1, 0.36, 1) 280ms both,
+    hero-visual-float 7.5s ease-in-out 1250ms infinite;
+}
+
 .reveal-section .reveal-heading,
 .reveal-section .reveal-card {
   opacity: 0;
-  transform: translateY(22px);
+  transform: translateY(24px);
   transition:
-    opacity 520ms ease-out,
-    transform 520ms ease-out,
-    border-color 150ms ease,
-    background 150ms ease,
-    box-shadow 150ms ease;
+    opacity 680ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 680ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .reveal-section .reveal-card {
@@ -683,7 +734,7 @@ body {
 }
 
 .reveal-section.is-visible .reveal-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 /* ======================================================

@@ -208,9 +208,11 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 function CheckBullet({
   children,
   tone = "violet",
+  className = "",
 }: {
   children: React.ReactNode;
   tone?: "violet" | "emerald" | "rose";
+  className?: string;
 }) {
   const cls =
     tone === "violet"
@@ -219,7 +221,7 @@ function CheckBullet({
         ? "text-emerald-400"
         : "text-rose-400";
   return (
-    <li className="flex items-start gap-3 text-sm text-gray-300">
+    <li className={`flex items-start gap-3 text-sm text-gray-300 ${className}`}>
       <svg
         viewBox="0 0 24 24"
         className={`mt-0.5 h-4 w-4 flex-none ${cls}`}
@@ -279,26 +281,26 @@ export default function Home() {
         <div aria-hidden className="hero-swirl hero-swirl-ambient left-1/4 bottom-0" />
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 pb-24 pt-12 lg:grid-cols-[0.88fr,1.12fr] lg:gap-16 lg:pb-28 lg:pt-16">
           <div>
-            <span className="pill mb-6 inline-flex">
+            <span className="hero-entrance hero-entrance-eyebrow pill mb-6 inline-flex">
               <span className="pill-dot" />
               Repo audit &middot; Daily guardrails &middot; Weekly updates.
             </span>
-            <h1 className="text-balance text-6xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl">
+            <h1 className="hero-entrance hero-entrance-headline text-balance text-6xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl">
               Don&apos;t ship
               <br />
               <span className="violet-text">AI code blind.</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
+            <p className="hero-entrance hero-entrance-copy mt-8 max-w-2xl text-pretty text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
               AI coding tools move fast and can quietly break auth, checkout,
               env vars, database rules, or deploy flows. VibeCode Safety gives
               you a simple repo audit workflow and daily AI change reviews
               before you ship.
             </p>
-            <div className="mt-6 inline-flex rounded-2xl border border-violet-300/20 bg-white/[0.05] px-4 py-3 text-sm font-medium text-violet-100 shadow-[0_0_34px_rgba(139,92,246,0.12)] backdrop-blur-xl">
+            <div className="hero-entrance hero-entrance-copy mt-6 inline-flex rounded-2xl border border-violet-300/20 bg-white/[0.05] px-4 py-3 text-sm font-medium text-violet-100 shadow-[0_0_34px_rgba(139,92,246,0.12)] backdrop-blur-xl">
               Working build ≠ safe release.
             </div>
 
-            <div className="mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
+            <div className="hero-entrance hero-entrance-cta mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
               <BuyLink className="btn-primary px-7 py-4 text-base">
                 Start for $6.99/month
               </BuyLink>
@@ -307,10 +309,10 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="hero-entrance hero-entrance-micro mt-4 text-sm text-gray-500">
               Run your first audit today. Cancel anytime.
             </p>
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="hero-entrance hero-entrance-micro mt-2 text-sm text-gray-500">
               Free checklist available before joining.{" "}
               <Link
                 href="/pre-ship-checklist"
@@ -321,7 +323,7 @@ export default function Home() {
               .
             </p>
 
-            <p className="mt-6 flex items-center gap-3 text-sm text-gray-400">
+            <p className="hero-entrance hero-entrance-micro mt-6 flex items-center gap-3 text-sm text-gray-400">
               <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-violet-300/50 text-violet-300">
                 <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                   <path d="m5 12 5 5L20 7" />
@@ -345,7 +347,7 @@ export default function Home() {
                 aria-hidden
                 className="pointer-events-none absolute bottom-[6%] left-[10%] right-[8%] -z-10 h-[24%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.24),rgba(42,23,75,0.22)_44%,transparent_76%)] blur-3xl"
               />
-              <div className="hero-product-image-wrap relative w-full">
+              <div className="hero-visual-entrance hero-product-image-wrap relative w-full">
                 <img
                   src="/images/vibey.png"
                   alt="VibeCode Safety report preview"
@@ -456,7 +458,7 @@ export default function Home() {
               {steps.map((s, index) => (
                 <li key={s.n} className="workflow-card relative rounded-3xl p-7">
                   <div className="flex items-start justify-between gap-5">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#A78BFA] to-[#8B5CF6] text-lg font-semibold text-white shadow-[0_0_32px_-8px_rgba(139,92,246,0.95)] ring-1 ring-white/50">
+                    <div className="workflow-number flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#A78BFA] to-[#8B5CF6] text-lg font-semibold text-white shadow-[0_0_32px_-8px_rgba(139,92,246,0.95)] ring-1 ring-white/50">
                       {s.n}
                     </div>
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#C4B5FD]/45 bg-white/70 text-[#8B5CF6] shadow-[0_14px_34px_-24px_rgba(46,16,101,0.55)]">
@@ -594,7 +596,7 @@ export default function Home() {
             {riskZones.map((r) => (
               <div key={r.t} className="light-glass rounded-2xl p-5">
                 <div className="flex items-center gap-2 text-sm font-semibold text-[#2E1065]">
-                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-[#F59E0B]/10 text-[#F59E0B] ring-1 ring-[#F59E0B]/25">
+                  <span className="risk-warning-icon inline-flex h-6 w-6 items-center justify-center rounded-md bg-[#F59E0B]/10 text-[#F59E0B] ring-1 ring-[#F59E0B]/25">
                     <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M12 2 2 21h20L12 2Z" />
                       <path d="M12 9v5" />
@@ -653,7 +655,7 @@ export default function Home() {
 
             <div className="glass-strong relative rounded-3xl p-8 shadow-glow-lg">
               <div className="absolute inset-x-0 -top-px mx-auto h-px w-2/3 bg-gradient-to-r from-transparent via-violet-300/60 to-transparent" />
-              <span className="pill">
+              <span className="pricing-best-value pill">
                 <SettingsIcon />
                 BEST VALUE
               </span>
@@ -679,7 +681,9 @@ export default function Home() {
             <p className="text-sm font-semibold text-white">Both plans include:</p>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {pricingIncludes.map((b) => (
-                <CheckBullet key={b}>{b}</CheckBullet>
+                <CheckBullet key={b} className="pricing-bullet">
+                  {b}
+                </CheckBullet>
               ))}
             </ul>
             <p className="mt-5 text-xs leading-relaxed text-gray-500">
@@ -773,12 +777,12 @@ export default function Home() {
             </span>
           </div>
           <h2 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-6xl">
-            Audit your repo.{" "}
-            <span className="violet-text">Guard every AI change.</span>
+            Run the audit{" "}
+            <span className="violet-text">before you deploy.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-gray-400">
-            Start with the heavy-duty repo audit. Add the daily guardrails.
-            Ship with fewer surprises.
+            AI can build fast. It can also break what matters. Start with the
+            heavy-duty repo audit, then guard every AI change.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <BuyLink className="btn-primary">

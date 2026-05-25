@@ -7,13 +7,13 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "VibeCode Safety Membership - Audit your repo. Guard every AI change.",
+  title: "VibeCode Safety Membership - Don't ship AI code blind.",
   description:
-    "A subscription membership for AI-assisted builders with a heavy-duty repo audit workflow, VibeCode Auditor Agent, daily change-review guardrails, Weekly Safety Notes, and Monthly Safety Drops.",
+    "A subscription membership for AI-assisted builders with a repo audit workflow, daily AI change reviews, Weekly Safety Notes, and Monthly Safety Drops before you ship.",
   metadataBase: new URL("https://vibecodesafetykit.com"),
   openGraph: {
     title: "VibeCode Safety Membership",
-    description: "Audit your repo. Guard every AI change. Ship with fewer surprises.",
+    description: "Don't ship AI code blind. Run the audit before you deploy.",
     type: "website",
   },
 };

@@ -15,13 +15,23 @@ export function ScrollReveal() {
 
       const cards = Array.from(
         section.querySelectorAll<HTMLElement>(
-          ".glass, .glass-strong, .light-glass, .light-tool-pill"
+          [
+            ".glass",
+            ".glass-strong",
+            ".light-glass",
+            ".light-tool-pill",
+            ".workflow-card",
+            ".verdict-strip",
+            ".logo-ticker-mask",
+            ".logo-ticker-item",
+            ".pricing-bullet",
+          ].join(", ")
         )
       );
 
-      cards.slice(0, 12).forEach((card, index) => {
+      cards.slice(0, 18).forEach((card, index) => {
         card.classList.add("reveal-card");
-        card.style.setProperty("--reveal-delay", `${Math.min(index * 90, 540)}ms`);
+        card.style.setProperty("--reveal-delay", `${Math.min(index * 110, 720)}ms`);
       });
     });
 
