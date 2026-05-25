@@ -293,7 +293,7 @@ export default function Home() {
                   preload="metadata"
                   aria-hidden="true"
                 >
-                  <source src="/video/Hero%20right%20block.mp4" type="video/mp4" />
+                  <source src="/video/rightblockvideo.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
