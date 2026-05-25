@@ -222,11 +222,11 @@ export default function Home() {
         </video>
         <div
           aria-hidden
-          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,2,8,0.36),rgba(3,2,8,0.48)),radial-gradient(circle_at_75%_45%,rgba(124,58,237,0.16),transparent_45%),radial-gradient(ellipse_at_78%_20%,rgba(139,92,246,0.10),transparent_48%),linear-gradient(180deg,rgba(3,2,8,0.10)_0%,rgba(5,3,11,0.30)_54%,rgba(16,6,31,0.58)_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_78%_42%,rgba(139,92,246,0.26),transparent_38%),radial-gradient(circle_at_83%_58%,rgba(58,27,104,0.34),transparent_44%),radial-gradient(circle_at_64%_50%,rgba(38,18,74,0.28),transparent_50%),linear-gradient(135deg,#05030B_0%,#0B0616_34%,#120821_58%,#1B0D33_100%)]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(3,2,8,0.92),rgba(3,2,8,0.56),rgba(3,2,8,0.12)),linear-gradient(to_bottom,transparent_62%,#05030B_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(5,3,11,0.94),rgba(11,6,22,0.58),rgba(27,13,51,0.10)),radial-gradient(circle_at_78%_42%,rgba(196,181,253,0.08),transparent_32%),linear-gradient(to_bottom,transparent_62%,#05030B_100%)]"
         />
         {/* Animated swirl orbs */}
         <div aria-hidden className="hero-swirl hero-swirl-1 -left-24 top-0" />

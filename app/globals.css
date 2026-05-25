@@ -340,8 +340,10 @@ body {
 
 .hero-bg-video {
   background:
-    radial-gradient(circle at 72% 42%, rgba(124, 58, 237, 0.20), transparent 45%),
-    linear-gradient(180deg, #030208 0%, #05030B 100%);
+    radial-gradient(circle at 78% 42%, rgba(139, 92, 246, 0.26), transparent 38%),
+    radial-gradient(circle at 83% 58%, rgba(58, 27, 104, 0.34), transparent 44%),
+    radial-gradient(circle at 64% 50%, rgba(38, 18, 74, 0.28), transparent 50%),
+    linear-gradient(135deg, #05030B 0%, #0B0616 34%, #120821 58%, #1B0D33 100%);
 }
 
 .hero-product-video-wrap {
