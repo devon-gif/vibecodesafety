@@ -1,96 +1,98 @@
-# VibeCode Safety Kit - Landing Site
+# VibeCode Safety
 
-Standalone landing page for the **VibeCode Safety Kit** - a one-time digital product that helps solo founders and AI builders review AI-generated code before they ship.
+### Guardrails for AI-assisted software development
+
+VibeCode Safety is a product and workflow system for solo founders and AI-assisted builders who use tools such as Claude, Codex, Cursor, Windsurf and GitHub Copilot to ship software.
+
+The core idea is simple:
 
 > **Make AI check the AI before you ship.**
 
-This repo only contains the marketing site. It does **not** depend on any other project (CheckRay, Raycheck, CheckMate, etc.).
+Instead of treating AI-generated code as automatically trustworthy, the workflow introduces structured review states, repo rules, audit prompts and pre-deploy checks before changes reach production.
+
+**Focus:** AI-assisted development · developer experience · product design · safety workflows · Next.js
+
+[View my portfolio](https://www.archerdesign.shop/devon)
 
 ---
 
-## What this project is
+## The problem
 
-- A premium dark landing page for selling a one-time $29.99 digital kit (Launch Edition).
-- Next.js 14 (App Router) + React 18 + TypeScript + Tailwind CSS v3.
-- No database. No auth. No subscriptions. No cart. No API routes.
-- Stripe checkout is **not** wired yet - see `docs/CHECKOUT_TODO.md`.
+AI coding tools make software dramatically faster to create—but they can also make it easier to ship mistakes quickly:
 
-## Product positioning
+- exposed secrets
+- weakened authentication
+- incorrect environment-variable boundaries
+- billing regressions
+- database / RLS drift
+- unsafe dependency changes
+- preview and deployment failures
+- repeated mistakes caused by missing repo instructions
 
-- **Name:** VibeCode Safety Kit
-- **Positioning:** “Make AI check the AI before you ship.”
-- **One-liner:** A practical guardrail system for solo founders and AI builders - prompts, checklists, repo rules, and pre-deploy workflows that help catch broken flows, exposed secrets, schema drift, and risky AI-generated changes before they go live.
-- **Price:** $29.99 one-time (Launch Edition). Not a subscription.
-- **Primary CTA:** “Get the kit”
-- **Secondary CTA:** “See what's inside”
+VibeCode Safety turns those risks into a repeatable review process.
 
-## Pages
+## The workflow
 
-| Path             | Purpose                                                |
-| ---------------- | ------------------------------------------------------ |
-| `/`              | Marketing homepage with all sections                   |
-| `/success`       | “Checkout coming soon” / post-purchase placeholder     |
-| `/terms`         | Terms of Service                                       |
-| `/privacy`       | Privacy Policy                                         |
-| `/refund-policy` | Refund Policy                                          |
+The current product experience is organized around a simple loop:
 
-CTAs currently link to `/success` (no Stripe yet). There are no broken buttons.
+1. **Install the safety workflow**
+2. **Run a structured repository audit**
+3. **Review AI-generated changes**
+4. **Classify the result as PASS / WARNING / BLOCKED**
+5. **Fix or escalate issues before commit / push / deploy**
+6. **Keep the review system current through ongoing safety updates**
 
-## How to run locally
+The product is intentionally tool-agnostic and can be used with multiple AI coding environments.
 
-```bash
-pnpm install
-pnpm run dev
-```
+## What the member system includes
 
-Then open http://localhost:3000.
+- Heavy-duty repository audit workflow
+- AI auditor-agent instructions
+- Daily AI change-review process
+- Weekly safety notes
+- Monthly deeper safety drops
+- Repository instruction templates
+- Pre-commit / pre-push / pre-deploy checks
+- Rollback and handoff checklists
+- Ongoing prompt and guardrail updates
 
-Other useful scripts:
+## Design principles
 
-```bash
-pnpm run type-check   # tsc --noEmit
-pnpm run build        # production build
-pnpm run start        # run the production build
-```
+### AI output is not evidence by itself
+A generated change still needs validation against the repository, application behavior and deployment environment.
 
-If you don't have pnpm, npm works too: `npm install`, `npm run dev`, etc.
+### Safety should be visible
+PASS / WARNING / BLOCKED makes the state of a review understandable without requiring a developer to parse a long AI transcript.
 
-## Project structure
+### High-risk surfaces deserve stricter rules
+Authentication, payments, secrets, database policies and production configuration should receive more scrutiny than low-risk visual changes.
 
-```
-app/
-  layout.tsx
-  page.tsx               # Homepage (hero, problem, how it works, what's inside, who it's for, pricing, FAQ, final CTA)
-  success/page.tsx
-  terms/page.tsx
-  privacy/page.tsx
-  refund-policy/page.tsx
-  globals.css
-components/
-  SiteHeader.tsx
-  SiteFooter.tsx
-  LegalShell.tsx
-docs/
-  PRODUCT_PLAN.md
-  LAUNCH_CHECKLIST.md
-  CHECKOUT_TODO.md
-kit-preview/             # Placeholder previews of kit contents (not the real kit)
-  AGENTS-template.md
-  REVIEWER_PROMPT-template.md
-  PRE_DEPLOY_CHECKLIST-template.md
-```
+### Repeatable beats heroic
+The goal is not a one-time audit. It is a lightweight system people can use every time an AI tool changes their codebase.
 
-## Next steps
+## Product stack
 
-1. Wire up Stripe (one-time payment) - see `docs/CHECKOUT_TODO.md`.
-2. Build the actual kit ZIP and set up delivery (e.g., signed download link or email).
-3. Hook up analytics.
-4. Add `og-image.png`, favicon, and a real domain.
-5. Launch - see `docs/LAUNCH_CHECKLIST.md`.
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Subscription / checkout flows
+- AI-tool-agnostic review workflows
 
-## What this project is **not**
+## Relationship to VibeCode+
 
-- Not a SaaS subscription.
-- Not connected to Stripe yet.
-- Not deployed to Vercel by this repo (deploy intentionally not configured).
-- Not connected to GitHub by this repo.
+VibeCode Safety is the productized safety layer around a broader area I have been exploring: how autonomous and AI-assisted software systems can perform useful work **without hiding state, bypassing guardrails or removing human control**.
+
+A sanitized architecture case study for the more advanced VibeCode+ repair system is available in my public portfolio repository.
+
+## Why this project is in my portfolio
+
+This project represents the intersection I care about most as a Creative Technologist: product UX, emerging AI behavior, technical systems and the design of trust.
+
+The design challenge is not simply making an AI tool look polished. It is deciding **what the system may do, what it must explain, when it should stop and when a human must take over.**
+
+---
+
+**Devon Archer**  
+Creative Technologist / Design Engineer  
+[Portfolio](https://www.archerdesign.shop/devon) · [GitHub](https://github.com/devon-gif)
